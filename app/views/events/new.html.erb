@@ -4,6 +4,14 @@
     <%= e.input :title %>
     <%= e.input :number_of_members, as: :numeric %>
 
-    <%= e.submit "Submit", class: "white btn btn-beige" %>
+  <div>
+    <% Option.all.each do |o| %>
+    <%= o.name %>
+    <% end %>
+  </div>
+
+  <%= e.submit "Submit", class: "white btn btn-beige" %>
   <% end %>
+
+
 </div>

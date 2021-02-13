@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :events, only: [:new, :create]
 
+  get 'events/:event_id/select_meals', to: 'events#select_meals', as: 'event_select_meals'
+
 
 end

@@ -29,6 +29,18 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  const locos = document.querySelectorAll(".divLoco");
+  locos.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      const div = element.nextElementSibling;
+      if (div.style.height == "0px"){
+        div.style.height = "100px";
+        div.style.opacity = "1";
+      }
+      else {
+        div.style.height = "0px";
+        div.style.opacity = "0";
+      }
+    });
+  });
 });

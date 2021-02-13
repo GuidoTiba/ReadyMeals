@@ -1,0 +1,9 @@
+<h1>aqui iria el formulario de new</h1>
+<div id="form">
+  <%= simple_form_for @event do |e| %>
+    <%= e.input :title %>
+    <%= e.input :number_of_members, as: :numeric %>
+
+    <%= e.submit "Submit", class: "white btn btn-beige" %>
+  <% end %>
+</div>

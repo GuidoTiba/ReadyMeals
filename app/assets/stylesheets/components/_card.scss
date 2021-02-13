@@ -1,0 +1,14 @@
+.card-recipe {
+  height: 100px;
+  background-color: aliceblue;
+  display: flex;
+}
+
+.card-recipe img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-recipe p {
+  margin: auto;
+}

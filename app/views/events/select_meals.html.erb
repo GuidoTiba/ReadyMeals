@@ -1,0 +1,15 @@
+<h1 class="text-center"><%= @event.title %></h1>
+<h2 class="text-center">Choose your meals!</h2>
+
+<div class="container">
+  <div class="row">
+    <% @recipes.each do |recipe| %>
+      <div class="col-12 col-lg-3 text-center">
+        <div class="card-recipe">
+          <img src="https://source.unsplash.com/400x300/?yummy" alt="">
+          <p><%= recipe.name %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

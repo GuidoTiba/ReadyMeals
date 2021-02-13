@@ -1,0 +1,19 @@
+.plus-btn {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: rgba($color: #61ad43, $alpha: 0.6);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  flex-shrink:inherit;
+  font-size: 12px;
+}
+
+
+.selectable {
+  width: 30%;
+  display: flex;
+}

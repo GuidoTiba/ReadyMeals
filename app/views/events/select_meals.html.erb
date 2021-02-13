@@ -1,13 +1,18 @@
 <h1 class="text-center"><%= @event.title %></h1>
-<h2 class="text-center">Choose your meals!</h2>
+<h2 class="text-center">Elegí las comidas PA!</h2>
 
 <div class="container">
   <div class="row">
     <% @recipes.each do |recipe| %>
-      <div class="col-12 col-lg-3 text-center">
+      <div class="col-12 col-lg-4 text-center">
         <div class="card-recipe">
           <img src="https://source.unsplash.com/400x300/?yummy" alt="">
           <p><%= recipe.name %></p>
+          <div class="selectable">
+            <%= button_to "-", "#", method: :delete, class: "plus-btn" %>
+            <p>0</p>
+            <%= button_to "+", "#", method: :post, class: "plus-btn" %>
+          </div>
         </div>
       </div>
     <% end %>

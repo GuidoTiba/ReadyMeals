@@ -7,4 +7,6 @@ class Option < ApplicationRecord
   ## Validations
 
   validates :name, presence: true
+
+  ESTILOS_COMIDA = %w(VEGANA CELIACA MEXICANA)
 end

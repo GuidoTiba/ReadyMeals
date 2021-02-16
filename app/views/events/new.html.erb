@@ -1,9 +1,32 @@
-<h1>aqui iria el formulario de new</h1>
-<div id="form">
-  <%= simple_form_for @event do |e| %>
-    <%= e.input :title %>
-    <%= e.input :number_of_members, as: :numeric %>
+<div class="container text-center">
+  <h3 class="py-3"><strong>Create your group</strong></h3>
 
-    <%= e.submit "Submit", class: "white btn btn-beige" %>
-  <% end %>
+  <div id="form">
+    <%= simple_form_for @event do |e| %>
+      <%= e.input :title %>
+      <%= e.input :number_of_members, as: :numeric %>
+
+    <div>
+      <% Option.all.each do |o| %>
+      <%= o.name %>
+      <% end %>
+    </div>
+
+  </div>
+
+  <h4 class="py-3 pt-5">Dietary restrictions</h4>
+
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+  <div class="oval">Hello</div>
+
+  <div class="py-5">
+      <%= e.submit "Next →", class: "white btn start" %>
+    <% end %>
+  </div>
+
 </div>

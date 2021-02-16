@@ -1,5 +1,7 @@
-<h1>aqui iria el formulario de new</h1>
-<div id="form">
+<div class="container">
+<h3><strong>Create your group</strong></h3>
+
+<div id="form ">
   <%= simple_form_for @event do |e| %>
     <%= e.input :title %>
     <%= e.input :number_of_members, as: :numeric %>
@@ -10,8 +12,8 @@
     <% end %>
   </div>
 
-  <%= e.submit "Submit", class: "white btn btn-beige" %>
+  <%= e.submit "Submit", class: "white btn start" %>
   <% end %>
-
+</div>
 
 </div>

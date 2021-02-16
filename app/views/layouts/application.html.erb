@@ -16,5 +16,21 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-help">
+        <p> <% link_to help_path%>Help</p>
+        <p> <% link_to about_path %> About</p>
+        <p> <% link_to contact_path %> Contact</p>
+      </div>
+
+      <p> ® Ready Meals 2021</p>
+
+    </div>
   </body>
 </html>

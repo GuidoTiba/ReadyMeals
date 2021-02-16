@@ -12,3 +12,54 @@
 .card-recipe p {
   margin: auto;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.mini-card  {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+.mini-card > img {
+  height: 130px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mini-card .mini-card-infos {
+  padding: 8px;
+}
+
+.rectangular-card {
+  height: 70px;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.rectangular-card > img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}

@@ -12,9 +12,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-
+    <% unless action_name == "home" %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+    <% end %>
     <%= yield %>
     <div class="footer">
       <div class="footer-links">

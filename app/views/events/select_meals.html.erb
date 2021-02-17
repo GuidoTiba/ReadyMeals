@@ -3,14 +3,7 @@
 
 <div class="container">
   <div class="row">
-    <% @recipes.each do |recipe| %>
-      <div class="col-12 col-lg-3 text-center">
-        <div class="card-recipe">
-          <img src="https://source.unsplash.com/400x300/?yummy" alt="">
-          <p><%= recipe.name %></p>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'recipes' %>
   </div>
   <div class="btn start my-3">Next →</div>
 </div>

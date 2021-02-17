@@ -1,3 +1,22 @@
+.plus-btn {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: rgba($color: #61ad43, $alpha: 0.6);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  flex-shrink:inherit;
+  font-size: 12px;
+}
+
+
+.selectable {
+  width: 30%;
+  display: flex;
+}
 .start {
   background-color: white;
   color: $green;
@@ -36,7 +55,7 @@
   color: #B3DEB4;
   cursor: auto;
   -webkit-user-select: auto;
-  padding: 6px;
+  padding: 6px 14px;
   border-radius: 20px;
   margin-top: 6px;
   margin-right: 6px;

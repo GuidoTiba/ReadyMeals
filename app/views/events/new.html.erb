@@ -6,23 +6,15 @@
       <%= e.input :title %>
       <%= e.input :number_of_members, as: :numeric %>
 
+  <h4 class="py-3 pt-5">Dietary restrictions</h4>
     <div>
       <% Option.all.each do |o| %>
-      <%= o.name %>
+      <div class="oval"><%= o.name %></div>
       <% end %>
     </div>
 
   </div>
 
-  <h4 class="py-3 pt-5">Dietary restrictions</h4>
-
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
-  <div class="oval">Hello</div>
 
   <div class="py-5">
       <%= e.submit "Next →", class: "white btn start" %>

@@ -1,7 +1,11 @@
 .card-recipe {
-  height: 100px;
-  background-color: aliceblue;
+  height: 80px;
+  background-color: white;
   display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 5px;
+  margin-bottom: 20px;
 }
 
 .card-recipe img {
@@ -15,7 +19,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 

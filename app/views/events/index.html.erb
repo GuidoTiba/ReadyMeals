@@ -1,2 +1,10 @@
-<h1>All your events</h1>
+<div class="white-background">
+  <div class="container">
+    <h2 class="py-5 text-center">All your events</h2>
 
+  <% @events.each do |event| %>
+    <%= event.title %>
+  <% end %>
+
+  </div>
+</div>

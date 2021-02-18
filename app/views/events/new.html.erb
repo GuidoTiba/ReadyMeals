@@ -6,13 +6,6 @@
       <%= e.input :title %>
       <%= e.input :number_of_members, as: :numeric %>
 
-  <h4 class="py-3 pt-5">Dietary restrictions</h4>
-    <div>
-      <% Option.all.each do |o| %>
-      <div class="oval"><%= o.name %></div>
-      <% end %>
-    </div>
-
     <h4 class="py-3 pt-5">Dietary restrictions</h4> 
 
     <% Option.all.each do |o| %>

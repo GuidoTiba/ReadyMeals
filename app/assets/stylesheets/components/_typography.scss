@@ -5,3 +5,19 @@
 .white {
   color: white;
 }
+
+.white-link {
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+

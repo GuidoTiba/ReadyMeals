@@ -4,32 +4,22 @@
     <%= e.input :title %>
     <%= e.input :number_of_members, as: :numeric %>
 
-<ul>
-  <% Option.all.each do |o| %>
-      <li>
-        <%= check_box_tag 'options_id[]', o.name -%>
-        <%= o.name -%>
-      </li>
-  <% end %>
-</ul>
-  <%= e.submit "Submit", class: "white btn btn-beige" %>
-  <% end %>
+    <h4 class="py-3 pt-5">Dietary restrictions</h4> 
 
-      <h4 class="py-3 pt-5">Dietary restrictions</h4> 
+    <% Option.all.each do |o| %>
+      <div class="oval clickable"> <%= o.name %> </div>
+    <% end %>
 
-      <% Option.all.each do |o| %>
-        <div class= "oval clickable"> <%= o.name %> </div>
+    <% Option.all.each do |o| %>
+      <%= simple_fields_for :options do |of| %>
+        <%= of.input o.name.to_sym, as: :hidden %>
       <% end %>
-      <% Option.all.each do |o| %>
-        <%= simple_fields_for :options do |of| %>
-          <%= of.input o.name.to_sym, as: :hidden %>
-        <% end %>
-      <% end %>
-    </div>
+    <% end %>
+  </div>
 
       <div class="py-5">
       <%= e.submit "Next →", class: "white btn start" %>
-    <% end %>
+  <% end %>
   </div>
 
 </div>

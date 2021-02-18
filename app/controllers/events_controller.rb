@@ -2,9 +2,9 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:select_meals]
 
   def new
-    @event = Event.new()
+    @event = Event.new(params[:id])
   end
-  
+
   def create
   
     @event = Event.new(event_params)
@@ -28,6 +28,14 @@ class EventsController < ApplicationController
         @recipes << recipe
       end
     end
+  end
+
+  def index
+    @events = Event.all
+  end
+
+  def show
+    @event = Event.find(params[:id])
   end
 
   private

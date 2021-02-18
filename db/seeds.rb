@@ -1,3 +1,11 @@
+puts "Deleting all"
+RecipeOption.destroy_all
+RecipeIngredient.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
+Option.destroy_all
+
+
 puts "Creating recipes"
 @barbeque = Recipe.create(name: "Barbeque", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
 @gnocchi = Recipe.create(name: "Gnocchi", instructions: "Add sauce to the gnocchi", details: "So good")
@@ -48,11 +56,11 @@ puts "Joining recipe with its ingredients"
 
 @pizza_tomato_sauce = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato_sauce.id, ammount: 500, unit: "grams")
 @pizza_tomato = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
-@pizza_mozzarela = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @mozarela.id, ammount: 500, unit: "grams")
+@pizza_mozzarela = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @mozzarela.id, ammount: 500, unit: "grams")
 @pizza_oregano = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @oregano.id, ammount: 500, unit: "grams")
 
 @caesar_salad_chicken = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @chicken.id, ammount: 500, unit: "grams")
-@caesar_salad_ceasar_dressing = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @ceasar_dressing.id, ammount: 500, unit: "grams")
+@caesar_salad_ceasar_dressing = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @caesar_dressing.id, ammount: 500, unit: "grams")
 @caesar_salad_cheese = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @cheese.id, ammount: 500, unit: "grams")
 @caesar_salad_greens = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @greens.id, ammount: 500, unit: "grams")
 
@@ -79,7 +87,7 @@ puts "joining recipe with its dietary restriction"
 @caesar_salad_celiac = RecipeOption.create(option_id: @celiac.id, recipe_id: @caesar_salad.id)
 
 @sushi_celiac = RecipeOption.create(option_id: @celiac.id, recipe_id: @sushi.id)
-@sushi_lactose_intolerant = RecipeOption.create(option_id: @clactose_intolerant.id, recipe_id: @sushi.id)
+@sushi_lactose_intolerant = RecipeOption.create(option_id: @lactose_intolerant.id, recipe_id: @sushi.id)
 
 
 

@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def select_meals
-    @recipes = []
+    @recipes = Recipe.all
     @event.options.each do |option|
       option.recipes.each do |recipe|
         @recipes << recipe

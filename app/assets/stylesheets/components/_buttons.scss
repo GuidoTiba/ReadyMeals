@@ -17,9 +17,20 @@
   display: flex;
 }
 
-.start {
-  background-color: white;
+.btn-green {
+  color: white;
+  background-color: $green;
+    &:hover {
+    color: white;
+  }
+}
+
+.btn-white {
   color: $green;
+  background-color: white;
+    &:hover {
+    color: $green;
+  }
 }
 
 .drop-down {

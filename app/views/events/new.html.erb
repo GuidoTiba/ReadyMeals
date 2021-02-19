@@ -9,7 +9,7 @@
       <h4 class="py-3 pt-5">Dietary restrictions</h4>
 
       <% Option.all.each do |o| %>
-      <div class="oval clickable"> <%= o.name %> </div>
+      <div class="oval clickable px-3"> <%= o.name %> </div>
       <% end %>
 
       <% Option.all.each do |o| %>
@@ -20,7 +20,7 @@
   </div>
 
   <div class="py-5">
-    <%= e.submit "Next →", class: "white btn start" %>
+    <%= e.submit "Next →", class: "btn btn-green" %>
     <% end %>
   </div>
 

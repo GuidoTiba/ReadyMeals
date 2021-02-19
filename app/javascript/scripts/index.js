@@ -1,0 +1,1 @@
+import './clickable_checkboxes'

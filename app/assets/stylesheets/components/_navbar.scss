@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 85px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-left: 80px !important;
+  padding-right: 80px !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,88 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-menu img {
+  width: 30px;
+}
+
+.navbar-menu {
+  appearance: none;
+  background: transparent;
+  border: 1px solid #B3DEB4;
+  color: #222222;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0px;
+  outline: none;
+  overflow: visible;
+  padding: 5px 5px 5px 12px;
+  text-align: inherit;
+  text-decoration: none;
+  user-select: auto;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 21px;
+  height: 42px;
+  position: relative;
+  vertical-align: middle;
+  transition: box-shadow 0.2s ease;
+  z-index: 1;
+  color:$green;
+  &:hover {
+    -webkit-box-align: center;
+    appearance: none;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    outline: none;
+    overflow: visible;
+    padding: 5px 5px 5px 12px;
+    text-align: inherit;
+    text-decoration: none;
+    user-select: auto;
+    align-items: center;
+    border-radius: 21px;
+    height: 42px;
+    position: relative;
+    vertical-align: middle;
+    transition: box-shadow 0.2s ease;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  }
+}
+
+.dropdown-menu {
+  -webkit-box-align: center;
+  appearance: none;
+  background: rgb(255, 255, 255);
+  border: 1px transparent;
+  color: rgb(34, 34, 34);
+  cursor: pointer;
+  margin: 0px;
+  outline: none;
+  overflow: visible;
+  padding: 5px 5px 5px 12px;
+  text-align: inherit;
+  text-decoration: none;
+  user-select: auto;
+  align-items: center;
+  border-radius: 7px;
+  position: relative;
+  vertical-align: middle;
+  transition: box-shadow 0.2s ease;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }

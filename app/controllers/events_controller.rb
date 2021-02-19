@@ -6,9 +6,15 @@ class EventsController < ApplicationController
   end
 
   def create
+  
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
+      options_to_create = params["options"]. select { |key, value| value =="1" }.keys
+      options_to_create.each do |option_name|
+        event_option = EventOption.new(event: @event, option: Option.find_by(name: option_name))
+        event_option.save!
+      end
       redirect_to event_select_meals_path(@event)
     else
       render :new

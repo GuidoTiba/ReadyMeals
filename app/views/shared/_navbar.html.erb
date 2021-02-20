@@ -11,7 +11,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="navbar-menu">
-        <div class="pr-2">Home</div>
+        <%= link_to "Menu", "#", class: "pr-2 text-decoration-none green", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="navbarDropdown">
           <%= link_to "My events", "#", class: "dropdown-item" %>

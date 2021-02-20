@@ -1,7 +1,7 @@
 <div class="white-background">
   <div class="container">
 
-    <h3 class="py-3">Welcome back!</h3>
+    <h3 class="pt-5 pb-3">Welcome back!</h3>
 
     <div class="light-green-block p-3">
       <h4>Your next event:</h4>
@@ -10,15 +10,23 @@
       <H4>INFO</H4>
     </div>
 
-    <div class="py-3">
-      <h5>Saved dietary preferences:</h5>
-      <h6>□ Vegetarian</h6>
-      <h6>□ No peanuts</h6>
+    <div id="form">
+
+      <h4 class="py-3 pt-5">Your saved dietary preferences</h4>
+
+      <% Option.all.each do |o| %>
+      <div class="oval clickable px-3"> <%= o.name %> </div>
+      <% end %>
+
+      <% Option.all.each do |o| %>
+      <%= simple_fields_for :options do |of| %>
+      <%= of.input o.name.to_sym, as: :hidden %>
+      <% end %>
+      <% end %>
     </div>
 
 
-
-    <div class="light-green-block p-3">
+    <div class="light-green-block p-3 bg-primary">
       <h4>Your last event:</h4>
       <%= @lastevent.title %>
       <h6 class="pt-4">Rate it!</h6>

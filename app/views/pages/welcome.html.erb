@@ -1,43 +1,42 @@
+<div class="white-background">
 
-<div class="green-background">
-
-  <h6 class="white d-flex justify-content-end pr-5 pt-5">Already a member?</h6>
-  <%= link_to "Login to your account", new_user_session_path, class: "white-link d-flex justify-content-end pr-5" %>
+  <h6 class="green d-flex justify-content-end pr-5 pt-5">Already a member?</h6>
+  <%= link_to "Login to your account", new_user_session_path, class: "green-link d-flex justify-content-end pr-5" %>
 
   <div class="container py-5">
-    <h1 class="white"><strong>Planned recipes at the ready.</strong></h1>
-    <h1 class="white"><strong>None of the hassle</strong></h1>
-    <p class="white">Get started in 1 minute</p>
+    <h1 class="green"><strong>Planned recipes at the ready.</strong></h1>
+    <h1 class="green"><strong>None of the hassle</strong></h1>
+    <p class="green">Get started in 1 minute</p>
     <%= link_to new_event_path, method: :get, id: :btn do %>
-    <div class="btn start">Get started</div>
+    <div class="btn btn-green">Get started</div>
     <% end %>
   </div>
 
 </div>
 
-<div class="white-background">
+<div class="green-background">
   <div class="container py-5">
-    <h3 class="green">Your <strong>shopping list and recipes</strong> tailored according to your needs, </h3>
-    <h3  class="green">all in one place.</h3>
+    <h3 class="white">Your <strong>shopping list and recipes</strong> tailored according to your needs, </h3>
+    <h3  class="white">all in one place.</h3>
   </div>
 </div>
 
 
 <div class="white-background">
-  <div class="container py-5">
+  <div class="container-fluid mx-5 py-5">
     <h3 class="green pb-3"><strong>New recipes added this week!</strong></h3>
-    <div class="cards">
+    <div class="cards overflow-hidden">
       <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/400x300/?yummy,food" %>
+        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
       </div>
       <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/400x300/?yummy,food" %>
+        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
       </div>
       <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/400x300/?yummy,food" %>
+        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
       </div>
       <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/400x300/?yummy,food" %>
+        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
       </div>
     </div>
   </div>

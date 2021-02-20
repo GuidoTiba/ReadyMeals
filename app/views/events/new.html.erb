@@ -1,26 +1,27 @@
 <div class="container text-center">
   <h3 class="py-3"><strong>Create your group</strong></h3>
 
-  <div id="form">
+  <div class="w-50 mx-auto">
     <%= simple_form_for @event do |e| %>
-      <%= e.input :title %>
-      <%= e.input :number_of_members, as: :numeric %>
+    <%= e.input :title %>
+    <%= e.input :number_of_members, as: :numeric %>
 
-      <h4 class="py-3 pt-5">Dietary restrictions</h4>
+    <h4 class="py-3 pt-5">Dietary restrictions</h4>
 
-      <% Option.all.each do |o| %>
-      <div class="oval clickable"> <%= o.name %> </div>
-      <% end %>
+    <% Option.all.each do |o| %>
+    <div class="oval clickable px-3"> <%= o.name %> </div>
+    <% end %>
 
-      <% Option.all.each do |o| %>
-        <%= simple_fields_for :options do |of| %>
+    <% Option.all.each do |o| %>
+      <%= simple_fields_for :options do |of| %>
         <%= of.input o.name.to_sym, as: :hidden %>
       <% end %>
     <% end %>
   </div>
 
   <div class="py-5">
-    <%= e.submit "Next →", class: "btn start" %>
+    <%= e.submit "Next →", class: "btn btn-green" %>
+
     <% end %>
   </div>
 

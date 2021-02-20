@@ -144,3 +144,11 @@
     text-decoration: none;
   }
 }
+
+#btn_back {
+  color: black!important;
+  &:hover {
+    text-decoration: none;
+    color: $green !important;
+  }
+}

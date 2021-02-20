@@ -1,5 +1,12 @@
-<ul>
-  <% @ingredients_hash.each do |ingredient_id, ammount| %>
-    <li><%= Ingredient.find(ingredient_id).name %>: <%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="d-flex my-3">
+    <div class="ml-auto p-0"><%= link_to " ↩︎ Back", event_path, id: :btn_back %></div>
+  </div>
+
+  <div class="list-group" id="list-tab" role="tablist">
+    <% @ingredients_hash.each do |ingredient_id, ammount| %>
+      <p class="list-group-item list-group-item-action" id="list-home-list" role="tab" aria-controls="home"><%= Ingredient.find(ingredient_id).name %>: <%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></p>
+    <% end %>
+  </div>
+
+</div>

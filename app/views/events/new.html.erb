@@ -10,7 +10,7 @@
       <div id="simple_field_for_event_options" class="d-flex align-items-center">
         <%= simple_fields_for :event_options do |of| %>
           <% Option.all.each do |o| %>
-            <%= of.input o.name.to_sym, label_html: {class: "oval clickable"}, as: :boolean, id: "event_options_#{o.name}" %>
+            <%= of.input o.name.to_sym, label_html: {class: "oval clickable "}, as: :boolean, id: "event_options_#{o.name}" %>
           <% end %>
         <% end %>
       </div>

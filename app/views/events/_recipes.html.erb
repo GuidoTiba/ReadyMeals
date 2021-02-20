@@ -12,6 +12,7 @@
         <% end %>
         <p><%= @event.meals_with_recipe(recipe).count %></p>
         <%= button_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "plus-btn" %>
+        <!-- link con remote true (AJAX lecture)-->
       </div>
     </div>
   </div>

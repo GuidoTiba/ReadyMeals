@@ -5,7 +5,7 @@ class MealsController < ApplicationController
 
   def create
     meal = Meal.new(event: @event, recipe: @recipe, date: Date.today)
-    if meal.save 
+    if meal.save
       redirect_to event_select_meals_path(@event)
       flash.alert = "Meal created"
     else
@@ -33,7 +33,7 @@ class MealsController < ApplicationController
   def set_event
     @event = Event.find(params[:event_id])
   end
-  
+
   def set_recipe
     @recipe = Recipe.find(params[:recipe_id])
   end

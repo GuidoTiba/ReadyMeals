@@ -8,4 +8,5 @@ class PagesController < ApplicationController
     @nextevent = Event.last
     @lastevent = Event.first
   end
+
 end

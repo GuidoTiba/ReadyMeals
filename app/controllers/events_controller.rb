@@ -31,7 +31,7 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @events = current_user.events
   end
 
   def show

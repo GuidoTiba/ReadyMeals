@@ -5,5 +5,7 @@
   <div class="row">
     <%= render 'recipes' %>
   </div>
-  <div class="btn start my-3">Next →</div>
+  <%= link_to events_path, method: :get, id: :btn do %>
+    <div class="btn start my-3">Next →</div>
+  <% end %>
 </div>

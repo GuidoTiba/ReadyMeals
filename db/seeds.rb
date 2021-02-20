@@ -44,7 +44,7 @@ puts "Creating options of dietary restrictions"
 @vegan = Option.create(name: "Vegan")
 @pescetarian = Option.create(name: "Pescetarian")
 @celiac = Option.create(name: "Celiac")
-@lactose_intolerant = Option.create(name: "Lactose Intolerant")
+@dairy_intolerant = Option.create(name: "Dairy Intolerant")
 
 puts "Joining recipe with its ingredients"
 @barbeque_meat = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @meat.id, ammount: 500, unit: "grams")
@@ -73,7 +73,7 @@ puts "Joining recipe with its ingredients"
 
 puts "joining recipe with its dietary restriction"
 @barbeque_celiac = RecipeOption.create(option_id: @celiac.id, recipe_id: @barbeque.id)
-@barbeque_lactose_intolerant = RecipeOption.create(option_id: @lactose_intolerant.id, recipe_id: @barbeque.id)
+@barbeque_dairy_intolerant = RecipeOption.create(option_id: @dairy_intolerant.id, recipe_id: @barbeque.id)
 
 @gnocchi_vegetarian = RecipeOption.create(option_id: @vegetarian.id, recipe_id: @gnocchi.id)
 @gnocchi_vegan = RecipeOption.create(option_id: @vegan.id, recipe_id: @gnocchi.id)
@@ -87,7 +87,7 @@ puts "joining recipe with its dietary restriction"
 @caesar_salad_celiac = RecipeOption.create(option_id: @celiac.id, recipe_id: @caesar_salad.id)
 
 @sushi_celiac = RecipeOption.create(option_id: @celiac.id, recipe_id: @sushi.id)
-@sushi_lactose_intolerant = RecipeOption.create(option_id: @lactose_intolerant.id, recipe_id: @sushi.id)
+@sushi_dairy_intolerant = RecipeOption.create(option_id: @dairy_intolerant.id, recipe_id: @sushi.id)
 
 
 

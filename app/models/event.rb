@@ -3,6 +3,7 @@ class Event < ApplicationRecord
   has_many :event_options
   has_many :options, through: :event_options
   has_many :meals
+  accepts_nested_attributes_for :event_options
 
   ## Validations
 

@@ -21,11 +21,16 @@ class EventsController < ApplicationController
   end
 
   def select_meals
-    @recipes = Recipe.all
-    @event.options.each do |option|
-      option.recipes.each do |recipe|
-        @recipes << recipe
+    if @event.options.empty? 
+      @recipes = Recipe.all
+    else
+      @recipes = []
+      @event.options.each do |option|
+        option.recipes.each do |recipe|
+          @recipes << recipe
+        end
       end
+      @recipes = @recipes.uniq
     end
   end
 

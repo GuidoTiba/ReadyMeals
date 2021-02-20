@@ -1,11 +1,12 @@
-<h2 class="text-center py-3"><%= @event.title %></h2>
-<h3 class="text-center py-3"><strong>Choose your meals!</strong></h3>
+<div class="white-background">
 
-<div class="container">
-  <div class="row">
-    <%= render 'recipes' %>
-  </div>
-  <%= link_to events_path, method: :get, id: :btn do %>
+  <h2 class="text-center py-3"><%= @event.title %></h2>
+  <h3 class="text-center py-3"><strong>Choose your meals!</strong></h3>
+
+  <div class="container">
+    <div class="row">
+      <%= render 'recipes' %>
+    </div>
     <div class="btn start my-3">Next →</div>
-  <% end %>
+  </div>
 </div>

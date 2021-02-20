@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to home_path, class: "navbar-brand" do %>
   <%= image_tag "readymeals-logo.png", class:"w-25" %>
   <% end %>
 
@@ -11,11 +11,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="navbar-menu">
-        <div class="pr-2">Home</div>
+        <%= link_to home_path, id:"home-btn" do %>
+          <div class="pr-2">Home</div>
+        <% end %>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="navbarDropdown">
-          <%= link_to "My events", "#", class: "dropdown-item" %>
-          <%= link_to "New event", "#", class: "dropdown-item" %>
+          <%= link_to "My events", events_path, class: "dropdown-item" %>
+          <%= link_to "New event", new_event_path, class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>

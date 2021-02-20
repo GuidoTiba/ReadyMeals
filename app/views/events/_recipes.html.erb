@@ -1,23 +1,23 @@
-<div class="cards">
-  <% @recipes.each do |recipe| %>
+  <div class="cards">
+    <% @recipes.each do |recipe| %>
 
-  <div>
-    <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="big-card">
+    <div class="card-containter">
+      <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="big-card">
 
-    <div class="d-flex justify-content-between align-items-center pt-3">
-      <p class="m-0"><%= recipe.name %></p>
-      <div class="d-flex align-items-center">
-        <% if recipe.meals.empty? %>
-          <p class="m-0">-</p>
-        <% else %>
-          <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount"%>
-        <% end %>
-        <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
-        <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount"%>
+      <div class="d-flex justify-content-between align-items-right pt-3">
+        <p class="m-0"><%= recipe.name %></p>
+        <div class="d-flex align-items-center">
+          <% if recipe.meals.empty? %>
+            <p class="m-0">-</p>
+          <% else %>
+            <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount"%>
+          <% end %>
+          <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
+          <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount"%>
+        </div>
+        <!-- link con remote true (AJAX lecture)-->
       </div>
-      <!-- link con remote true (AJAX lecture)-->
     </div>
-  </div>
 
-  <% end %>
-</div>
+    <% end %>
+  </div>

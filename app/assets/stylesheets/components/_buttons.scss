@@ -1,15 +1,15 @@
 .plus-btn {
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   padding: 5px;
-  background-color: rgba($color: #61ad43, $alpha: 0.6);
-  color: white;
+  background-color: rgba($color: white, $alpha: 0.6);
+  color: #61ad43;
   text-align: center;
   vertical-align: middle;
   border: none;
   flex-shrink:inherit;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .selectable {

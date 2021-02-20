@@ -1,18 +1,25 @@
+<div class="container py-5">
 
-<% @recipes.each do |recipe| %>
-  <div class="col-12 col-lg-4 text-center">
-    <div class="card-recipe">
-      <img src="https://source.unsplash.com/400x300/?yummy,food" alt="">
-      <p><%= recipe.name %></p>
-      <div class="selectable">
-        <% if recipe.meals.empty? %>
-          <div class="plus-btn">-</div>
-        <% else %>
-          <%= button_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "plus-btn" %>
-        <% end %>
-        <p><%= @event.meals_with_recipe(recipe).count %></p>
-        <%= button_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "plus-btn" %>
+  <div class="cards">
+    <% @recipes.each do |recipe| %>
+
+      <div>
+
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="big-card">
+
+        <div class="selectable pt-3">
+          <p><%= recipe.name %></p>
+          <% if recipe.meals.empty? %>
+            <div class="plus-btn">-</div>
+          <% else %>
+            <%= button_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "plus-btn" %>
+          <% end %>
+          <p><%= @event.meals_with_recipe(recipe).count %></p>
+          <%= button_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "plus-btn" %>
+        </div>
+
       </div>
-    </div>
+    <% end %>
   </div>
-<% end %>
+
+</div>

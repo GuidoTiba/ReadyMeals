@@ -6,22 +6,22 @@
       <%= e.input :title %>
       <%= e.input :number_of_members, as: :numeric %>
 
-    <h4 class="py-3 pt-5">Dietary restrictions</h4> 
+      <h4 class="py-3 pt-5">Dietary restrictions</h4>
 
-    <% Option.all.each do |o| %>
+      <% Option.all.each do |o| %>
       <div class="oval clickable"> <%= o.name %> </div>
-    <% end %>
+      <% end %>
 
-    <% Option.all.each do |o| %>
-      <%= simple_fields_for :options do |of| %>
+      <% Option.all.each do |o| %>
+        <%= simple_fields_for :options do |of| %>
         <%= of.input o.name.to_sym, as: :hidden %>
       <% end %>
     <% end %>
   </div>
 
   <div class="py-5">
-      <%= e.submit "Next →", class: "white btn start" %>
-  <% end %>
+    <%= e.submit "Next →", class: "white btn start" %>
+    <% end %>
   </div>
 
 </div>

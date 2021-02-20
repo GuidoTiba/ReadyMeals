@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   resources :events, only: [:new, :create, :index, :show] do
     resources :meals, only: [:create, :destroy]
   end
-
-
-  get 'events/:event_id/select_meals', to: 'events#select_meals', as: 'event_select_meals'
+  
+  
+  get 'events/:id/list_ingredients', to:'events#list_ingredients', as: 'ingredient_list'
+  get 'events/:id/select_meals', to: 'events#select_meals', as: 'event_select_meals'
 
 
 end

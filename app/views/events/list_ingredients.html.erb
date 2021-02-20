@@ -1,0 +1,5 @@
+<ul>
+  <% @ingredients_hash.each do |ingredient_id, ammount| %>
+    <li><%= Ingredient.find(ingredient_id).name %>: <%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></li>
+  <% end %>
+</ul>

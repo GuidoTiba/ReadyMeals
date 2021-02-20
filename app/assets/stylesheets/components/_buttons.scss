@@ -17,9 +17,22 @@
   display: flex;
 }
 
-.start {
+.btn-green {
+  background-color: white;
+  color: green;
+  border-color: #B3DEB4;
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
+}
+
+.btn-white {
   background-color: white;
   color: $green;
+  &:hover {
+    color: $green;
+  }
 }
 
 .drop-down {
@@ -73,27 +86,29 @@
   }
 }
 .clickable {
-    background-color: white;
-    color: #B3DEB4;
-    cursor: auto;
-    -webkit-user-select: auto;
-    padding: 6px;
-    border-radius: 20px;
-    margin-top: 6px;
-    margin-right: 6px;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    min-width: 70px;
-    font-size: 16px;
-    &:hover {
-      color: $green;
-    }
-    &:select {
-      color: white;
-      background-color: $green;
-    }
+  background-color: white;
+  color: #B3DEB4;
+  cursor: auto;
+  -webkit-user-select: auto;
+  padding: 6px;
+  border-radius: 20px;
+  margin-top: 6px;
+  margin-right: 6px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  min-width: 70px;
+  font-size: 16px;
   cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+}
+
+.clickable.active {
+  color: #433FB0;
+  background-color: rgb(236, 237, 254);
+  border-color: inherit;
 }
 
 .clickable i {
@@ -103,11 +118,6 @@
 
 .clickable:hover i {
   color: #52ACF4;
-}
-
-.clickable.active {
-  color: inherit;
-  border-color: inherit;
 }
 
 .clickable.active i {

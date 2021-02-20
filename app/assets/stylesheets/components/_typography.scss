@@ -15,9 +15,19 @@
   }
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+.green-link {
+  color: $green;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+  color: $green;
+
+  }
 }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
 
 

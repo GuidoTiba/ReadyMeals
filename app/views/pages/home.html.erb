@@ -1,18 +1,52 @@
 <div class="white-background">
   <div class="container">
 
-    <h3 class="pt-5 pb-3">Welcome back!</h3>
+    <h3 class="pt-4 pb-3 text-center"><strong>Welcome back!</strong></h3>
+    <div class="d-flex text-center pb-3">
+      <%= link_to events_path, class:"no-text-decoration" do %>
+        <div class="lilac-rectangular-card">
+          <%= image_tag "List_of_ingredients.png" %>
+          <p class="green text-center my-0 mx-2 flex-fill">Go to all my events</p>
+        </div>
+      <% end %>
 
-    <div class="light-green-block p-3">
-      <h4>Your next event:</h4>
-      <%= @nextevent.title %>
-      <h4>FOTO</h4>
-      <H4>INFO</H4>
+      <%= link_to new_event_path, class:"no-text-decoration" do %>
+        <div class="lilac-rectangular-card">
+          <%= image_tag "List_of_ingredients.png" %>
+          <p class="green text-center my-0 mx-2 flex-fill">New event!</p>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="light-violet-block p-3 text-cente">
+    <h4 class="mb-4">Event coming up next:</h4>
+      <div class="d-flex">
+        <div class="ml-4 mt-2 pr-4">
+          <h4 class="mb-4"> <%= @nextevent.title %></h4>
+          <h6 class="mb-2"> Dining members:  <%= @nextevent.number_of_members %></h6>
+          <h6 class="mb-2"> Meals to be prepared:  <%= @nextevent.meals.count %></h6>
+          <h6 class="mb-2"> Day meals:  <%= (@nextevent.meals.count)/2 %></h6>
+          <h6 class="mb-2"> Night meals:  <%= (@nextevent.meals.count)/2 %></h6>
+          <!-- <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3"> -->
+        </div>
+
+        <div class="pl-4 separator">
+          <h6>Shop at once for all you will need!</h6>
+          <%= link_to ingredient_list_path(@nextevent), class:"no-text-decoration" do %>
+            <div class="lilac-rectangular-card">
+              <%= image_tag "List_of_ingredients.png" %>
+              <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
     </div>
 
     <div id="form">
 
-      <h4 class="py-3 pt-5">Your saved dietary preferences</h4>
+      <h4 class="py-1 pt-3">Your saved dietary preferences</h4>
 
       <% Option.all.each do |o| %>
       <div class="oval clickable px-3"> <%= o.name %> </div>
@@ -25,10 +59,31 @@
       <% end %>
     </div>
 
+    <h4 class=my-4>Your favourites:</h4>
+    <div class="cards">
+      <div class="mb-5">
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
+        <p class="m-0 text-center"><%= @nextevent.meals.first.recipe.name %></p>
+      </div>
+      <div>
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
+        <p class="m-0 text-center"><%= @nextevent.meals.second.recipe.name %></p>
+      </div>
+      <div>
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
+        <p class="m-0 text-center"><%= @nextevent.meals.third.recipe.name %></p>
+      </div>
+      <div>
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
+        <p class="m-0 text-center"><%= @nextevent.meals.third.recipe.name %></p>
+      </div>
+    </div>
 
-    <div class="light-green-block p-3 bg-primary">
+    <div class="light-violet-block p-3">
       <h4>Your last event:</h4>
-      <%= @lastevent.title %>
+      <h4 class="mb-4"><%= @lastevent.title %></h4>
+      <h6 class="mb-2"> Dining members:  <%= @lastevent.number_of_members %></h6>
+      <h6 class="mb-2"> Meals prepared:  <%= @lastevent.meals.count %></h6>
       <h6 class="pt-4">Rate it!</h6>
       <h6>☆ ☆ ☆ ☆ ☆</h6>
     </div>

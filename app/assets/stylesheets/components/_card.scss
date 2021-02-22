@@ -1,26 +1,12 @@
-.card-recipe {
-  height: 80px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding-right: 5px;
-  margin-bottom: 20px;
-}
-
-.card-recipe img {
-  height: 100%;
-  object-fit: contain;
-}
-
-.card-recipe p {
-  margin: auto;
-}
-
 .cards {
   display: grid;
   grid-gap: 20px;
   height: 100%;
+}
+
+.card-containter {
+  height: 400px;
+  width: 350px;
 }
 
 .mini-card  {
@@ -41,10 +27,6 @@
   height: 130px;
   width: 100%;
   object-fit: cover;
-}
-
-.mini-card .mini-card-infos {
-  padding: 8px;
 }
 
 .rectangular-card {
@@ -68,21 +50,6 @@
   padding: 15px;
 }
 
-.light-green-block {
-  margin-top: 0px;
-  margin-right: auto;
-  padding-top: 2px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  background-color: rgb(236, 237, 254);
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 26px;
-}
 
 .big-card {
   background: rgb(221, 221, 221) !important;
@@ -92,7 +59,67 @@
   width: 350px;
 }
 
-.card-containter {
-  height: 400px;
-  width: 350px;
+
+.light-violet-block {
+  margin-top: 0px;
+  margin-right: auto;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 26px;
+  background-color: $lilac;
+  color: $dark-violet;
 }
+
+.lilac-rectangular-card {
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  border: 1px transparent;
+  &:hover {
+    border: inherit!important;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  }
+}
+
+.lilac-rectangular-card > img {
+  border-radius: 12px;
+  height: 100%;
+  padding: 8px;
+}
+
+.separator {
+  border-left: solid 1.5px $dark-violet;
+}
+
+// .card-recipe {
+//   height: 80px;
+//   background-color: white;
+//   display: flex;
+//   align-items: center;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   padding-right: 5px;
+//   margin-bottom: 20px;
+// }
+
+// .card-recipe img {
+//   height: 100%;
+//   object-fit: contain;
+// }
+
+// .card-recipe p {
+//   margin: auto;
+// }

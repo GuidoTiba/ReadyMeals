@@ -11,7 +11,7 @@
 
 .btn-green {
   background-color: white;
-  color: green;
+  color: $green;
   border-color: #B3DEB4;
   &:hover {
     background-color: $green;
@@ -130,9 +130,9 @@
 }
 
 #home-btn {
-  color: $green;
+  color: grey;
   &:hover{
-    color: $black;
+    color: $green;
     text-decoration: none;
   }
 }

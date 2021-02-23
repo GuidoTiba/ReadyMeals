@@ -16,21 +16,24 @@ html, body {
 }
 
 .green-speckled-background {
-  background: image-url('green_speckles.png') no-repeat;
+  background: image-url('green_speckles.png');
+  background-size: cover;
   height: 500px;
   margin-right: 0px;
   margin-left: 0px;
 }
 
 .grey-speckled-background {
-  background: image-url('grey_speckles.png') no-repeat;
+  background: image-url('grey_speckles.png');
+  background-size: cover;
   height: 500px;
   margin-right: 0px;
   margin-left: 0px;
 }
 
 .login-background {
-  background: image-url('login_background.png') no-repeat;
+  background: image-url('login_background.png');
+  background-size: cover;
   height: 100%;
   margin-right: 0px;
   margin-left: 0px;

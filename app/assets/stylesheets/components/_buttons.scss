@@ -4,7 +4,6 @@
   font-weight: bold;
   &:hover {
     color: #433FB0;
-
     border-color: #433FB0;
   }
 }
@@ -20,10 +19,11 @@
 }
 
 .btn-white {
-  background-color: white;
-  color: $green;
+  background-color:$green ;
+  color: white;
   &:hover {
-    color: $green;
+    font-weight: bold;
+    color: white;
   }
 }
 

@@ -1,5 +1,8 @@
 .green {
-  color: $green
+  color: $green;
+  &:hover {
+    color: $green;
+  }
 }
 
 .white {
@@ -20,14 +23,14 @@
   &:hover {
     text-decoration: none;
     font-weight: bold;
-  color: $green;
+    color: $green;
 
   }
 }
 
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
+html, body {
+  height: 100%;
+  width: 100%;
+}
 
 

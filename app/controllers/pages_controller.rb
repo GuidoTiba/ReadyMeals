@@ -5,18 +5,18 @@ class PagesController < ApplicationController
   end
 
   def home
-    @nextevent = Event.last
-    @lastevent = Event.first
+    @nextevent = Event.new(title: "Trip to Mar del Plata", number_of_members: 8)
+    @nextevent.user = current_user
+    @nextevent.save
+    EventOption.create!(option_id: Option.first.id, event_id: @nextevent.id)
+    Meal.create!(event_id: @nextevent.id, recipe_id: Recipe.first.id, date: Date.today)
 
+    @lastevent = Event.new(title: "Trip to Mar del Plata", number_of_members: 8)
+    @lastevent.user = current_user
+    @lastevent.save
+    EventOption.create!(option_id: Option.first.id, event_id: @lastevent.id)
+    Meal.create!(event_id: @lastevent.id, recipe_id: Recipe.first.id, date: Date.today)
 
-        # @nextevent = Event.create(title: "Trip to Mar del Plata", number_of_members: 8, id: 1000)
-    # @nextevent_eventoption = EventOption.create(option_id: @vegetarian.id, event_id: @nextevent.id, id: 1002)
-    # @nextevent_meal = Meal.create(event_id: @nextevent.id, recipe_id: @pizza.id, id: 1003)
-
-    # @lastevent = Event.create(title: "Trip to Mar del Plata", number_of_members: 8, id: 1004)
-    # @lastevent_eventoption = EventOption.create(option_id: @vegetarian.id, event_id: @lastevent.id, id: 1005)
-    # @lastevent_meal = Meal.create(event_id: @lastevent.id, recipe_id: @pizza.id, id: 1006)
-    # #el coming up y last event para poder citarlos
   end
 
 end

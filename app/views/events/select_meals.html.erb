@@ -1,14 +1,48 @@
+
 <div class="white-background">
 
-  <h2 class="text-center py-3"><%= @event.title %></h2>
+  <h2 class="text-center py-3 green"><%= @event.title %></h2>
   <h3 class="text-center py-3"><strong>Choose your meals!</strong></h3>
 
-  <div class="container">
-    <div class="row">
-      <%= render 'recipes' %>
+  <div class="block">
+    <%= render 'recipes' %>
+    <div class="text-center">
+      <%= link_to event_path(@event), method: :get, id: :btn do %>
+        <div class="btn btn-green my-3">Next →</div>
+      <% end %>
     </div>
-    <%= link_to event_path(@event), method: :get, id: :btn do %>
-      <div class="btn start my-3">Next →</div>
-    <% end %>
+
   </div>
+
+  <div class="sidebar-loco">
+    <div class="container">
+
+      <h4 class="pt-5 text-center">Your meals for </h4>
+      <h4 class="pb-5 text-center"><%= @event.title %></h4>
+
+      <% @recipes.each do |recipe| %>
+        <div class="d-flex py-3 ml-3">
+          <% unless recipe.meals.empty? %>
+            <p class="m-0 green"><%= recipe.name %></p>
+            <div class="d-flex align-items-center">
+              <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount"%>
+              <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
+              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount"%>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+      <h6 class="ml-3">Total number of meals: <%= @recipes.count %> </h6>
+
+      <div class="text-center">
+        <%= link_to event_path(@event), method: :get, id: :btn do %>
+          <div class="btn btn-green my-3">Next →</div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+
 </div>
+

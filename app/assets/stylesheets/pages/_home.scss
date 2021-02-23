@@ -20,21 +20,21 @@ html, body {
 }
 
 .green-speckled-background {
-  background-image: url(green_speckles.png);
+  background: image-url('green_speckles.png');
   height: 500px;
   margin-right: 0px;
   margin-left: 0px;
 }
 
 .grey-speckled-background {
-  background-image: url(grey_speckles.png);
+  background: image-url('grey_speckles.png');
   height: 500px;
   margin-right: 0px;
   margin-left: 0px;
 }
 
 .login-background {
-  background-image: url(login_background.png);
+  background: image-url('login_background.png');
   height: 100%;
   margin-right: 0px;
   margin-left: 0px;

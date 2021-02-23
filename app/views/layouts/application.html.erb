@@ -25,9 +25,10 @@
       </div>
 
       <div class="footer-help">
-        <p class="mx-2"> <% link_to help_path%>Help</p>
-        <p class="mx-2"> <% link_to about_path %> About</p>
-        <p class="mx-2"> <% link_to contact_path %> Contact</p>
+        <p class="mx-2"> <%= link_to "Help", help_path, class: "footer"%>  </p>
+        <p class="mx-2" > <%= link_to "About", about_path, class: "footer" %></p>
+        <p class="mx-2"> <%= link_to "Contact", contact_path, class: "footer" %></p>
+        
       </div>
 
       <p> ® Ready Meals 2021</p>

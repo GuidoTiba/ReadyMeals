@@ -3,6 +3,7 @@ RecipeOption.destroy_all
 RecipeIngredient.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
+EventOption.destroy_all
 Option.destroy_all
 
 

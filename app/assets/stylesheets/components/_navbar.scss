@@ -7,6 +7,14 @@
   padding-right: 80px !important;
 }
 
+.navbar-welcome {
+  border-bottom: 1px transparent!important;
+}
+
+.navbar-welcome img {
+  right: 0px;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -22,7 +30,7 @@
 .navbar-menu {
   appearance: none;
   background: transparent;
-  border: 1px solid #B3DEB4;
+  border: 1px solid rgb(221, 221, 221);
   color: #222222;
   cursor: pointer;
   display: inline-flex;
@@ -45,7 +53,6 @@
   vertical-align: middle;
   transition: box-shadow 0.2s ease;
   z-index: 1;
-  color:$green;
   &:hover {
     -webkit-box-align: center;
     appearance: none;

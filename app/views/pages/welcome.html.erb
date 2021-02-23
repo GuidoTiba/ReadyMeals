@@ -1,44 +1,92 @@
 <div class="white-background">
-
-  <h6 class="green d-flex justify-content-end pr-5 pt-5">Already a member?</h6>
+<!--   <h6 class="green d-flex justify-content-end pr-5 pt-5">Already a member?</h6>
   <%= link_to "Login to your account", new_user_session_path, class: "green-link d-flex justify-content-end pr-5" %>
-
-  <div class="container py-5">
-    <h1 class="green"><strong>Planned recipes at the ready.</strong></h1>
-    <h1 class="green"><strong>None of the hassle</strong></h1>
-    <p class="green">Get started in 1 minute</p>
-    <%= link_to new_event_path, method: :get, id: :btn do %>
-    <div class="btn btn-green">Get started</div>
+ -->
+  <div class="block py-5 green-speckled-background text-center">
+    <%= link_to home_path, class: "navbar-brand pb-5" do %>
+      <%= image_tag "readymeals-logo.png", class:"w-25" %>
     <% end %>
+    <div class="pt-5 pb-3">
+      <h1 class="green"><strong>Planned recipes at the ready.</strong></h1>
+      <h1 class="green"><strong>None of the hassle</strong></h1>
+    </div>
+    <div class="d-flex justify-content-center">
+      <% if user_signed_in? %>
+        <%= link_to home_path, method: :get, id: :btn do %>
+          <div class="btn btn-green">Get started</div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, method: :get, id: :btn do %>
+          <div class="btn btn-green">Get started</div>
+        <% end %>
+      <% end %>
+      <div class="green ml-2 my-auto">in 1 minute</div>
+    </div>
+<!--     <div class="d-flex justify-content-center mt-2">
+      <p class="green my-auto mx-2"> or </p>
+      <%= link_to "Login", home_path, class: "green-link d-flex my-auto justify-content-center" %>
+    </div> -->
   </div>
 
-</div>
 
-<div class="green-background">
-  <div class="container py-5">
-    <h3 class="white">Your <strong>shopping list and recipes</strong> tailored according to your needs, </h3>
-    <h3  class="white">all in one place.</h3>
+  <div class="green-background d-flex justify-content-center">
+    <div class="block py-5 align-self-center">
+      <h3 class="white pt-5">Your <strong>shopping list and recipes</strong></h3>
+      <h3 class="white"> tailored according to your needs, </h3>
+      <h3  class="white pb-5">all in one place.</h3>
+    </div>
+      <%= image_tag "sample_food.png", class: "sample_food my-5" %>
+  <!--   <div class="lilac-rectangular-card white-background mt-5">
+      <%= image_tag "List_of_ingredients.png" %>
+      <p class="green text-center my-0 mx-2">List of all ingredients</p>
+    </div> -->
   </div>
-</div>
 
+  <div class="white-background">
+    <div class="block py-5">
+      <h3 class="green pb-5"><strong>Our all time favourites</strong></h3>
+      <div class="cards overflow-hidden">
 
-<div class="white-background">
-  <div class="container-fluid mx-5 py-5">
-    <h3 class="green pb-3"><strong>New recipes added this week!</strong></h3>
-    <div class="cards overflow-hidden">
-      <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
-      </div>
-      <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
-      </div>
-      <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
-      </div>
-      <div class="big-card">
-        <%= image_tag "https://source.unsplash.com/350x350/?yummy,food" %>
+      <% 8.times do %>
+        <div class="d-flex">
+          <%= image_tag "https://source.unsplash.com/80x80/?yummy,food", class: "small-card" %>
+          <div class="align-self-center ml-3">
+            <h5 class="green">Pecan pie</h5>
+            <h6 class="lilac">4 ingredients</h6>
+          </div>
+        </div>
+      <% end %>
+
       </div>
     </div>
   </div>
-</div>
 
+  <div class="white-background">
+    <div class="block  py-5">
+      <h3 class="green pb-3"><strong>New recipes added this week!</strong></h3>
+      <div class="cards overflow-hidden">
+      <% 4.times do %>
+        <div class="card-containter">
+          <%= image_tag "https://source.unsplash.com/350x350/?yummy,food", class: "big-card" %>
+          <h5 class="green pt-3">Pecan pie</h5>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="white-background">
+    <div class="block py-5 text-center">
+      <h1 class="green"><strong>Join the millions already using ReadyMeals!</strong></h1>
+      <p class="green">Explore a world of recipes you didn't even know existed</p>
+      <div class="d-flex justify-content-center">
+        <%= link_to new_event_path, method: :get, id: :btn do %>
+          <div class="btn btn-green">Get started</div>
+        <% end %>
+        <p class="green my-auto mx-3"> or </p>
+        <%= link_to "Login", new_user_session_path, class: "green-link d-flex my-auto" %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    event_option_params.to_h.select {|_, value | value =="1" }.map{|option, value| Option.find_by(name: option).id }.each do |id| 
+    event_option_params.to_h.select {|_, value | value =="1" }.map{|option, value| Option.find_by(name: option).id }.each do |id|
       @event.event_options.build(option_id: id)
     end
 
@@ -20,7 +20,7 @@ class EventsController < ApplicationController
   end
 
   def select_meals
-    if @event.options.empty? 
+    if @event.options.empty?
       @recipes = Recipe.all
     else
       @recipes = []
@@ -63,8 +63,8 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:title, :number_of_members)
   end
-  
+
   def event_option_params
     params["event_options"].permit!
-  end 
+  end
 end

@@ -3,8 +3,8 @@
 
   <div class="w-50 mx-auto">
     <%= simple_form_for @event do |e| %>
-    <%= e.input :title %>
-    <%= e.input :number_of_members, as: :numeric %>
+      <%= e.input :title %>
+      <%= e.input :number_of_members, as: :numeric %>
 
       <h4 class="py-3 pt-5">Dietary restrictions</h4>
       <div id="simple_field_for_event_options" class="d-flex align-items-center">
@@ -14,12 +14,9 @@
           <% end %>
         <% end %>
       </div>
-  </div>
-
-  <div class="py-5">
-    <%= e.submit "Next →", class: "btn btn-green" %>
-
+      <div class="py-5">
+        <%= e.submit "Next →", class: "btn btn-green" %>
+      </div>
     <% end %>
   </div>
-
 </div>

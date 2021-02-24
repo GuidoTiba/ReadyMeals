@@ -8,12 +8,26 @@ Option.destroy_all
 
 puts "Creating recipes"
 @barbeque = Recipe.create(name: "Barbeque", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
+@barbeque.photo.attach(io: file, filename: 'barbeque.jpg', content_type: 'image/jpg')
+
 @gnocchi = Recipe.create(name: "Gnocchi", instructions: "Add sauce to the gnocchi", details: "So good")
+@gnocchi.photo.attach(io: file, filename: 'gnochi.jpg', content_type: 'image/jpg')
+
 @pizza = Recipe.create(name: "Pizza", instructions: "Put pizza in the oven", details: "Put the sauce, the mozzarela and tada")
+@pizza.photo.attach(io: file, filename: 'pizza.jpg', content_type: 'image/jpg')
+
 @caesar_salad = Recipe.create(name: "Caesar salad", instructions: "Mix greens with chicken and add caesar dressing", details: "The dressing is the key")
+@caesar_salad.photo.attach(io: file, filename: 'caesar_salad.jpg', content_type: 'image/jpg')
+
 @sushi = Recipe.create(name: "Sushi", instructions: "Buy the sushi", details: "Don't forget the soy sauce")
+@sushi.photo.attach(io: file, filename: 'sushi.jpg', content_type: 'image/jpg')
+
 @ravioli = Recipe.create(name: "Ravioli", instructions: "Boil water and add the ravioli", details: "Choose savour carefully")
-@empanadas = Recipe.create(name: "Asado", instructions: "Put empanadas in the oven", details: "An argentine classic")
+@ravioli.photo.attach(io: file, filename: 'ravioli.jpg', content_type: 'image/jpg')
+
+@empanadas = Recipe.create(name: "Empanadas", instructions: "Put empanadas in the oven", details: "An argentine classic")
+@empanadas.photo.attach(io: file, filename: 'empanadas.jpg', content_type: 'image/jpg')
+
 
 
 puts "Creating ingredients"

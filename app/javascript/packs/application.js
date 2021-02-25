@@ -27,10 +27,13 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import "../scripts/index"
+import { init_clickable_checkboxes } from "../scripts/clickable_checkboxes"
+import { init_sidebar_loco } from "../scripts/sidebar_loco";
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  init_clickable_checkboxes();
+  init_sidebar_loco();
 });
-

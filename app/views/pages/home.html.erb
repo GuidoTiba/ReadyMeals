@@ -95,15 +95,35 @@
       </div>
 
       <h4 class=my-4>Your favourites:</h4>
-      <div class="cards">
-        <div class="mb-5">
-          <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
-          <p class="m-0 text-center"><%= @nextevent.meals.first.recipe.name %></p>
-        </div>
-        <div>
-          <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
+      <div class="cards pb-4">
 
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Sushi").name %></h5>
         </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Mousse").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Mousse").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Barbeque").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Empanadas").name %></h5>
+        </div>
+
+
+
       </div>
 
       <div class="light-violet-block p-3">

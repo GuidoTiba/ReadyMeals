@@ -1,18 +1,18 @@
 .cards {
-  display: grid;
+  display: flex;
   grid-gap: 20px;
   height: 100%;
 }
 
 .card-containter {
-  height: 400px;
-  width: 350px;
+  width: 100%;
 }
 
 .mini-card  {
   background-size: cover;
   background-position: center;
   height: 180px;
+  width: 250px;
   justify-content: center;
   align-items: center;
   font-size: 20px;

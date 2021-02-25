@@ -96,14 +96,6 @@
 
       <h4 class=my-4>Your favourites:</h4>
       <div class="cards pb-4">
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
-        </div>
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Mousse").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Mousse").name %></h5>
-        </div>
 
         <div>
           <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "mini-card" %>
@@ -111,8 +103,18 @@
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Chocotorta").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocotorta").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Mousse").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Mousse").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "mini-card" %>
+          <h5 class="green pt-3"><%= @recipes.find_by(name: "Barbeque").name %></h5>
         </div>
 
         <div>

@@ -58,15 +58,15 @@
       <h3 class="green pb-3"><strong>Discover new recipes and add them to your favourites!</strong></h3>
       <div class="cards overflow-hidden">
 
-        <% 8.times do %>
-        <div class="d-flex">
-          <%= image_tag "https://source.unsplash.com/80x80/?yummy,food", class: "small-card" %>
-          <div class="align-self-center ml-3">
-            <h5 class="green">Pecan pie</h5>
-            <h6 class="grayish">4 ingredients</h6>
+        <% @recipes.each do |recipe| %>
+          <div class="d-flex">
+            <%= cl_image_tag recipe.photo.key, class: "small-card" %>
+            <div class="align-self-center ml-3">
+              <h5 class="green"><%= recipe.name %></h5>
+              <h6 class="lilac"><%= recipe.ingredients.count%> ingredients</h6>
+            </div>
+            <div class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5">♡</div>
           </div>
-          <div class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5">♡</div>
-        </div>
         <% end %>
 
       </div>

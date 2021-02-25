@@ -5,6 +5,7 @@ class Recipe < ApplicationRecord
   has_many :options, through: :recipe_options
   has_many :meals
   has_many :events, through: :meals
+  has_one_attached :photo
 
   ## Validations
 

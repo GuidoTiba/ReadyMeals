@@ -6,9 +6,10 @@
     <%= link_to home_path, class: "navbar-brand pb-5" do %>
       <%= image_tag "readymeals-logo.png", class:"w-25" %>
     <% end %>
-    <div class="pt-5 pb-3">
-      <h1 class="green"><strong>Planned recipes at the ready.</strong></h1>
-      <h1 class="green"><strong>None of the hassle</strong></h1>
+    <div class="block py-3 text-center">
+      <h1 class="green"><strong>Join the millions using ReadyMeals</strong></h1>
+      <h1 class="green"><strong>and plan your meals in under 2 minutes!</strong></h1>
+      <p class="green pt-2">Explore a world of recipes you didn't even know existed</p>
     </div>
     <div class="d-flex justify-content-center">
       <% if user_signed_in? %>
@@ -31,9 +32,9 @@
 
   <div class="green-background d-flex justify-content-center">
     <div class="block py-5 align-self-center">
-      <h3 class="white pt-5">Your <strong>shopping list and recipes</strong></h3>
-      <h3 class="white"> tailored according to your needs, </h3>
-      <h3  class="white pb-5">all in one place.</h3>
+      <h2 class="white pt-5">Your <strong>shopping list and recipes</strong></h2>
+      <h2 class="white"> tailored according to your needs, </h2>
+      <h2  class="white pb-5">all in one place.</h2>
     </div>
       <%= image_tag "sample_food.png", class: "sample_food my-5" %>
   <!--   <div class="lilac-rectangular-card white-background mt-5">
@@ -76,17 +77,19 @@
   </div>
 
   <div class="white-background">
-    <div class="block py-5 text-center">
-      <h1 class="green"><strong>Join the millions using ReadyMeals</strong></h1>
-      <h1 class="green"><strong>and plan your meals in under 2 minutes!</strong></h1>
-      <p class="green">Explore a world of recipes you didn't even know existed</p>
+    <div class="pt-5 pb-3 block py-3 text-center">
+      <h1 class="green"><strong>Planned recipes at the ready.</strong></h1>
+      <h1 class="green"><strong>None of the hassle</strong></h1>
+      <p class="green pt-2">Decide what to eat for days in under 2 minutes!</p>
+    </div>
+
       <div class="d-flex justify-content-center">
         <%= link_to new_event_path, method: :get, id: :btn do %>
           <div class="btn btn-green">Get started</div>
         <% end %>
         <p class="green my-auto mx-3"> or </p>
         <%= link_to "Login", new_user_session_path, class: "green-link d-flex my-auto" %>
-      </div>
+
     </div>
   </div>
 

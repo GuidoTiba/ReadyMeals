@@ -4,7 +4,25 @@
   <div class="w-50 mx-auto">
     <%= simple_form_for @event do |e| %>
       <%= e.input :title, label: 'Group Name' %>
-      <%= e.input :number_of_members, as: :numeric %>
+      <%= e.input :number_of_members, as: :numeric, as: :hidden %>
+      <label for="Number of Members">Number of members: </label>
+
+      <div class="row">
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-1">1</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-2">2</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-3">3</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-4">4</div>
+        
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-5">5</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-6">6</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-7">7</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-8">8</div>
+        
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-9">9</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-10">10</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-11">11</div>
+        <div class="col-3 number-box btn btn-green oval clickable mx-0" id="number-12">12</div>
+      </div>
 
       <h4 class="py-3 pt-5">Dietary Preferences</h4>
       <div id="simple_field_for_event_options" class="d-flex align-items-center">

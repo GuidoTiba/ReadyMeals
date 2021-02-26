@@ -159,3 +159,10 @@
     cursor: pointer;
   }
 }
+
+.number-box {
+  width: 30px;
+  &:hover{
+    background-color: white !important;
+  }
+}

@@ -12,11 +12,11 @@
       <% @recipes.each do |recipe| %>
         <% unless @event.meals_with_recipe(recipe).empty? %>
           <div class="d-flex py-3 ml-3">
-            <p class="m-0 mr-2 green"><%= recipe.name %></p>
-            <div class="d-flex align-items-center">
-              <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
-              <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
-              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
+            <p class="m-0 mr-2 align-self-center"><%= recipe.name %></p>
+            <div class="d-flex align-self-center ml-auto p-2">
+              <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
+              <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
+              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
             </div>
           </div>
         <% end %>

@@ -31,6 +31,8 @@ import { init_clickable_checkboxes } from "../scripts/clickable_checkboxes"
 import { init_sidebar_loco } from "../scripts/sidebar_loco";
 import { init_member_numbers } from "../scripts/member-numbers";
 
+Turbolinks.scroll = {};
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -38,4 +40,27 @@ document.addEventListener('turbolinks:load', () => {
   init_clickable_checkboxes();
   init_sidebar_loco();
   init_member_numbers();
+  
+  // A continuación, rutina para evitar el scroll en links que tengan 'data-turbolinks-scroll': false
+    const elements = document.querySelectorAll("[data-turbolinks-scroll]");
+    
+    elements.forEach(function(element){
+      
+      element.addEventListener("click", ()=> {
+        Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
+      });
+      
+      element.addEventListener("submit", ()=> {
+        Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
+      });
+      
+    });
+    
+    if (Turbolinks.scroll['top']) {
+      document.scrollingElement.scrollTo(0, Turbolinks.scroll['top']);
+    }
+    
+    Turbolinks.scroll = {};
+  // Hasta acá
+  
 });

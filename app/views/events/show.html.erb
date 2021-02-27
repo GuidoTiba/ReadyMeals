@@ -1,26 +1,32 @@
-<div class="white-background">
-  <div class="container">
+ <div id="page-container">
+   <div id="content-wrap">
 
-    <h2 class="py-5 text-center"><%= @event.title %></h2>
-    <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
-      <div class="rectangular-card">
-        <%= image_tag "List_of_ingredients.png" %>
-        <h4 class="green text-center my-0 mx-2 flex-fill">List of all ingredients</h4>
-      </div>
-    <% end %>
-    <div class="cards my-5">
+    <div class="white-background">
+      <div class="container">
 
-      <% @event.meals.each do |meal| %>
-        <div class="mini-card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg">
-          <div class="mini-card-infos">
-            <p><%= meal.recipe.name %></p>
+        <h2 class="py-5 text-center"><%= @event.title %></h2>
+        <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
+          <div class="rectangular-card">
+            <%= image_tag "List_of_ingredients.png" %>
+            <h4 class="green text-center my-0 mx-2 flex-fill">List of all ingredients</h4>
           </div>
+        <% end %>
+        <div class="cards my-5">
+
+          <% @event.meals.each do |meal| %>
+            <div class="mini-card">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg">
+              <div class="mini-card-infos">
+                <p><%= meal.recipe.name %></p>
+              </div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
 
+   </div>
+   <footer id="footerbottom"></footer>
+ </div>
 
 
-  </div>
-</div>

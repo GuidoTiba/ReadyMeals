@@ -6,8 +6,8 @@
     </div>
   </div>
 
-  <div id="sidebox" style="position: fixed;   right: 0px;">
-    <div class="card card-body sidebox">
+  <div id="sidebox" style="position: fixed;right: 0px;">
+    <div class="card sidebox">
       <h4 class="pt-3 text-center">Summary</h4>
       <% @recipes.each do |recipe| %>
         <% unless @event.meals_with_recipe(recipe).empty? %>
@@ -37,7 +37,7 @@
 <!-- <div>
     <a class="btn btn-green" id="sidebar-toggle-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Cart</a>
     <div class="collapse sidebox" id="collapseExample">
-      <div class="card card-body">
+      <div class="card">
         <h4 class="pt-3 text-center">Summary</h4>
         <% @recipes.each do |recipe| %>
           <% unless @event.meals_with_recipe(recipe).empty? %>

@@ -12,7 +12,7 @@
 
       <%= link_to new_event_path, class:"no-text-decoration" do %>
       <div class="lilac-rectangular-card ml-4">
-        <%= image_tag "yellow_plus.png" %>
+        <%= image_tag "new-event.png" %>
         <p class="green my-0 mx-2 flex-fill">New event!</p>
       </div>
       <% end %>
@@ -49,7 +49,7 @@
               <% @nextevent.event_options.each do |option| %>
                 <p><%= option.option.name %></p>
               <% end %>
-        
+
       </div>
 
     </div>
@@ -68,7 +68,7 @@
               <h6 class="lilac"><%= recipe.ingredients.count%> ingredients</h6>
             </div>
             <div><i class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5 corazon fas fa-heart"></i> </div>
-            
+
           </div>
         <% end %>
 

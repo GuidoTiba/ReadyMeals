@@ -18,14 +18,14 @@
             </ul>
         </div>
         <div class="d-flex justify-content-between align-items-right pt-3">
-          <p class="m-0 green"><%= recipe.name %></p>
+          <p class="m-0 align-self-center"><%= recipe.name %></p>
           <div class="d-flex align-items-center">
             <% if @event.meals_with_recipe(recipe).empty? %>
               <%= link_to "Add", event_meals_path(@event, recipe_id: recipe), method: :post, class: "btn oval", id: "add", remote: true, 'data-turbolinks-scroll': false  %>
             <% else %>
-              <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
+              <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
               <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
-              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
+              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
             <% end %>
           </div>
         </div>

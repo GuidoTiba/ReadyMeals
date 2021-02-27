@@ -1,5 +1,5 @@
   <div class="cards">
-    <div class="card-containter row" style="grid-gap: 20px;">
+    <div class="card-containter row big-cards-setup">
       <% @recipes.each do |recipe| %>
       <div>
         <%=  cl_image_tag recipe.photo.key, height: 300, width: 400, class: "big-card" %>

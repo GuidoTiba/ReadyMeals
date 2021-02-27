@@ -64,5 +64,5 @@ document.addEventListener('turbolinks:load', () => {
     
     Turbolinks.scroll = {};
   // Hasta acá
-  
+  });
 });

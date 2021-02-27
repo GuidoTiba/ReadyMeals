@@ -50,13 +50,16 @@
   padding: 15px;;
 }
 
-
 .big-card {
   background: rgb(221, 221, 221) !important;
   overflow: hidden !important;
   border-radius: 8px !important;
-  height: 350px;
-  width: 350px;
+  height: 340px;
+  width: 340px;
+}
+
+.big-cards-setup {
+  grid-gap: 60px;
 }
 
 .small-card {

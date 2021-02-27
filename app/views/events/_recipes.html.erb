@@ -9,14 +9,13 @@
             <% if recipe.meals.empty? %>
               <p class="m-0">-</p>
             <% else %>
-              <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount"%>
+              <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
             <% end %>
             <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
-            <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount"%>
+            <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn-amount", remote: true, 'data-turbolinks-scroll': false  %>
           </div>
-          <!-- link con remote true (AJAX lecture)-->
         </div>
-        </div>
+      </div>
       <% end %>
     </div>
   </div>

@@ -138,3 +138,20 @@
 // .card-recipe p {
 //   margin: auto;
 // }
+
+.hover-recipe-details {
+  background: white;
+  color: black;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: 0;
+  overflow: scroll;
+  &:hover{
+    opacity: 1;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+  }
+}

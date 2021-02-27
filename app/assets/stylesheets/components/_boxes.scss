@@ -1,0 +1,19 @@
+.sidebox {
+  width: 350px;
+  height: 100%;
+  border-color: transparent;
+  right: 0px;
+}
+
+div#sidebox {
+  padding-left: 1px;
+  position: relative;
+  background-color:#aaaaaa;
+}
+div#sidebox:before{
+  content: "";
+  position: absolute;
+  bottom:25%;
+  border-right: 1px solid red;
+}
+

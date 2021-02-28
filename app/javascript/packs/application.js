@@ -30,7 +30,7 @@ import "bootstrap";
 import { init_clickable_checkboxes } from "../scripts/clickable_checkboxes"
 import { init_sidebar_loco } from "../scripts/sidebar_loco";
 import { init_member_numbers } from "../scripts/member-numbers";
-import { init_corazones } from "../scripts/corazones";
+import { init_hearts } from "../scripts/hearts";
 
 Turbolinks.scroll = {};
 
@@ -41,27 +41,27 @@ document.addEventListener('turbolinks:load', () => {
   init_clickable_checkboxes();
   init_sidebar_loco();
   init_member_numbers();
-  init_corazones();
+  init_hearts();
   const elements = document.querySelectorAll("[data-turbolinks-scroll]");
-  
+
   elements.forEach(function(element){
-    
+
     elements.forEach(function(element){
-      
+
       element.addEventListener("click", ()=> {
         Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
       });
-      
+
       element.addEventListener("submit", ()=> {
         Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
       });
-      
+
     });
-    
+
     if (Turbolinks.scroll['top']) {
       document.scrollingElement.scrollTo(0, Turbolinks.scroll['top']);
     }
-    
+
     Turbolinks.scroll = {};
   // Hasta acá
   });

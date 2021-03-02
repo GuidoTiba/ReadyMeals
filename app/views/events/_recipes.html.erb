@@ -24,7 +24,7 @@
               <%= link_to "Add", event_meals_path(@event, recipe_id: recipe), method: :post, class: "btn oval", id: "add", remote: true, 'data-turbolinks-scroll': false  %>
             <% else %>
               <%= link_to "-", event_meal_path(@event, recipe.meals.first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
-              <p class="m-0 mx-3"><%= @event.meals_with_recipe(recipe).count %></p>
+              <p class="m-0 mr-1"><%= @event.meals_with_recipe(recipe).count %></p>
               <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
             <% end %>
           </div>

@@ -26,9 +26,9 @@
     </div>
 
 
-    <div class=" d-flex row">
+    <div>
       <% @event.meals.each do |meal| %>
-        <div class="separator-bottom separator-left w-50 pl-4">
+        <div class="separator-bottom separator-left w-50 px-5 pb-3 pt-2">
 
           <div class="mt-5 d-flex">
             <%= cl_image_tag meal.recipe.photo.key, class: "medium-card " %>
@@ -36,9 +36,13 @@
             <div class="pl-4">
               <h5 class="separator-bottom pb-3"> <%= meal.recipe.name%></h5>
               <div class="pt-2">
-                <p> Recipe:</p>
+                <p>
+                  Recipe →
+                </p>
                 <!-- <p> <%= meal.recipe.instructions %></p> -->
-                <p> Ingredients:</p>
+                <p>
+                  Ingredients →
+                </p>
 <!--              <% meal.recipe.ingredients.each do |ingredient| %>
                     <p> <%= ingredient.name %></p>
                   <% end %> -->
@@ -46,10 +50,10 @@
             </div>
           </div>
 
-          <div class="d-flex bd-highlight mt-3 ">
-            <p class="subtitles mr-auto p-2 bd-highlight"> Notes: <%= meal.recipe.details %></p>
-            <p class="mb-5 btn active oval clickable ml-auto p-2 bd-highlight mr-5 micro-letter">Add notes</p>
-          </div>
+
+            <p class="subtitles mt-4"> Notes: <%= meal.recipe.details %></p>
+            <p class="btn active oval clickable micro-letter">Add notes</p>
+
 
         </div>
       <% end %>

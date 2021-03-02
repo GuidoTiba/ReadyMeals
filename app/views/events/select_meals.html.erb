@@ -1,4 +1,6 @@
 <div class="d-flex">
+
+  <% if  @event.meals.count == 0  %>
   <div class="white-background">
     <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
     <div class="block">
@@ -6,15 +8,21 @@
     </div>
   </div>
 
-  <% unless @event.meals.count == 0 %>
+  <% else %>
+    <div class="white-background">
+      <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
+      <div class="block">
+        <%= render 'recipes' %>
+      </div>
+    </div>
     <div id="sidebox" style="position: fixed; right: 0px; height:100%;">
       <div class="card sidebox container">
         <h6 class="py-3"><strong>Review</strong></h6>
-        <div class="selection container">
+        <div class="selection container pb-3">
           <% @recipes.each do |recipe| %>
             <% unless @event.meals_with_recipe(recipe).empty? %>
-              <div class="d-flex pb-3">
-                <p class="m-0 mr-2 align-self-center"><%= recipe.name %></p>
+              <div class="d-flex">
+                <p class="m-0 align-self-center"><%= recipe.name %></p>
                 <div class="d-flex align-self-center ml-auto p-2">
                   <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
                   <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
@@ -23,9 +31,9 @@
               </div>
             <% end %>
           <% end %>
-          <p class="align-right oval btn" id="add">Remove all</p>
         </div>
-        <h6 class= "mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
+        <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
+        <p class="align-right oval btn mt-1" id="add">Remove all</p>
               <div class="text-center">
           <%= link_to event_path(@event), method: :get, id: :btn do %>
             <div class="btn btn-green my-5">Next →</div>

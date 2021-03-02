@@ -81,7 +81,7 @@
 .oval#add {
   color: #433FB0;
   background-color: rgb(236, 237, 254);
-  border-color: inherit;
+  border-color: transparent;
   cursor: pointer;
   -webkit-user-select: auto;
   padding: 3px;
@@ -94,6 +94,9 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
+  &:hover {
+    border-color: #433FB0;
+  }
 }
 
 .oval#plus-minus {
@@ -113,7 +116,7 @@
   background-color: rgb(236, 237, 254);
   border-color: transparent;
   &:hover {
-  border-color: #433FB0;
+    border-color: #433FB0;
   }
 }
 

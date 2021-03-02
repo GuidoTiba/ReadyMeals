@@ -12,28 +12,26 @@
 
       <%= link_to new_event_path, class:"no-text-decoration" do %>
       <div class="lilac-rectangular-card ml-4">
-        <%= image_tag "yellow_plus.png" %>
+        <%= image_tag "new-event.png" %>
         <p class="green my-0 mx-2 flex-fill">New event!</p>
       </div>
       <% end %>
     </div>
   </div>
 
-  <div class="light-violet-block p-3 mt-4">
+<!--   <div class="light-violet-block p-3 mt-4">
     <div class="d-flex ml-4 pl-4">
       <div class="mb-4 ml-4 mr-5 align-self-center">
-        <h4><strong>Event coming up next:</strong></h4>
-        <h4><%= @nextevent.title %></h4>
+        <h5>Event coming up next:</h5>
+        <h4><strong><%= @nextevent.title %></strong></h4>
       </div>
-
       <div class="ml-4 mt-2 pr-4 w-25">
         <h6 class="mb-2"> Dining members:  <%= @nextevent.number_of_members %></h6>
         <h6 class="mb-2"> Meals to be prepared:  <%= @nextevent.meals.count %></h6>
         <h6 class="mb-2"> Day meals:  <%= (@nextevent.meals.count)/2 %></h6>
         <h6 class="mb-2"> Night meals:  <%= (@nextevent.meals.count)/2 %></h6>
-        <!-- <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3"> -->
+        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
       </div>
-
       <div class="pl-4 separator mr-4 w-25">
         <h6 class="mt-3">Shop at once for all you'll need!</h6>
         <%= link_to ingredient_list_path(@nextevent), class:"no-text-decoration" do %>
@@ -43,35 +41,29 @@
         </div>
         <% end %>
       </div>
-
       <div class="pl-4 separator w-25">
         <h6 class="mt-3">Dietary Options:</h6>
-              <% @nextevent.event_options.each do |option| %>
-                <p><%= option.option.name %></p>
-              <% end %>
-        
+        <% @nextevent.event_options.each do |option| %>
+          <p><%= option.option.name %></p>
+        <% end %>
       </div>
-
     </div>
   </div>
-
+ -->
   <div class="white-background">
-    <div class="block pt-3">
-      <h3 class="green pb-3"><strong>Discover new recipes and add them to your favourites!</strong></h3>
-      <div class="cards overflow-hidden">
-
-        <% @recipes.each do |recipe| %>
+    <div class="block">
+      <h3 class="py-5"><strong>Discover new recipes and add them to your favourites!</strong></h3>
+      <div class="cards">
+        <% @recipes.first(8).each do |recipe| %>
           <div class="d-flex">
             <%= cl_image_tag recipe.photo.key, class: "small-card" %>
             <div class="align-self-center ml-3">
-              <h5 class="green"><%= recipe.name %></h5>
-              <h6 class="lilac"><%= recipe.ingredients.count%> ingredients</h6>
+              <h5><strong><%= recipe.name %></strong></h5>
+              <h6><%= recipe.ingredients.count%> ingredients</h6>
             </div>
-            <div><i class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5 corazon fas fa-heart"></i> </div>
-            
+            <i class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5 heart fas fa-heart"></i>
           </div>
         <% end %>
-
       </div>
     </div>
   </div>
@@ -82,55 +74,46 @@
   <div class="white-background">
     <div class="block py-5">
 
-
       <div id="form">
-
-        <h4 class="py-1 pt-3">Your saved dietary Options</h4>
-
+        <h4 class="py-3 pt-3">Your saved dietary Options</h4>
         <% Option.all.each do |o| %>
-        <div class="oval clickable px-3"> <%= o.name %> </div>
+          <div class="oval clickable px-3"> <%= o.name %> </div>
         <% end %>
-
         <% Option.all.each do |o| %>
-        <%= simple_fields_for :options do |of| %>
-        <%= of.input o.name.to_sym, as: :hidden %>
-        <% end %>
+          <%= simple_fields_for :options do |of| %>
+            <%= of.input o.name.to_sym, as: :hidden %>
+          <% end %>
         <% end %>
       </div>
 
-      <h4 class=my-4>Your favourites:</h4>
+      <h4 class="py-4">Your favourites:</h4>
       <div class="cards pb-4">
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Sushi").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
+          <h5 class="pt-3"><%= @recipes.find_by(name: "Sushi").name %></h5>
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "big-card" %>
+          <h5 class="pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Mousse").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Mousse").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "big-card" %>
+          <h5 class="pt-3"><%= @recipes.find_by(name: "Barbeque").name %></h5>
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Barbeque").name %></h5>
-        </div>
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "mini-card" %>
-          <h5 class="green pt-3"><%= @recipes.find_by(name: "Empanadas").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "big-card" %>
+          <h5 class="pt-3"><%= @recipes.find_by(name: "Empanadas").name %></h5>
         </div>
 
 
 
       </div>
 
-      <div class="light-violet-block p-3">
+     <!--  <div class="light-violet-block p-3">
         <h4>Your last event:</h4>
         <h4 class="mb-4"><%= @lastevent.title %></h4>
         <h6 class="mb-2"> Dining members:  <%= @lastevent.number_of_members %></h6>
@@ -138,7 +121,7 @@
         <h6 class="pt-4">Rate it!</h6>
         <h6>☆ ☆ ☆ ☆ ☆</h6>
       </div>
-
+ -->
 
     </div>
   </div>

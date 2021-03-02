@@ -1,9 +1,3 @@
-.cards {
-  display: flex;
-  grid-gap: 20px;
-  height: 100%;
-}
-
 .card-containter {
   width: 100%;
 }
@@ -53,7 +47,7 @@
 .big-card {
   background: rgb(221, 221, 221) !important;
   overflow: hidden !important;
-  border-radius: 8px !important;
+  border-radius: 12px !important;
   height: 340px;
   width: 340px;
   border: 1px solid rgb(221, 221, 221);
@@ -64,13 +58,32 @@
   grid-gap: 60px;
 }
 
-.small-card {
+.medium-card {
   background: rgb(221, 221, 221) !important;
   overflow: hidden !important;
-  border-radius: 8px !important;
-  height: 80px;
-  width: 80px;
+  border-radius: 12px !important;
+  height: 240px;
+  width: 240px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
+
+.medium-cards-setup {
+  grid-gap: 60px;
+}
+
+.small-card {
+  background: rgb(221, 221, 221) !important;
+  border-radius: 12px !important;
+  height: 64px;
+  width: 64px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.small-cards {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 
 
 .light-violet-block {
@@ -86,8 +99,7 @@
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 26px;
-  background-color: $lilac;
-  color: $dark-violet;
+  color: $gray;
 }
 
 .lilac-rectangular-card {
@@ -114,8 +126,12 @@
   padding: 8px;
 }
 
-.separator {
-  border-left: solid 1.5px $dark-violet;
+.separator-left {
+  border-left: solid 0.5px $dark-violet;
+}
+
+.separator-bottom {
+  border-bottom: solid 0.5px $dark-violet;
 }
 
 .sample_food {

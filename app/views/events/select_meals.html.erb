@@ -1,34 +1,58 @@
 <div class="d-flex">
-  <div class="white-background">
-    <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
-    <div class="block">
-      <%= render 'recipes' %>
-    </div>
-  </div>
 
-  <div id="sidebox" style="position: fixed;   right: 0px;">
-    <div class="card card-body sidebox">
-      <h4 class="pt-3 text-center">Summary</h4>
-      <% @recipes.each do |recipe| %>
-        <% unless @event.meals_with_recipe(recipe).empty? %>
-          <div class="d-flex py-3 ml-3">
-            <p class="m-0 mr-2 align-self-center"><%= recipe.name %></p>
-            <div class="d-flex align-self-center ml-auto p-2">
-              <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
-              <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
-              <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
-            </div>
+  <% if  @event.meals.count == 0  %>
+
+    <div class="white-background">
+      <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
+      <div class="block">
+        <div class="card-containter row big-cards-setup">
+          <div class="cards">
+            <%= render 'recipes' %>
           </div>
-        <% end %>
-      <% end %>
-      <h6 class="ml-3 mt-3">Total number of meals: <%= @event.meals.count %> </h6>
-            <div class="text-center">
-        <%= link_to event_path(@event), method: :get, id: :btn do %>
-          <div class="btn btn-green my-5">Next →</div>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
+
+  <% else %>
+
+    <div class="white-background">
+      <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
+      <div class="block">
+        <div class="card-containter row big-cards-setup">
+          <div class="sidebox-cards">
+            <%= render 'recipes' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebox" style="position: fixed; right: 0px; height:100%;">
+      <div class="card sidebox container">
+        <h6 class="py-3"><strong>Review</strong></h6>
+        <div class="selection container pb-3">
+          <% @recipes.each do |recipe| %>
+            <% unless @event.meals_with_recipe(recipe).empty? %>
+              <div class="d-flex">
+                <p class="m-0 align-self-center"><%= recipe.name %></p>
+                <div class="d-flex align-self-center ml-auto p-2">
+                  <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
+                  <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
+                  <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
+        <p class="align-right oval btn mt-1" id="add">Remove all</p>
+              <div class="text-center">
+          <%= link_to event_path(@event), method: :get, id: :btn do %>
+            <div class="btn btn-green my-5">Next →</div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
 
 </div>
 
@@ -37,7 +61,7 @@
 <!-- <div>
     <a class="btn btn-green" id="sidebar-toggle-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Cart</a>
     <div class="collapse sidebox" id="collapseExample">
-      <div class="card card-body">
+      <div class="card">
         <h4 class="pt-3 text-center">Summary</h4>
         <% @recipes.each do |recipe| %>
           <% unless @event.meals_with_recipe(recipe).empty? %>

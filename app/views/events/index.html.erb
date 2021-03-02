@@ -3,81 +3,53 @@
     <div class="container">
       <h3 class="pt-4 pb-3 text-center green"><strong>My events</strong></h3>
 
-        <% @events.each do |event| %>
-        <div class="d-flex">
-        <div class="light-violet-block p-3 mt-4">
-          <div class="d-flex pl-4">
-            <div class="mb-4 mr-5 align-self-center">
-              <h4><%= event.title %></h4>
-               
-
-            </div>
-
-            <div class="ml-4 mt-2 pr-4 w-25">
-              <h6 class="mb-2"> Dining members:  <%= event.number_of_members %></h6>
-              <h6 class="mb-2"> Day meals:  <%= (event.meals.count)/2 %></h6>
-              <h6 class="mb-2"> Night meals:  <%= (event.meals.count)/2 %></h6>
-              <!-- <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3"> -->
-            </div>
-
-            <div class="pl-4 separator mr-4 w-25">
-              <h6 class="mt-3">Shop at once for all you'll need!</h6>
-              <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
-              <div class="lilac-rectangular-card">
-                <%= image_tag "List_of_ingredients.png" %>
-                <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
-              </div>
-              <% end %>
-            </div>
-
-            <div class="pl-4 separator w-25">
-              <h6 class="mt-3">Dietary preferences:</h6>             
-
-              <% event.event_options.each do |option| %>
-                <p><%= option.option.name %></p>
-              <% end %>
-    
-            </div>
-
-          </div>
-        </div>
-        </div>
-        <% end %>
-
-
-
-
-
-
       <% @events.each do |event| %>
-      <div class="light-violet-block p-3 mt-4">
-        <div class="d-flex ml-4 pl-4">
-          <div class="mb-4 ml-4 mr-5 align-self-center">
-            <h4><%= event.title %></h4>
-          </div>
-          <div class="ml-4 mt-2 pr-4 w-25">
-            <h6 class="mb-2"> Dining members:  <%= event.number_of_members %></h6>
-            <h6 class="mb-2"> Day meals:  <%= (event.meals.count)/2 %></h6>
-            <h6 class="mb-2"> Night meals:  <%= (event.meals.count)/2 %></h6>      </div>
-            <div class="pl-4 separator mr-4 w-25">
-              <h6 class="mt-3">Shop at once for all you'll need!</h6>
-              <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
-              <div class="lilac-rectangular-card">
-                <%= image_tag "List_of_ingredients.png" %>
-                <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
+
+        <div class="d-flex separator-bottom mb-4">
+          <div class="light-violet-block p-3">
+
+            <%= link_to event_path(event), class:"no-text-decoration align-self-center" do %>
+              <h4><%= event.title %></h4>
+            <% end %>
+
+            <div class="d-flex mt-4">
+              <div class="mb-4 mr-5 align-self-center d-flex bd-highlight mb-3">
+
+                <div class="my-auto p-2 bd-highlight">
+                  <!-- quiero que el contenido de este div tenga menos espacio entre lineas -->
+                  <p class="pt-2 subtitles">02.03.2021 - 05.03.2021</p>
+                  <p class="subtitles"> <%= event.number_of_members %> members</p>
+                </div>
+<!--                 <div class="mt-3">
+                  <% event.event_options.each do |option| %>
+                    <p class="oval clickable active"><%= option.option.name %></p>
+                  <% end %>
+                </div> -->
               </div>
+
+              <div class="d-flex pl-4 p-2 bd-highlight">
+                <% event.meals.each do |meal| %>
+                  <div class="mx-3">
+                    <%= cl_image_tag meal.recipe.photo.key, class: "small-card" %>
+                  </div>
+                <% end %>
+              </div>
+
+              <%= link_to ingredient_list_path(event), class:"no-text-decoration ml-auto p-2 bd-highlight" do %>
+                <div class="lilac-rectangular-card">
+                  <%= image_tag "List_of_ingredients.png" %>
+                  <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
+                </div>
               <% end %>
+
             </div>
-            <div class="pl-4 separator w-25">
-              <h6 class="mt-3">Dietary preferences:</h6>
-              <p>PREFERENCIAS ELEGIDAS</p>
-            </div>
+
+
           </div>
         </div>
-        <% end %>
 
+      <% end %>
 
-
-
-      </div>
     </div>
+  </div>
+</div>

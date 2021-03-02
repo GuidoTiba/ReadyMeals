@@ -1,6 +1,5 @@
-
-const init_corazones = () => { 
-  const listado = document.querySelectorAll(".corazon");
+const init_hearts = () => {
+  const listado = document.querySelectorAll(".heart");
   if (listado) {
     listado.forEach((restriction) => {
       restriction.addEventListener("click", (event) => {
@@ -10,4 +9,4 @@ const init_corazones = () => {
   }
 };
 
-export {init_corazones}
+export {init_hearts}

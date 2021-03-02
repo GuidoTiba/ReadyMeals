@@ -1,3 +1,15 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.sidebox-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -17,12 +29,18 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .sidebox-cards {
+    grid-template-columns:1fr 1fr;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .sidebox-cards {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -31,10 +49,12 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .sidebox-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .block {
   margin-right: 90px;
   margin-left: 90px;
-
 }

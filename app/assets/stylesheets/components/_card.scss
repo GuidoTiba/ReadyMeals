@@ -85,8 +85,7 @@
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 26px;
-  background-color: $lilac;
-  color: $dark-violet;
+  color: $gray;
 }
 
 .lilac-rectangular-card {
@@ -113,8 +112,12 @@
   padding: 8px;
 }
 
-.separator {
-  border-left: solid 1.5px $dark-violet;
+.separator-left {
+  border-left: solid 0.5px $dark-violet;
+}
+
+.separator-bottom {
+  border-bottom: solid 0.5px $dark-violet;
 }
 
 .sample_food {

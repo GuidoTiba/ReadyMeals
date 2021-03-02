@@ -58,6 +58,20 @@
   grid-gap: 60px;
 }
 
+.medium-card {
+  background: rgb(221, 221, 221) !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  height: 240px;
+  width: 240px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.medium-cards-setup {
+  grid-gap: 60px;
+}
+
 .small-card {
   background: rgb(221, 221, 221) !important;
   border-radius: 12px !important;

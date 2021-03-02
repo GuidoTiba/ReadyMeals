@@ -41,7 +41,14 @@ document.addEventListener('turbolinks:load', () => {
   init_clickable_checkboxes();
   init_sidebar_loco();
   init_member_numbers();
+
+  
   init_hearts();
+  
+  $(".alert").delay(1500).slideUp(900, function(){
+    $(".alert").alert('close');
+  });
+
   const elements = document.querySelectorAll("[data-turbolinks-scroll]");
 
   elements.forEach(function(element){

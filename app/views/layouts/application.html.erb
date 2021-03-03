@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReadyMeals</title>
+
+    <% if content_for?(:metadata) %>
+      <%= yield :metadata %>
+    <% else %>
+      <title>ReadyMeals</title>
+      <meta description="ReadyMeals is a platform...">
+    <% end %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +21,9 @@
 
   <body>
     <% unless action_name == "welcome"%>
-      <%= render 'shared/navbar' %>
+      <% unless content_for? :navbar %>
+        <%= render 'shared/navbar' %>
+      <% end %>
       <%= render 'shared/flashes' %>
     <% end %>
 

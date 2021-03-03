@@ -15,11 +15,11 @@
         <i class="fas fa-bars mr-2" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></i>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/guidotiba", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
-        <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="navbarDropdown">
-          <%= link_to "Home", home_path, class: "dropdown-item" %>
+        <div class="dropdown-menu dropdown-menu-right mt-2 p-0" aria-labelledby="navbarDropdown">
+          <%= link_to "Home", home_path, class: "dropdown-item dropdown-top" %>
           <%= link_to "My events", events_path, class: "dropdown-item" %>
           <%= link_to "New event", new_event_path, class: "dropdown-item" %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item dropdown-bottom" %>
         </div>
       </li>
       <% else %>

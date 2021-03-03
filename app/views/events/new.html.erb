@@ -7,7 +7,7 @@
       <h3 class="py-3"><strong>Create your group</strong></h3>
       <div class="mx-auto">
         <%= simple_form_for @event do |e| %>
-          <%= e.input :title, label: 'Group Name' %>
+          <%= e.input :title, label: 'Group Name', input_html: { id: "event-form-title" } %>
           <%= e.input :number_of_members, as: :numeric, as: :hidden %>
           <label for="Number of Members">Number of members: </label>
 
@@ -33,7 +33,7 @@
             <%= simple_fields_for :event_options do |of| %>
             <div class="cards">
               <% Option.all.each do |o| %>
-              <div> <%= of.input o.name.to_sym, label_html: {class: "oval clickable"}, as: :boolean, id: "event_options_#{o.name}" %></div>
+              <div> <%= of.input o.name.to_sym, label_html: { class: "oval clickable" }, as: :boolean, id: "event_options_#{o.name}" %></div>
               <!-- poner una class en el div de arriba para  que wrappee y no siga ad infinitum en la misma linea-->
               <% end %>
               </div>

@@ -9,6 +9,9 @@
         <%= simple_form_for @event do |e| %>
           <%= e.input :title, label: 'Group Name', input_html: { id: "event-form-title" } %>
           <%= e.input :number_of_members, as: :numeric, as: :hidden %>
+          <%= e.input :start_date, as: :string, input_html: {id: "range_start"} %>
+          <%= e.input :end_date, as: :string, input_html: {id: "range_end"} %>
+
           <label for="Number of Members">Number of members: </label>
 
           <div class="row justify-content-center">

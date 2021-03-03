@@ -8,6 +8,8 @@ class Event < ApplicationRecord
   ## Validations
 
   validates :title, presence: true
+  validates :start_date, presence: true
+  validates :end_date, presence: true
   validates :number_of_members, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
   def meals_with_recipe(recipe)

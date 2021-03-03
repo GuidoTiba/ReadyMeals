@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     event_option_params.to_h.select {|_, value | value =="1" }.map{|option, value| Option.find_by(name: option).id }.each do |id|
       @event.event_options.build(option_id: id)
     end
+    raise
 
     if @event.save
       redirect_to event_select_meals_path(@event)
@@ -62,7 +63,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :number_of_members)
+    params.require(:event).permit(:title, :number_of_members, :start_date, :end_date)
   end
 
   def event_option_params

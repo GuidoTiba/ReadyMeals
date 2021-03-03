@@ -26,3 +26,14 @@ div#sidebox:before{
 #event-form-title:focus {
   outline: none;
 }
+
+
+.dropdown-top {
+ border-top-right-radius:7px;
+ border-top-left-radius: 7px;
+}
+
+.dropdown-bottom {
+ border-bottom-right-radius:7px;
+ border-bottom-left-radius: 7px;
+}

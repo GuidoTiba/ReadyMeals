@@ -1,8 +1,18 @@
+<%= content_for :metadata do %>
+  <title>Selected meals</title>
+  <meta description="ReadyMeals is a platform...">
+<% end %>
+
+<%= content_for :navbar do %>
+  ""
+<% end %>
+
 <div class="d-flex">
 
   <% if  @event.meals.count == 0  %>
 
     <div class="white-background">
+      <%= render 'shared/navbar' %>
       <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
       <div class="block">
         <div class="card-containter row big-cards-setup">
@@ -16,6 +26,7 @@
   <% else %>
 
     <div class="white-background">
+      <%= render 'shared/navbar' %>
       <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
       <div class="block">
         <div class="card-containter row big-cards-setup">
@@ -25,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div id="sidebox" style="position: fixed; right: 0px; height:100%;">
+    <div class="position-fixed h-100" id="sidebox" style="right: 0px;">
       <div class="card sidebox container">
         <h6 class="py-3"><strong>Review</strong></h6>
         <div class="selection container pb-3">

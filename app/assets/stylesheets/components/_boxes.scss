@@ -22,3 +22,7 @@ div#sidebox:before{
   border-radius: 8px;
   padding: 1.5rem;
 }
+
+#event-form-title:focus {
+  outline: none;
+}

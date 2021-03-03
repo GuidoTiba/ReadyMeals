@@ -7,7 +7,7 @@ class MealsController < ApplicationController
     meal = Meal.new(event: @event, recipe: @recipe, date: Date.today)
     if meal.save
       redirect_to event_select_meals_path(@event)
-      flash.notice = "Meal created"
+      flash.notice = "#{@recipe.name} Meal created"
     else
       redirect_to event_select_meals_path(@event)
       flash.alert = "The Meal couldn't be created"
@@ -17,7 +17,7 @@ class MealsController < ApplicationController
   def destroy
     if @meal.destroy
       redirect_to event_select_meals_path(@event)
-      flash.alert = "Meal destroyed"
+      flash.alert = "#{@recipe.name} Meal destroyed"
     else
       redirect_to event_select_meals_path(@event)
       flash.alert = "The Meal couldn't be destroyed"

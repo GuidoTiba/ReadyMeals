@@ -120,6 +120,7 @@
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.05);
   border: 1px transparent;
+  background-color: white;
   &:hover {
     border: inherit!important;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -170,12 +171,16 @@
   overflow: hidden;
   border-radius: 8px;
   position: absolute;
-  height: 350px;
-  width: 350px;
   top: 0;
   overflow: scroll;
   &:hover{
     opacity: 1;
-    background-color: rgba($color: #fff, $alpha: 0.8);
+    background-color: rgb(236, 237, 254);
+    border-color: #433FB0;
+    box-shadow: rgba(0, 0, 0, 0.18) 3px 3px 3px 3px;
+  height: 340px;
+  width: 340px;
+
+
   }
 }

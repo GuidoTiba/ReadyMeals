@@ -39,12 +39,17 @@
 
     <div class="position-fixed h-100" id="sidebox" style="right: 0px;">
       <div class="card sidebox container">
+
+        <h5 class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+          <strong>Selected Meals</strong>
+        </h5>
+
         <h6 class="py-3"><strong>Review</strong></h6>
 
-        <div class="selection container pb-3">
+        <div class="selection pb-3">
           <% @recipes.each do |recipe| %>
             <% unless @event.meals_with_recipe(recipe).empty? %>
-              <div class="d-flex  my-3">
+              <div class="d-flex my-3">
                 <%= cl_image_tag recipe.photo.key, class: "tiny-card" %>
                 <p class="m-0 align-self-center ml-2"><%= recipe.name %></p>
                 <div class="d-flex align-self-center ml-auto p-2">
@@ -55,12 +60,12 @@
               </div>
             <% end %>
           <% end %>
+        <h6 class="my-4">Total number of meals: <%= @event.meals.count %> </h6>
           <p class="oval btn mt-1 w-100" id="add">Remove all</p>
         </div>
 
-        <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
         <%= link_to event_path(@event), method: :get, id: :btn do %>
-          <div class="btn btn-green w-100 oval">Next →</div>
+          <div class="btn btn-green w-100 oval mt-3">Next →</div>
         <% end %>
 
       </div>

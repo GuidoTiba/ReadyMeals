@@ -45,7 +45,7 @@
               <div class="d-flex">
                 <p class="m-0 align-self-center"><%= recipe.name %></p>
                 <div class="d-flex align-self-center ml-auto p-2">
-                  <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
+                  <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false %>
                   <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
                   <%= link_to "+", event_meals_path(@event, recipe_id: recipe), method: :post, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false  %>
                 </div>
@@ -54,7 +54,8 @@
           <% end %>
         </div>
         <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
-        <p class="align-right oval btn mt-1" id="add">Remove all</p>
+        
+        <%= link_to "Remove all", event_meals_destroy_all_path(@event), method: :delete, class: "text-decoration-none oval btn mt-1", remote: true, 'data-turbolinks-scroll': false %>
               <div class="text-center">
           <%= link_to event_path(@event), method: :get, id: :btn do %>
             <div class="btn btn-green my-5">Next →</div>

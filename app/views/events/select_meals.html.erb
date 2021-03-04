@@ -55,7 +55,7 @@
         </div>
         <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
         
-        <%= link_to "Remove all", event_meals_destroy_all_path(@event), method: :delete, class: "text-decoration-none oval btn mt-1", remote: true, 'data-turbolinks-scroll': false %>
+        <%= link_to "Remove all", event_meals_destroy_all_path(@event), method: :delete, class: "text-decoration-none oval btn mt-1", id:"add", remote: true, 'data-turbolinks-scroll': false %>
               <div class="text-center">
           <%= link_to event_path(@event), method: :get, id: :btn do %>
             <div class="btn btn-green my-5">Next →</div>

@@ -84,7 +84,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
+.tiny-card {
+  background: rgb(221, 221, 221) !important;
+  border-radius: 12px !important;
+  height: 40px;
+  width: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
 .light-violet-block {
   margin-top: 0px;

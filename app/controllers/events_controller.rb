@@ -11,7 +11,6 @@ class EventsController < ApplicationController
     event_option_params.to_h.select {|_, value | value =="1" }.map{|option, value| Option.find_by(name: option).id }.each do |id|
       @event.event_options.build(option_id: id)
     end
-    raise
 
     if @event.save
       redirect_to event_select_meals_path(@event)

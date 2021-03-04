@@ -1,6 +1,6 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: [:destroy]
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: [:create, :destroy, :destroy_all]
   before_action :set_recipe, only: [:create]
 
   def create
@@ -15,13 +15,22 @@ class MealsController < ApplicationController
   end
 
   def destroy
+    recipe_name = @meal.recipe.name
     if @meal.destroy
       redirect_to event_select_meals_path(@event)
-      flash.alert = "#{@recipe.name} Meal destroyed"
+      flash.alert = "#{recipe_name} Meal destroyed"
     else
       redirect_to event_select_meals_path(@event)
-      flash.alert = "The Meal couldn't be destroyed"
+      flash.notice = "The Meal couldn't be destroyed"
     end
+  end
+
+  def destroy_all
+    @event.meals.each do |meal|
+      meal.destroy
+    end
+    flash.notice = "Every Meal has been destroyed"
+    redirect_to event_select_meals_path(@event)
   end
 
   private

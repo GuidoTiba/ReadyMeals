@@ -108,8 +108,8 @@
   color: $gray;
 }
 
-.lilac-rectangular-card {
-  height: 50px;
+.main-rectangular-card {
+  height: 75px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -127,10 +127,10 @@
   }
 }
 
-.lilac-rectangular-card > img {
+.main-rectangular-card > img {
   border-radius: 12px;
   height: 100%;
-  padding: 8px;
+  padding: 12px;
 }
 
 .separator-left {

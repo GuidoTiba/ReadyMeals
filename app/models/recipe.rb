@@ -12,4 +12,15 @@ class Recipe < ApplicationRecord
   validates :name, presence: true
   validates :instructions, presence: true
   validates :details, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name, :instructions, :details ],
+    associated_against: {
+      ingredients: [ :name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end

@@ -13,7 +13,17 @@
 
     <div class="white-background">
       <%= render 'shared/navbar' %>
-      <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
+      <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
+
+      <%= form_tag event_select_meals_path(@event), method: :get, class:"w-25 mx-auto d-flex my-4" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find your recipe!"
+        %>
+        <%= submit_tag "Search", class: "btn btn-green" %>
+      <% end %>
+
       <div class="block">
         <div class="card-containter row big-cards-setup">
           <div class="cards">
@@ -27,7 +37,15 @@
 
     <div class="white-background">
       <%= render 'shared/navbar' %>
-      <h3 class="text-center py-5"><strong>Choose your meals!</strong></h3>
+      <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
+      <%= form_tag event_select_meals_path(@event), method: :get, class:"w-25 mx-auto d-flex my-4" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find your recipe!"
+        %>
+        <%= submit_tag "Search", class: "btn btn-green" %>
+      <% end %>
       <div class="block">
         <div class="card-containter row big-cards-setup">
           <div class="sidebox-cards">

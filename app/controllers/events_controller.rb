@@ -21,7 +21,8 @@ class EventsController < ApplicationController
 
   def select_meals
     if @event.options.empty?
-      @recipes = Recipe.all
+      @recipes = Recipe.all.includes(:recipe_ingredients)
+      @recipes = Recipe.global_search(params[:query]) if params[:query].present?
     else
       @recipes = []
       @event.options.each do |option|
@@ -30,12 +31,15 @@ class EventsController < ApplicationController
         end
       end
       @recipes = @recipes.uniq
+      if params[:query].present?
+        recipes_found = Recipe.global_search(params[:query])
+        @recipes = @recipes & recipes_found
+      end
     end
   end
 
   def index
     @events = current_user.events
-
   end
 
   def show

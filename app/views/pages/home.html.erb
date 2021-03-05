@@ -1,7 +1,8 @@
 <div class="white-background">
 
-  <div class="home-background">
-    <h1 class="pt-5 pb-3 text-center white $my-font"><strong>Welcome back to <em>your</em> virtual kitchen</strong></h1>
+  <div class="home-background" style="justify-content: center; align-items: center;">
+    <h1 class="pt-5 green align-text-middle"><strong>Welcome back to <em>your</em> </strong></h1>
+    <h1 class="pb-5 green align-text-middle"><strong>virtual kitchen</strong></h1>
   </div>
 
     <div class="d-flex py-5 justify-content-center">
@@ -51,17 +52,49 @@
     </div>
   </div> -->
 
-
   <div class="green-background">
-    <div class="block">
-      <h5 class="py-4 white"><strong>Discover new recipes and add them to your favourites!</strong></h5>
+    <div class="block py-3">
+
+      <h3 class="pt-4 pb-1 white"><strong>Your favourites</strong></h3>
+      <h6 class="white pb-4">These have been your choices for you lastest events</h6>
+      <div class="cards pb-4">
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Sushi").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Barbeque").name %></h5>
+        </div>
+
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Empanadas").name %></h5>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="white-background">
+    <div class="block py-2">
+      <h3 class="pt-4 pb-1"><strong>Discover new recipes</strong></h3>
+      <h6 class="pb-4">Find recipes you can add to your next event!</h6>
       <div class="cards">
         <% @recipes.first(8).each do |recipe| %>
           <div class="d-flex">
             <%= cl_image_tag recipe.photo.key, class: "small-card" %>
             <div class="align-self-center ml-3">
-              <h5 class="white"><strong><%= recipe.name %></strong></h5>
-              <h6 class="white"><%= recipe.ingredients.count%> ingredients</h6>
+              <h5><strong><%= recipe.name %></strong></h5>
+              <h6><%= recipe.ingredients.count%> ingredients</h6>
             </div>
             <i class="align-self-center ml-auto p-2 ml-3 mr-5 pr-5 heart fas fa-heart"></i>
           </div>
@@ -87,33 +120,8 @@
           <% end %>
         <% end %>
       </div>
-
-      <h4 class="py-4">Your favourites:</h4>
-      <div class="cards pb-4">
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
-          <h5 class="pt-3"><%= @recipes.find_by(name: "Sushi").name %></h5>
-        </div>
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "big-card" %>
-          <h5 class="pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
-        </div>
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "big-card" %>
-          <h5 class="pt-3"><%= @recipes.find_by(name: "Barbeque").name %></h5>
-        </div>
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "big-card" %>
-          <h5 class="pt-3"><%= @recipes.find_by(name: "Empanadas").name %></h5>
-        </div>
-
-
-
-      </div>
+    </div>
+  </div>
 
      <!--  <div class="light-violet-block p-3">
         <h4>Your last event:</h4>
@@ -124,7 +132,4 @@
         <h6>☆ ☆ ☆ ☆ ☆</h6>
       </div>
  -->
-
-    </div>
-  </div>
 </div>

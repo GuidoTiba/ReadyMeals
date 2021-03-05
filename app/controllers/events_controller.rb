@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:select_meals, :show, :list_ingredients]
+  before_action :set_event, only: [:select_meals, :show, :list_ingredients, :list_recipes]
 
   def new
     @event = Event.new(params[:id])
@@ -53,6 +53,10 @@ class EventsController < ApplicationController
         end
       end
     end
+  end
+
+  def list_recipes
+    @events = current_user.events
   end
 
   private

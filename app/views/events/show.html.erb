@@ -12,7 +12,7 @@
         <p class="subtitles text-center"> <%= @event.number_of_members %> members</p>
       </div>
       <div>
-      <div class="d-flex">
+        <div class="d-flex">
         <div class="mb-4 align-self-center">
           <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
             <div class="lilac-rectangular-card">
@@ -23,15 +23,7 @@
         </div>
       </div>
 
-      <div class="d-flex">
-        <div class="mb-4 align-self-center">
-          <%= link_to recipes_list_path(@event), class:"no-text-decoration" do %>
-            <div class="lilac-rectangular-card">
-              <%= image_tag "List_of_ingredients.png" %>
-              <p class="green text-center my-0 mx-2 flex-fill">List of Recipes</p>
-            </div>
-          <% end %>
-        </div>
+
       </div>  
       </div>
 
@@ -48,12 +40,10 @@
             <div class="pl-4">
               <h5 class="separator-bottom pb-3"> <%= meal.recipe.name%></h5>
               <div class="pt-2">
-                <p>
-                <strong>  Recipe →</strong>
-                </p>
+                <a id="recipe_id" href="<%=  %>"><strong>Recipe</strong></a>
                 <p><%= meal.recipe.instructions %></p>
                 <p>
-                  <strong>Ingredients →</strong>
+                 <a href="<%= ingredient_list_path(@event) %>"><strong>Ingredients</strong></a>
                 </p>
                  <% meal.recipe.ingredients.each do |ingredient| %>
                   <p> <%= ingredient.name %></p>

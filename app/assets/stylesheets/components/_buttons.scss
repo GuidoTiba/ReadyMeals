@@ -18,6 +18,16 @@
   }
 }
 
+.btn-light-green {
+  background-color: white;
+  color: $green;
+  border-color: #B3DEB4;
+  &:hover {
+    background-color: #B3DEB4;
+    color: white;
+  }
+}
+
 .btn-white {
   background-color:$green ;
   color: white;
@@ -78,6 +88,26 @@
   }
 }
 
+.oval-green {
+  background-color: white;
+  color: $green;
+  cursor: auto;
+  -webkit-user-select: auto;
+  padding: 6px 14px;
+  border-radius: 15px;
+  margin-top: 6px;
+  margin-right: 6px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  min-width: 70px;
+  font-size: 16px;
+  &:select {
+    color: white;
+    background-color: $green;
+  }
+}
+
 .oval#add {
   color: #433FB0;
   background-color: rgb(236, 237, 254);
@@ -91,7 +121,7 @@
   display: inline-block;
   text-align: center;
   min-width: 50px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   &:hover {

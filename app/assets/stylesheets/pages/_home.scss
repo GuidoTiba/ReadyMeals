@@ -1,5 +1,5 @@
 .green-background {
-  background-color: $green;
+  background-color: #c9e4ca;
 }
 
 .white-background {
@@ -10,6 +10,11 @@
   background-color: $black;
 }
 
+.home-background {
+  background-image: url(image_path('background3.jpg'));
+  height: 400px;
+  background-size: cover;
+}
 
 html, body {
   background-color: $white;

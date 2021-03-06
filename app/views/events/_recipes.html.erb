@@ -2,18 +2,20 @@
   <div class="position-relative pb-4">
     <%=  cl_image_tag recipe.photo.key, height: 300, width: 400, class: "big-card" %>
     <div class="hover-recipe-details container">
-      <h4 class="text-center my-2">Instructions:</h4>
-        <p><%= recipe.instructions %></p>
-      <h4 class="text-center">Details:</h4>
+      <h5 class="text-left mt-4">Ingredients</h5>
+        <% recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+        <% end %>
+      <h5 class="text-left">Details</h5>
         <p><%= recipe.details %></p>
-      <h4 class="text-center">Ingredients:</h4>
+      <!-- <h4 class="text-center">Ingredients:</h4>
         <ul>
           <% recipe.recipe_ingredients.each do |recipe_ingredient| %>
             <li>
               <p><%= recipe_ingredient.ingredient.name %>: <%= recipe_ingredient.ammount %> <%= recipe_ingredient.unit %></p>
             </li>
           <% end %>
-        </ul>
+        </ul> -->
     </div>
     <div class="d-flex justify-content-between align-items-right pt-3 mt-1">
       <p class="m-0 align-self-center"><%= recipe.name %></p>

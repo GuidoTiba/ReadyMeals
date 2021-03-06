@@ -32,7 +32,8 @@ import { init_sidebar_loco } from "../scripts/sidebar_loco";
 import { init_member_numbers } from "../scripts/member-numbers";
 import { init_hearts } from "../scripts/hearts";
 import { initFlatpickr } from "../scripts/flatpickr";
-import { init_recipe_listener, recipe_listener } from "../scripts/recipe_listener";
+import { init_recipe_listener } from "../scripts/recipe_listener";
+import { initSelect2 } from '../scripts/init_select2';
 
 Turbolinks.scroll = {};
 
@@ -44,6 +45,9 @@ document.addEventListener('turbolinks:load', () => {
   init_sidebar_loco();
   init_member_numbers();
   initFlatpickr();
+  initSelect2();
+
+  
   init_hearts();
   init_recipe_listener();
   

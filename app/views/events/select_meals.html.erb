@@ -11,7 +11,7 @@
 
   <% if  @event.meals.count == 0  %>
 
-    <div class="white-background">
+    <div class="white-background w-100">
       <%= render 'shared/navbar' %>
       <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
 
@@ -25,7 +25,7 @@
       <% end %>
 
       <div class="block">
-        <div class="card-containter row big-cards-setup">
+        <div class="card-containter">
           <div class="cards">
             <%= render 'recipes' %>
           </div>
@@ -47,21 +47,29 @@
         <%= submit_tag "Search", class: "btn btn-green" %>
       <% end %>
       <div class="block">
-        <div class="card-containter row big-cards-setup">
+        <div class="card-containter">
           <div class="sidebox-cards">
             <%= render 'recipes' %>
           </div>
         </div>
       </div>
     </div>
+
     <div class="position-fixed h-100" id="sidebox" style="right: 0px;">
-      <div class="card sidebox container">
+      <div class="card sidebox container px-4">
+
+        <h5 class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="padding-left: 0px!important;">
+          <strong>Selected Meals</strong>
+        </h5>
+
         <h6 class="py-3"><strong>Review</strong></h6>
-        <div class="selection container pb-3">
+
+        <div class="selection pb-3">
           <% @recipes.each do |recipe| %>
             <% unless @event.meals_with_recipe(recipe).empty? %>
-              <div class="d-flex">
-                <p class="m-0 align-self-center"><%= recipe.name %></p>
+              <div class="d-flex my-3">
+                <%= cl_image_tag recipe.photo.key, class: "tiny-card" %>
+                <p class="m-0 align-self-center ml-2"><%= recipe.name %></p>
                 <div class="d-flex align-self-center ml-auto p-2">
                   <%= link_to "-", event_meal_path(@event, @event.meals_with_recipe(recipe).first), method: :delete, class: "text-decoration-none btn oval", id: "plus-minus", remote: true, 'data-turbolinks-scroll': false %>
                   <p class="m-0 mr-1 align-self-center"><%= @event.meals_with_recipe(recipe).count %></p>
@@ -70,15 +78,20 @@
               </div>
             <% end %>
           <% end %>
+
+          <div class="d-flex mt-4 mb-3 justify-content-between">
+            <h6>Total number of meals:</h6>
+            <h6 class="pr-4"><%= @event.meals.count %> </h6>
+          </div>
+          <%= link_to "Remove all", event_meals_destroy_all_path(@event), method: :delete, class: "text-decoration-none oval btn w-100", id:"add", remote: true, 'data-turbolinks-scroll': false %>
         </div>
-        <h6 class="mt-4"><strong>Total number of meals:</strong> <%= @event.meals.count %> </h6>
-        
-        <%= link_to "Remove all", event_meals_destroy_all_path(@event), method: :delete, class: "text-decoration-none oval btn mt-1", id:"add", remote: true, 'data-turbolinks-scroll': false %>
-              <div class="text-center">
+
+        <div class="container">
           <%= link_to event_path(@event), method: :get, id: :btn do %>
-            <div class="btn btn-green my-5">Next →</div>
+            <div class="btn btn-green w-100 oval-green mt-3">Next →</div>
           <% end %>
         </div>
+
       </div>
     </div>
 

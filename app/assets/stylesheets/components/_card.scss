@@ -189,3 +189,9 @@
   width: 340px;
   }
 }
+
+.hover-big-card {
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 0px;
+  }
+}

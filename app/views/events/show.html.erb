@@ -24,7 +24,7 @@
       </div>
 
 
-      </div>  
+      </div>
       </div>
 
     </div>
@@ -47,20 +47,16 @@
 
                 <span id="ingredient_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Show Ingredient</strong></span>
                 <p></p>
-                <div id="recipe_ingredient_<%= meal.recipe.id %>" class="d-none">    
+                <div id="recipe_ingredient_<%= meal.recipe.id %>" class="d-none">
                   <% meal.recipe.ingredients.each do |ingredient| %>
                   <li><%= ingredient.name %></li>
                   <% end %>
                 </div>
                 <p></p>
 
-
-
-
               </div>
             </div>
           </div>
-
 
             <p class="subtitles mt-4"> Notes: <%= meal.recipe.details %></p>
             <p class="btn active oval clickable micro-letter">Add notes</p>

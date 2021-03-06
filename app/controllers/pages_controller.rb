@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :welcome ]
-  before_action :set_recipes, only: [:welcome, :home]
+  before_action :set_recipes, only: [:welcome, :home, :recipes]
 
   def welcome
   end
@@ -19,10 +19,13 @@ class PagesController < ApplicationController
     Meal.create!(event_id: @lastevent.id, recipe_id: Recipe.first.id, date: Date.today)
   end
 
+  def recipes
+  end
+
   private
 
   def set_recipes
-    @recipes = Recipe.all
+    @recipes = Recipe.all.sort{|a,b| a.name <=> b.name}
   end
 
 end

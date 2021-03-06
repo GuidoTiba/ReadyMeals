@@ -19,29 +19,41 @@
   </head>
 
   <body>
-    <% unless action_name == "welcome"%>
-      <% unless content_for? :navbar %>
-        <%= render 'shared/navbar' %>
+    <div id="page-container">
+      <% unless action_name == "new" %>
+        <div id="content-wrap">
+      <% else %>
+        <div>
       <% end %>
-      <%= render 'shared/flashes' %>
-    <% end %>
+        <% unless action_name == "welcome"%>
+          <% unless content_for? :navbar %>
+            <%= render 'shared/navbar' %>
+          <% end %>
+          <%= render 'shared/flashes' %>
+        <% end %>
 
-    <%= yield %>
-
-    <div class="footer justify-content-between">
-      <div class="footer-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <%= yield %>
       </div>
-      <div class="footer-links ">
-        <p class="mx-2"> <%= link_to "Help", help_path, class: "footer"%>  </p>
-        <p class="mx-2" > <%= link_to "About", about_path, class: "footer" %></p>
-        <p class="mx-2"> <%= link_to "Contact", contact_path, class: "footer" %></p>
 
-      </div>
-      <p class="subtitles"> ® Ready Meals 2021</p>
+      <% unless action_name == "new"%>
+        <% unless content_for? :footer %>
+          <footer id="footerbottom">
+            <div class="footer-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footer-links">
+              <p class="mx-2"> <%= link_to "Help", help_path, class: "footer"%>  </p>
+              <p class="mx-2" > <%= link_to "About", about_path, class: "footer" %></p>
+              <p class="mx-2"> <%= link_to "Contact", contact_path, class: "footer" %></p>
 
+            </div>
+            <p class="subtitles"> ® Ready Meals 2021</p>
+
+          </footer>
+        <% end %>
+      <% end %>
     </div>
   </body>
 </html>

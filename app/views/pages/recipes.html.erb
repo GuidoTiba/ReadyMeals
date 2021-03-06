@@ -1,0 +1,24 @@
+<div class="block">
+  <h3 class="text-center pt-5 green"><strong>Browse <em>all</em> recipes</strong></h3>
+  <h6 class="text-center pb-5 green"><strong>and start choosing the right ones for your next event</strong></h6>
+  <div class="card-containter">
+    <div class="cards block d-flex row">
+      <% @recipes.each do |recipe| %>
+        <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
+          <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card"%>
+          </span>
+        <p></p>
+        <div id="recipe_instructions_<%= recipe.id %>" class="d-none"><%= recipe.instructions %></div>
+        <p></p>
+        <div id="recipe_ingredient_<%= recipe.id %>" class="d-none">
+          <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

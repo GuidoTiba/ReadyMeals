@@ -33,6 +33,7 @@ import { init_member_numbers } from "../scripts/member-numbers";
 import { init_hearts } from "../scripts/hearts";
 import { initFlatpickr } from "../scripts/flatpickr";
 import { init_recipe_listener } from "../scripts/recipe_listener";
+import { init_recipe_listener_ingredients } from "../scripts/recipe_listener_ingredients";
 import { initSelect2 } from '../scripts/init_select2';
 
 Turbolinks.scroll = {};
@@ -50,6 +51,7 @@ document.addEventListener('turbolinks:load', () => {
   
   init_hearts();
   init_recipe_listener();
+  init_recipe_listener_ingredients();
   
   $(".alert").delay(1500).slideUp(900, function(){
     $(".alert").alert('close');

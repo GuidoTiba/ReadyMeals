@@ -1,5 +1,6 @@
-const init_recipe_listener = () => { 
-  const recipes = document.querySelectorAll("#recipe_id");
+const init_recipe_listener_ingredients = () => { 
+  
+  const recipes = document.querySelectorAll("#ingredient_id");
   if (recipes) {
     recipes.forEach((recipe) => {
       recipe.addEventListener("click", (event) => {
@@ -10,7 +11,7 @@ const init_recipe_listener = () => {
         // console.log(event.currentTarget)
         // console.log(event.currentTarget.dataset.recipeId)
 
-        const recipe_instructions = document.getElementById(`recipe_instructions_${event.currentTarget.dataset.recipeId}`)
+        const recipe_instructions = document.getElementById(`recipe_ingredient_${event.currentTarget.dataset.recipeId}`)
         // console.log(recipe_instructions)
 
         if (recipe_instructions.classList.contains("d-none")) {
@@ -26,4 +27,4 @@ const init_recipe_listener = () => {
   }
 };
 
-export {init_recipe_listener}
+export {init_recipe_listener_ingredients}

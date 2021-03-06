@@ -2,8 +2,10 @@
   <div class="position-relative pb-4">
     <%=  cl_image_tag recipe.photo.key, height: 300, width: 400, class: "big-card" %>
     <div class="hover-recipe-details container">
-      <h5 class="text-left mt-4">Instructions</h5>
-        <p><%= recipe.instructions %></p>
+      <h5 class="text-left mt-4">Ingredients</h5>
+        <% recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+        <% end %>
       <h5 class="text-left">Details</h5>
         <p><%= recipe.details %></p>
       <!-- <h4 class="text-center">Ingredients:</h4>

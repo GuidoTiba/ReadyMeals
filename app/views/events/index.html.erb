@@ -2,12 +2,11 @@
 
   <h3 class="pt-4 pb-3 text-center green"><strong>My events</strong></h3>
 
-  <div class="green-background">
+  <div class="white-background">
 
     <% @events.each do |event|%>
-      <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);">
 
-        <div class="block py-3 pb-4 w-50 mx-auto">
+        <div class="block py-3 pb-4 w-50 mx-auto selection mb-5">
           <%= link_to event_path(event), class:"no-text-decoration align-self-center d-flex justify-content-between pt-2" do %>
             <h4 class="green"><%= event.title %></h4>
             <p class="subtitles">Monday 3 to Tuesday 4</p>
@@ -36,7 +35,7 @@
           <% end %>
 
         </div>
-      </div>
+
     <% end %>
 
   </div>

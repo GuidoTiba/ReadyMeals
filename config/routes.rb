@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   get 'events/:id/select_meals', to: 'events#select_meals', as: 'event_select_meals'
   get 'events/:id/list_recipes', to:'events#list_recipes', as: 'recipes_list'
 
+  #errors handler
+  get "/404", :to => "errors#not_found"
+  get "/422", :to => "errors#unacceptable"
+  get "/500", :to => "errors#internal_error"
+
 end

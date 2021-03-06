@@ -83,23 +83,23 @@
       <div class="cards pb-4">
 
         <div>
+          <%= cl_image_tag @recipes.find_by(name: "Tuna salad").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Tuna salad").name %></h5>
+        </div>
+
+        <div>
           <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
           <h5 class="pt-3 white"><%= @recipes.find_by(name: "Sushi").name %></h5>
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "big-card" %>
-          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Buckwheat cake").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Buckwheat cake").name %></h5>
         </div>
 
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Barbeque").photo.key, class: "big-card" %>
-          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Barbeque").name %></h5>
-        </div>
-
-        <div>
-          <%= cl_image_tag @recipes.find_by(name: "Empanadas").photo.key, class: "big-card" %>
-          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Empanadas").name %></h5>
+          <%= cl_image_tag @recipes.find_by(name: "Veggie nachos").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Veggie nachos").name %></h5>
         </div>
 
       </div>

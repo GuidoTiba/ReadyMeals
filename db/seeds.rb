@@ -746,13 +746,6 @@ puts "Creating beef pho"
 puts "Creating B cake"
 @buckwheat_cake = Recipe.create(name: "Buckwheat cake", instructions: "Place a rack in middle of oven; preheat to 350°. Coat pan with nonstick spray. Separate yolks from eggs over a large bowl to catch egg whites. Place yolks in another small bowl; set egg whites aside. Combine chocolate and butter in a medium heatproof bowl and set over a medium saucepan of simmering water (do not let bowl touch water). Melt chocolate, stirring occasionally, until smooth. Remove from heat and whisk in cocoa powder, vanilla, salt, and ¼ cup (50 g) granulated sugar. Add egg yolks one at a time, whisking until smooth after each addition. Stir in sponge. Add remaining ¼ cup (50 g) granulated sugar to bowl with reserved egg whites. Using an electric mixer on medium-high speed, beat until soft peaks form, about 4 minutes. Fold half of egg whites into batter until smooth, then fold in remaining egg whites until just combined. Scrape batter into prepared pan and smooth surface. Bake cake, rotating pan halfway through, until a tester inserted into the center comes out clean, 40–45 minutes. Let cake cool in pan. Run a paring knife around edges of cake, then unmold and place on a plate. Dust with powdered sugar just before serving. Do ahead: Cake (without powdered sugar) can be made 1 day ahead. Store tightly wrapped at room temperature.", details: "Buckwheat flour!")
 
-@burger_alfresco = Recipe.create(name: "Burger Alfresco", instructions: "Prepare a grill for high heat. Place a cast-iron griddle, flat side up, on grate; heat until very hot, at least 20 minutes. Mix together pickles, mayonnaise, ketchup, adobo sauce, and ½ tsp. salt in a medium bowl; set special sauce aside. Wrap all the buns together in a large sheet of foil to make a packet (this will keep buns soft and from getting too toasted on the grill). Place packet on grate and grill, turning once, until buns are warmed through, about 1 minute. Spread sauce over cut sides of buns. Place 3–4 pieces of lettuce on bottom buns and top each with some onion and a tomato slice, if using.", details: "Everybody love Burgers!")
-# #create ingredients
-@burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 10, unit: "slices")
-@burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 2, unit: "cups")
-@burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
-@burger_alfresco_potato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @potato.id, ammount: 500, unit: "grams")
-@burger_alfresco_meat = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @meat.id, ammount: 1000, unit: "grams")
 
 
 
@@ -925,12 +918,8 @@ puts "Creating grilled mushrooms"
 @pumpkin_sauce = Ingredient.create(name: "Pumpkin sauce")
 @grilled_mushrooms_pumpkin_sauce = RecipeIngredient.create(recipe_id: @grilled_mushrooms.id, ingredient_id: @pumpkin_sauce.id, ammount: 20, unit: "grams")
 
-@burger_alfresco_pescetarian = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @pescetarian.id)
-@burger_alfresco_kosher = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @kosher.id)
-@burger_alfresco_halal = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @halal.id)
-@burger_alfresco_peanut_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @peanut_allergy.id)
-@burger_alfresco_shellfish_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @shellfish_allergy.id)
-@burger_alfresco_sugar_free = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @sugar_free.id)
+
+
 
 @chicken_mushroom_noodles = Recipe.create(name: "Chicken and Mushroom Noodles", instructions: "If using 1 lb. skinless, boneless chicken thighs (about 4 small), cut into ¼ pieces on a cutting board with a chef’s knife. (To make this process easier, freeze chicken on a baking sheet 30 minutes, then cut chicken when it’s half thawed.) If you’re using 1 lb. ground chicken, skip this step.", details: "Delicious wok")
 # #create ingredients
@@ -939,6 +928,16 @@ puts "Creating grilled mushrooms"
 @chicken_mushroom_noodles_wine_vinegar = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @wine_vinegar.id, ammount: 1, unit: "cup")
 @chicken_mushroom_noodles_sugar = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @sugar.id, ammount: 100, unit: "grams")
 @chicken_mushroom_noodles_vegetable_oil = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @vegetable_oil.id, ammount: 3, unit: "cups")
+
+# # join recipe with dietary restriction
+@chicken_mushroom_noodles_pescetarian = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @pescetarian.id)
+@chicken_mushroom_noodles_dairy_intolerant = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @dairy_intolerant.id)
+@chicken_mushroom_noodles_kosher = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @kosher.id)
+@chicken_mushroom_noodles_peanut_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @peanut_allergy.id)
+@chicken_mushroom_noodles_shellfish_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @shellfish_allergy.id)
+@chicken_mushroom_noodles_sugar_free = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @sugar_free.id)
+
+
 # SESAME SAUCE
 # 1 cup finely chopped mixed herbs (parsley, oregano, and/or mint), stems reserved for blanching vegetables
 # Kosher salt
@@ -1183,18 +1182,9 @@ puts "Creating veggie nachos"
 # 8 oz. sharp cheddar, coarsely grated
 # Chopped @avocado, cilantro leaves with tender stems, and plain yogurt (for serving)
 
-# # join recipe with dietary restriction
-@chicken_mushroom_noodles_pescetarian = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @pescetarian.id)
-@chicken_mushroom_noodles_dairy_intolerant = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @dairy_intolerant.id)
-@chicken_mushroom_noodles_kosher = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @kosher.id)
-@chicken_mushroom_noodles_peanut_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @peanut_allergy.id)
-@chicken_mushroom_noodles_shellfish_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @shellfish_allergy.id)
-@chicken_mushroom_noodles_sugar_free = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @sugar_free.id)
 
-@herbs_fusilli = Recipe.create(name: "Fusilli With Battuto di Erbe", instructions: "Heat ¾ cup oil in a large Dutch oven or other heavy pot over medium until shimmering. Add garlic, hardy herbs, fennel pollen (if using), and red pepper flakes and cook, stirring often, until oil around garlic starts to sizzle slightly and garlic begins to turn golden brown, about 2 minutes (be careful when you add the garlic as the oil may spatter). Add spring greens and tender herbs and season with a couple pinches of salt. Cook, stirring often, until greens and herbs are wilted and bright green, about 2 minutes. Scrape herb mixture onto a rimmed baking sheet; spread out and let cool slightly. Reserve pot. Scrape pesto back into reserved pot and add pasta and ¾ cup pasta cooking liquid. Set over medium-low heat and cook, tossing vigorously and adding more pasta cooking liquid if needed, until warmed through and pasta is coated (do not let pesto come to a boil), about 1 minute. Taste and season with more salt if needed.", details: "Delicious pasta!")
-# #create ingredients
-@herbs_fusilli_garlic = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @garlic.id, ammount: 5, unit: "gloves")
-@herbs_fusilli_vegetable_oil = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @vegetable_oil.id, ammount: 3, unit: "cups")
+
+
 @veggie_nachos_vegetarian = RecipeOption.create(recipe_id: @veggie_nachos.id, option_id: @vegetarian.id)
 @veggie_nachos_vegan = RecipeOption.create(recipe_id: @veggie_nachos.id, option_id: @vegan.id)
 @veggie_nachos_pescetarian = RecipeOption.create(recipe_id: @veggie_nachos.id, option_id: @pescetarian.id)
@@ -1206,47 +1196,16 @@ puts "Creating veggie nachos"
 @veggie_nachos_diabetic = RecipeOption.create(recipe_id: @veggie_nachos.id, option_id: @diabetic.id)
 @veggie_nachos_sugar_free = RecipeOption.create(recipe_id: @veggie_nachos.id, option_id: @sugar_free.id)
 
-@fusilli = Ingredient.create(name: "Fusilli")
-@herbs_fusilli_fusilli = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @fusilli.id, ammount: 1000, unit: "grams")
 
-
-
-# # join recipe with dietary restriction
-@herbs_fusilli_vegetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegetarian.id)
-@herbs_fusilli_vegan = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegan.id)
-@herbs_fusilli_pescetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @pescetarian.id)
-@herbs_fusilli_peanut_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @peanut_allergy.id)
-@herbs_fusilli_shellfish_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @shellfish_allergy.id)
-@herbs_fusilli_diabetic = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @diabetic.id)
-@herbs_fusilli_paleo = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @paleo.id)
-@herbs_fusilli_sugar_free = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @sugar_free.id)
-
-@juicy_steak = Recipe.create(name: "Juicy Steaks", instructions: "Clip (or stand) sous vide machine to a tall large pot. Fill pot with warm water to height according to manufacturer’s instructions (keep in mind that steaks when added will cause water to rise). Heat a large cast-iron skillet over high until very hot. Add oil and cook all 4 sides of steak until a nice crust forms, 1–2 minutes total (it happens fast, so don’t walk away). The steak is already perfectly cooked; this step is to get some color and texture on the exterior. Slice steak against the grain, if desired, and season with salt and pepper. (The steak may appear slightly gray when you first cut into it but will turn bright pink when exposed to air.)", details: "You will never eat a steak as delicious as this one")
-# #create ingredients
-@juicy_steak_meat = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
-@juicy_steak_vegetable_oil = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @vegetable_oil.id, ammount: 5, unit: "cups")
-@juicy_steak_black_pepper = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @black_pepper.id, ammount: 5, unit: "cups")
-@juicy_steak_salt = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @salt.id, ammount: 3, unit: "cups")
 
 @ba_pizza = Recipe.create(name: "BA pizza", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
 # #create ingredients
 # @ba_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
 # @ba_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
 
-# # join recipe with dietary restriction
-@juicy_steak_pescetarian = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @pescetarian.id)
-@juicy_steak_celiac = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @celiac.id)
-@juicy_steak_dairy_intolerant = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @dairy_intolerant.id)
-@juicy_steak_kosher = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @kosher.id)
-@juicy_steak_halal = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @halal.id)
-@juicy_steak_peanut_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @peanut_allergy.id)
-@juicy_steak_shellfish_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @shellfish_allergy.id)
-@juicy_steak_sugar_free = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @sugar_free.id)
 
-@macncheese = Recipe.create(name: "Mac n' Cheese", instructions: "Peel ½ small butternut squash (about 1¼ lb.) and cut flesh into ½ cubes. Peel and finely chop 1 onion. Using the flat side of your chef’s knife, crush 1 garlic clove, then peel and finely chop. Coarsely chop 1 cup kimchi (some kimchi juice is okay; no need to drain).", details: "The good 'ol mac n cheese")
-# #create ingredients
-@macncheese_cheddar = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @cheddar.id, ammount: 500, unit: "grams")
-@macncheese_garlic = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @garlic.id, ammount: 4, unit: "gloves")
+
+
 # @replaceingredient = Ingredient.create(name: "X")
 # @ba_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
 
@@ -1728,6 +1687,70 @@ puts "Creating veggie nachos"
 @wings_diabetic = RecipeOption.create(recipe_id: @wings.id, option_id: @diabetic.id)
 @wings_paleo = RecipeOption.create(recipe_id: @wings.id, option_id: @paleo.id)
 @wings_sugar_free = RecipeOption.create(recipe_id: @wings.id, option_id: @sugar_free.id)
+
+
+
+@herbs_fusilli = Recipe.create(name: "Fusilli With Battuto di Erbe", instructions: "Heat ¾ cup oil in a large Dutch oven or other heavy pot over medium until shimmering. Add garlic, hardy herbs, fennel pollen (if using), and red pepper flakes and cook, stirring often, until oil around garlic starts to sizzle slightly and garlic begins to turn golden brown, about 2 minutes (be careful when you add the garlic as the oil may spatter). Add spring greens and tender herbs and season with a couple pinches of salt. Cook, stirring often, until greens and herbs are wilted and bright green, about 2 minutes. Scrape herb mixture onto a rimmed baking sheet; spread out and let cool slightly. Reserve pot. Scrape pesto back into reserved pot and add pasta and ¾ cup pasta cooking liquid. Set over medium-low heat and cook, tossing vigorously and adding more pasta cooking liquid if needed, until warmed through and pasta is coated (do not let pesto come to a boil), about 1 minute. Taste and season with more salt if needed.", details: "Delicious pasta!")
+# #create ingredients
+@herbs_fusilli_garlic = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @garlic.id, ammount: 5, unit: "gloves")
+@herbs_fusilli_vegetable_oil = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @vegetable_oil.id, ammount: 3, unit: "cups")
+
+@fusilli = Ingredient.create(name: "Fusilli")
+@herbs_fusilli_fusilli = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @fusilli.id, ammount: 1000, unit: "grams")
+
+
+
+# # join recipe with dietary restriction
+@herbs_fusilli_vegetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegetarian.id)
+@herbs_fusilli_vegan = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegan.id)
+@herbs_fusilli_pescetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @pescetarian.id)
+@herbs_fusilli_peanut_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @peanut_allergy.id)
+@herbs_fusilli_shellfish_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @shellfish_allergy.id)
+@herbs_fusilli_diabetic = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @diabetic.id)
+@herbs_fusilli_paleo = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @paleo.id)
+@herbs_fusilli_sugar_free = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @sugar_free.id)
+
+
+@juicy_steak = Recipe.create(name: "Juicy Steaks", instructions: "Clip (or stand) sous vide machine to a tall large pot. Fill pot with warm water to height according to manufacturer’s instructions (keep in mind that steaks when added will cause water to rise). Heat a large cast-iron skillet over high until very hot. Add oil and cook all 4 sides of steak until a nice crust forms, 1–2 minutes total (it happens fast, so don’t walk away). The steak is already perfectly cooked; this step is to get some color and texture on the exterior. Slice steak against the grain, if desired, and season with salt and pepper. (The steak may appear slightly gray when you first cut into it but will turn bright pink when exposed to air.)", details: "You will never eat a steak as delicious as this one")
+# #create ingredients
+@juicy_steak_meat = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
+@juicy_steak_vegetable_oil = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @vegetable_oil.id, ammount: 5, unit: "cups")
+@juicy_steak_black_pepper = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @black_pepper.id, ammount: 5, unit: "cups")
+
+@salt = Ingredient.create(name: "Salt")
+@juicy_steak_salt = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @salt.id, ammount: 3, unit: "cups")
+
+# # join recipe with dietary restriction
+@juicy_steak_pescetarian = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @pescetarian.id)
+@juicy_steak_celiac = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @celiac.id)
+@juicy_steak_dairy_intolerant = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @dairy_intolerant.id)
+@juicy_steak_kosher = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @kosher.id)
+@juicy_steak_halal = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @halal.id)
+@juicy_steak_peanut_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @peanut_allergy.id)
+@juicy_steak_shellfish_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @shellfish_allergy.id)
+@juicy_steak_sugar_free = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @sugar_free.id)
+
+
+@burger_alfresco = Recipe.create(name: "Burger Alfresco", instructions: "Prepare a grill for high heat. Place a cast-iron griddle, flat side up, on grate; heat until very hot, at least 20 minutes. Mix together pickles, mayonnaise, ketchup, adobo sauce, and ½ tsp. salt in a medium bowl; set special sauce aside. Wrap all the buns together in a large sheet of foil to make a packet (this will keep buns soft and from getting too toasted on the grill). Place packet on grate and grill, turning once, until buns are warmed through, about 1 minute. Spread sauce over cut sides of buns. Place 3–4 pieces of lettuce on bottom buns and top each with some onion and a tomato slice, if using.", details: "Everybody love Burgers!")
+# #create ingredients
+@burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 10, unit: "slices")
+@burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 2, unit: "cups")
+@burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
+@burger_alfresco_potatoes = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @potatoes.id, ammount: 500, unit: "grams")
+@burger_alfresco_meat = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @meat.id, ammount: 1000, unit: "grams")
+
+@burger_alfresco_pescetarian = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @pescetarian.id)
+@burger_alfresco_kosher = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @kosher.id)
+@burger_alfresco_halal = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @halal.id)
+@burger_alfresco_peanut_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @peanut_allergy.id)
+@burger_alfresco_shellfish_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @shellfish_allergy.id)
+@burger_alfresco_sugar_free = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @sugar_free.id)
+
+
+@macncheese = Recipe.create(name: "Mac n' Cheese", instructions: "Peel ½ small butternut squash (about 1¼ lb.) and cut flesh into ½ cubes. Peel and finely chop 1 onion. Using the flat side of your chef’s knife, crush 1 garlic clove, then peel and finely chop. Coarsely chop 1 cup kimchi (some kimchi juice is okay; no need to drain).", details: "The good 'ol mac n cheese")
+# #create ingredients
+@macncheese_cheddar = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @cheddar.id, ammount: 500, unit: "grams")
+@macncheese_garlic = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @garlic.id, ammount: 4, unit: "gloves")
 
 @maccaroni = Ingredient.create(name: "Macaronis")
 @macncheese_maccaroni = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @maccaroni.id, ammount: 500, unit: "grams")

@@ -15,12 +15,13 @@
       <%= render 'shared/navbar' %>
       <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
 
-      <%= form_tag event_select_meals_path(@event), method: :get, class:"w-25 mx-auto d-flex my-4" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find your recipe!"
-        %>
+      <%= form_tag event_select_meals_path(@event), method: :get, class:"d-flex w-25 mx-auto my-4" do %>
+        <select data-placeholder="Find your favourite meals!" class="select2" name="query" multiple="multiple">
+          <option value=""></option>
+          <% possible_searchs.each do |search| %>
+            <option value="<%= search %>"><%= search %></option>
+          <% end %>
+        </select>
         <%= submit_tag "Search", class: "btn btn-green" %>
       <% end %>
 

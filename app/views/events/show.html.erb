@@ -11,8 +11,8 @@
         <h2 class="text-center"><%= @event.title %></h2>
         <p class="subtitles text-center"> <%= @event.number_of_members %> members</p>
       </div>
-
-      <div class="d-flex">
+      <div>
+        <div class="d-flex">
         <div class="mb-4 align-self-center">
           <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
             <div class="main-rectangular-card">
@@ -21,6 +21,10 @@
             </div>
           <% end %>
         </div>
+      </div>
+
+
+      </div>  
       </div>
 
     </div>
@@ -36,16 +40,23 @@
             <div class="pl-4">
               <h5 class="separator-bottom pb-3"> <%= meal.recipe.name%></h5>
               <div class="pt-2">
-                <p>
-                  Recipe →
-                </p>
-                <!-- <p> <%= meal.recipe.instructions %></p> -->
-                <p>
-                  Ingredients →
-                </p>
-<!--              <% meal.recipe.ingredients.each do |ingredient| %>
-                    <p> <%= ingredient.name %></p>
-                  <% end %> -->
+                <span id="recipe_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Show Recipe</strong></span>
+                <p></p>
+                <div id="recipe_instructions_<%= meal.recipe.id %>" class="d-none"><%= meal.recipe.instructions %></div>
+                <p></p>
+
+                <span id="ingredient_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Show Ingredient</strong></span>
+                <p></p>
+                <div id="recipe_ingredient_<%= meal.recipe.id %>" class="d-none">    
+                  <% meal.recipe.ingredients.each do |ingredient| %>
+                  <li><%= ingredient.name %></li>
+                  <% end %>
+                </div>
+                <p></p>
+
+
+
+
               </div>
             </div>
           </div>
@@ -53,7 +64,6 @@
 
             <p class="subtitles mt-4"> Notes: <%= meal.recipe.details %></p>
             <p class="btn active oval clickable micro-letter">Add notes</p>
-
 
         </div>
       <% end %>

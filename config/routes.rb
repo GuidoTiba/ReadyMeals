@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   delete 'events/:event_id/meals', to: 'meals#destroy_all', as: 'event_meals_destroy_all'
   get 'events/:id/list_ingredients', to:'events#list_ingredients', as: 'ingredient_list'
   get 'events/:id/select_meals', to: 'events#select_meals', as: 'event_select_meals'
-
+  get 'events/:id/list_recipes', to:'events#list_recipes', as: 'recipes_list'
 
 end

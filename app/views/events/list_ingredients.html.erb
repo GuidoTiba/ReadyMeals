@@ -8,9 +8,26 @@
     <div class="align-self-center">
       <h2 class="text-center"><%= @event.title %></h2>
       <p class="subtitles text-center"> <%= @event.number_of_members %> members</p>
+      <p class="subtitles text-center"> Listado de Compras</p>
     </div>
-    <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
+
+    <div>
+      <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
+      
+      <div class="mb-4 align-self-center">
+        <%= link_to recipes_list_path(@event), class:"no-text-decoration" do %>
+          <div class="lilac-rectangular-card">
+            <%= image_tag "List_of_ingredients.png" %>
+            <p class="green text-center my-0 mx-2 flex-fill">List of Recipes</p>
+          </div>
+        <% end %>
+      </div>    
+    </div>
+
+
   </div>
+
+
 
   <div class="mx-auto">
     <div class="form-check w-50 text-center">

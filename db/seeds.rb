@@ -705,31 +705,212 @@ puts "Creating egg roll bowls"
 
 
 
+@burger_alfresco = Recipe.create(name: "Burger Alfresco", instructions: "Prepare a grill for high heat. Place a cast-iron griddle, flat side up, on grate; heat until very hot, at least 20 minutes. Mix together pickles, mayonnaise, ketchup, adobo sauce, and ½ tsp. salt in a medium bowl; set special sauce aside. Wrap all the buns together in a large sheet of foil to make a packet (this will keep buns soft and from getting too toasted on the grill). Place packet on grate and grill, turning once, until buns are warmed through, about 1 minute. Spread sauce over cut sides of buns. Place 3–4 pieces of lettuce on bottom buns and top each with some onion and a tomato slice, if using.", details: "Everybody love Burgers!")
+# #create ingredients
+@burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 10, unit: "slices")
+@burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 2, unit: "cups")
+@burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
+@burger_alfresco_potato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @potato.id, ammount: 500, unit: "grams")
+@burger_alfresco_meat = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @meat.id, ammount: 1000, unit: "grams")
+
+
+# # join recipe with dietary restriction
+
+@burger_alfresco_pescetarian = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @pescetarian.id)
+@burger_alfresco_kosher = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @kosher.id)
+@burger_alfresco_halal = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @halal.id)
+@burger_alfresco_peanut_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @peanut_allergy.id)
+@burger_alfresco_shellfish_allergy = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @shellfish_allergy.id)
+@burger_alfresco_sugar_free = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @sugar_free.id)
+
+@chicken_mushroom_noodles = Recipe.create(name: "Chicken and Mushroom Noodles", instructions: "If using 1 lb. skinless, boneless chicken thighs (about 4 small), cut into ¼ pieces on a cutting board with a chef’s knife. (To make this process easier, freeze chicken on a baking sheet 30 minutes, then cut chicken when it’s half thawed.) If you’re using 1 lb. ground chicken, skip this step.", details: "Delicious wok")
+# #create ingredients
+@chicken_mushroom_noodles_garlic = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @garlic.id, ammount: 5, unit: "gloves")
+@chicken_mushroom_noodles_black_pepper = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @black_pepper.id, ammount: 100, unit: "grams")
+@chicken_mushroom_noodles_wine_vinegar = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @wine_vinegar.id, ammount: 1, unit: "cup")
+@chicken_mushroom_noodles_sugar = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @sugar.id, ammount: 100, unit: "grams")
+@chicken_mushroom_noodles_vegetable_oil = RecipeIngredient.create(recipe_id: @chicken_mushroom_noodles.id, ingredient_id: @vegetable_oil.id, ammount: 3, unit: "cups")
+
+
+# # join recipe with dietary restriction
+@chicken_mushroom_noodles_pescetarian = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @pescetarian.id)
+@chicken_mushroom_noodles_dairy_intolerant = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @dairy_intolerant.id)
+@chicken_mushroom_noodles_kosher = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @kosher.id)
+@chicken_mushroom_noodles_peanut_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @peanut_allergy.id)
+@chicken_mushroom_noodles_shellfish_allergy = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @shellfish_allergy.id)
+@chicken_mushroom_noodles_sugar_free = RecipeOption.create(recipe_id: @chicken_mushroom_noodles.id, option_id: @sugar_free.id)
+
+@herbs_fusilli = Recipe.create(name: "Fusilli With Battuto di Erbe", instructions: "Heat ¾ cup oil in a large Dutch oven or other heavy pot over medium until shimmering. Add garlic, hardy herbs, fennel pollen (if using), and red pepper flakes and cook, stirring often, until oil around garlic starts to sizzle slightly and garlic begins to turn golden brown, about 2 minutes (be careful when you add the garlic as the oil may spatter). Add spring greens and tender herbs and season with a couple pinches of salt. Cook, stirring often, until greens and herbs are wilted and bright green, about 2 minutes. Scrape herb mixture onto a rimmed baking sheet; spread out and let cool slightly. Reserve pot. Scrape pesto back into reserved pot and add pasta and ¾ cup pasta cooking liquid. Set over medium-low heat and cook, tossing vigorously and adding more pasta cooking liquid if needed, until warmed through and pasta is coated (do not let pesto come to a boil), about 1 minute. Taste and season with more salt if needed.", details: "Delicious pasta!")
+# #create ingredients
+@herbs_fusilli_garlic = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @garlic.id, ammount: 5, unit: "gloves")
+@herbs_fusilli_vegetable_oil = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @vegetable_oil.id, ammount: 3, unit: "cups")
+
+@fusilli = Ingredient.create(name: "Fusilli")
+@herbs_fusilli_fusilli = RecipeIngredient.create(recipe_id: @herbs_fusilli.id, ingredient_id: @fusilli.id, ammount: 1000, unit: "grams")
 
 
 
+# # join recipe with dietary restriction
+@herbs_fusilli_vegetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegetarian.id)
+@herbs_fusilli_vegan = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @vegan.id)
+@herbs_fusilli_pescetarian = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @pescetarian.id)
+@herbs_fusilli_peanut_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @peanut_allergy.id)
+@herbs_fusilli_shellfish_allergy = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @shellfish_allergy.id)
+@herbs_fusilli_diabetic = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @diabetic.id)
+@herbs_fusilli_paleo = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @paleo.id)
+@herbs_fusilli_sugar_free = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @sugar_free.id)
+
+@juicy_steak = Recipe.create(name: "Juicy Steaks", instructions: "Clip (or stand) sous vide machine to a tall large pot. Fill pot with warm water to height according to manufacturer’s instructions (keep in mind that steaks when added will cause water to rise). Heat a large cast-iron skillet over high until very hot. Add oil and cook all 4 sides of steak until a nice crust forms, 1–2 minutes total (it happens fast, so don’t walk away). The steak is already perfectly cooked; this step is to get some color and texture on the exterior. Slice steak against the grain, if desired, and season with salt and pepper. (The steak may appear slightly gray when you first cut into it but will turn bright pink when exposed to air.)", details: "You will never eat a steak as delicious as this one")
+# #create ingredients
+@juicy_steak_meat = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
+@juicy_steak_vegetable_oil = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @vegetable_oil.id, ammount: 5, unit: "cups")
+@juicy_steak_black_pepper = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @black_pepper.id, ammount: 5, unit: "cups")
+@juicy_steak_salt = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @salt.id, ammount: 3, unit: "cups")
 
 
+# # join recipe with dietary restriction
+@juicy_steak_pescetarian = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @pescetarian.id)
+@juicy_steak_celiac = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @celiac.id)
+@juicy_steak_dairy_intolerant = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @dairy_intolerant.id)
+@juicy_steak_kosher = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @kosher.id)
+@juicy_steak_halal = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @halal.id)
+@juicy_steak_peanut_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @peanut_allergy.id)
+@juicy_steak_shellfish_allergy = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @shellfish_allergy.id)
+@juicy_steak_sugar_free = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @sugar_free.id)
+
+@macncheese = Recipe.create(name: "Mac n' Cheese", instructions: "Peel ½ small butternut squash (about 1¼ lb.) and cut flesh into ½ cubes. Peel and finely chop 1 onion. Using the flat side of your chef’s knife, crush 1 garlic clove, then peel and finely chop. Coarsely chop 1 cup kimchi (some kimchi juice is okay; no need to drain).", details: "The good 'ol mac n cheese")
+# #create ingredients
+@macncheese_cheddar = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @cheddar.id, ammount: 500, unit: "grams")
+@macncheese_garlic = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @garlic.id, ammount: 4, unit: "gloves")
+
+@maccaroni = Ingredient.create(name: "Macaronis")
+@macncheese_maccaroni = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @maccaroni.id, ammount: 500, unit: "grams")
 
 
+# # join recipe with dietary restriction
+@macncheese_vegetarian = RecipeOption.create(recipe_id: @macncheese.id, option_id: @vegetarian.id)
+@macncheese_pescetarian = RecipeOption.create(recipe_id: @macncheese.id, option_id: @pescetarian.id)
+@macncheese_kosher = RecipeOption.create(recipe_id: @macncheese.id, option_id: @kosher.id)
+@macncheese_halal = RecipeOption.create(recipe_id: @macncheese.id, option_id: @halal.id)
+@macncheese_peanut_allergy = RecipeOption.create(recipe_id: @macncheese.id, option_id: @peanut_allergy.id)
+@macncheese_shellfish_allergy = RecipeOption.create(recipe_id: @macncheese.id, option_id: @shellfish_allergy.id)
+@macncheese_diabetic = RecipeOption.create(recipe_id: @macncheese.id, option_id: @diabetic.id)
+@macncheese_sugar_free = RecipeOption.create(recipe_id: @macncheese.id, option_id: @sugar_free.id)
+
+@marinated_chicken = Recipe.create(name: "Delicious marinated Chicken", instructions: "Pour oil into a small skillet; stir in paprika, coriander, and cumin. Set over medium heat and cook, stirring occasionally, until tiny bubbles form and oil around spices starts to sizzle and is very fragrant, about 2 minutes. (This step extracts oils from the spices, bringing out their flavors.) Immediately pour half of spiced oil into a large bowl; set remaining spiced oil aside for borani. Let oil in bowl cool 5 minutes, then add yogurt, garlic, ginger, and red pepper flakes and whisk until smooth.", details: "Not apt for vegetarians")
+# #create ingredients
+@marinated_chicken_chicken = RecipeIngredient.create(recipe_id: @marinated_chicken.id, ingredient_id: @chicken.id, ammount: 1500, unit: "grams")
+@marinated_chicken_black_pepper = RecipeIngredient.create(recipe_id: @marinated_chicken.id, ingredient_id: @black_pepper.id, ammount: 5, unit: "cups")
+@marinated_chicken_vegetable_oil = RecipeIngredient.create(recipe_id: @marinated_chicken.id, ingredient_id: @vegetable_oil.id, ammount: 5, unit: "cups")
+
+@yogurt = Ingredient.create(name: "Yogurt")
+@marinated_chicken_yogurt = RecipeIngredient.create(recipe_id: @marinated_chicken.id, ingredient_id: @yogurt.id, ammount: 300, unit: "grams")
 
 
+# # join recipe with dietary restriction
+@marinated_chicken_pescetarian = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @pescetarian.id)
+@marinated_chicken_celiac = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @celiac.id)
+@marinated_chicken_dairy_intolerant = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @dairy_intolerant.id)
+@marinated_chicken_kosher = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @kosher.id)
+@marinated_chicken_peanut_allergy = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @peanut_allergy.id)
+@marinated_chicken_shellfish_allergy = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @shellfish_allergy.id)
+@marinated_chicken_sugar_free = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @sugar_free.id)
+
+@noodle_puttanesca = Recipe.create(name: "Noodles Puttanesca", instructions: "Step 1 Pulse beefsteak tomatoes, garlic, red pepper flakes, and 2 tsp. salt in a food processor until smooth; transfer sauce to a large bowl and mix in cherry tomatoes, olives, capers, and ¼ cup oil. Step 2 Cook spaghetti in a large pot of boiling salted water, stirring occasionally, until al dente. Drain pasta, reserving ¼ cup pasta cooking liquid. Step 3 Add pasta, parsley, and butter to sauce. Toss vigorously with tongs, adding a splash of pasta cooking liquid or more as needed to create an emulsified sauce that coats pasta. Divide among bowls and drizzle with more oil.", details: "Delicious pasta")
+# #create ingredients
+@noodle_puttanesca_tomato = RecipeIngredient.create(recipe_id: @noodle_puttanesca.id, ingredient_id: @tomato.id, ammount: 300, unit: "grams")
+@noodle_puttanesca_tomato_sauce = RecipeIngredient.create(recipe_id: @noodle_puttanesca.id, ingredient_id: @tomato_sauce.id, ammount: 400, unit: "grams")
+@noodle_puttanesca_pasta = RecipeIngredient.create(recipe_id: @noodle_puttanesca.id, ingredient_id: @pasta.id, ammount: 1000, unit: "grams")
+@noodle_puttanesca_vegetable_oil = RecipeIngredient.create(recipe_id: @noodle_puttanesca.id, ingredient_id: @vegetable_oil.id, ammount: 4, unit: "cups")
+
+# # join recipe with dietary restriction
+@noodle_puttanesca_vegetarian = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @vegetarian.id)
+@noodle_puttanesca_vegan = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @vegan.id)
+@noodle_puttanesca_pescetarian = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @pescetarian.id)
+@noodle_puttanesca_celiac = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @celiac.id)
+@noodle_puttanesca_dairy_intolerant = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @dairy_intolerant.id)
+@noodle_puttanesca_kosher = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @kosher.id)
+@noodle_puttanesca_halal = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @halal.id)
+@noodle_puttanesca_peanut_allergy = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @peanut_allergy.id)
+@noodle_puttanesca_shellfish_allergy = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @shellfish_allergy.id)
+@noodle_puttanesca_diabetic = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @diabetic.id)
+@noodle_puttanesca_paleo = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @paleo.id)
+@noodle_puttanesca_sugar_free = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @sugar_free.id)
+
+@steak_wraps = Recipe.create(name: "Lettuce and Steak Wraps", instructions: "This recipe is simple: marinate some skirt steak in the adobo sauce from canned chipotles in adobo, lime juice, salt, pepper, and neutral oil. Cook it in a ripping-hot cast iron pan, let it rest, slice, and slide into iceberg lettuce. That’s all fine and dandy, but the reason this recipe is so exciting isn’t because it’s weeknight friendly or because it’s way to eat less carbs without feeling like you’re depriving yourself. It’s amazing because you are eating corn nuts, a snack that your mom probably didn’t let you buy from the gas station! There are radishes there for a sharp bite and extra vegetables, spicy yogurt sauce, cilantro, and lime too, but really, my eyes are on those corn nuts.", details: "Delicious and healthy")
+# #create ingredients
+@steak_wraps_lettuce = RecipeIngredient.create(recipe_id: @steak_wraps.id, ingredient_id: @lettuce.id, ammount: 500, unit: "grams")
+@steak_wraps_meat = RecipeIngredient.create(recipe_id: @steak_wraps.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
+@steak_wraps_black_pepper = RecipeIngredient.create(recipe_id: @steak_wraps.id, ingredient_id: @black_pepper.id, ammount: 4, unit: "cups")
+
+@wrap = Ingredient.create(name: "Wraps")
+@steak_wraps_wrap = RecipeIngredient.create(recipe_id: @steak_wraps.id, ingredient_id: @wrap.id, ammount: 10, unit: "units")
 
 
+# # join recipe with dietary restriction
+@steak_wraps_pescetarian = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @pescetarian.id)
+@steak_wraps_dairy_intolerant = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @dairy_intolerant.id)
+@steak_wraps_kosher = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @kosher.id)
+@steak_wraps_peanut_allergy = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @peanut_allergy.id)
+@steak_wraps_shellfish_allergy = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @shellfish_allergy.id)
+@steak_wraps_diabetic = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @diabetic.id)
+@steak_wraps_paleo = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @paleo.id)
+@steak_wraps_sugar_free = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @sugar_free.id)
+
+@steaks_and_eggs = Recipe.create(name: "Steak and Eggs with Saucy Beans", instructions: "Step 1 Mix paprika, Aleppo-style pepper, 2½ tsp. salt, and 1 tsp. black pepper in a bowl. Rub all over steaks, pressing to adhere. Let sit while you make the beans. Step 2 Heat 2 Tbsp. oil in a medium saucepan over medium-low. Cook shallots, garlic, and cilantro stems, stirring often, until softened but not yet browned, about 3 minutes. Add beans, butter, and ¾ cup water. Bring to a simmer and cook, stirring occasionally, until beans are saucy, 6–9 minutes. Remove from heat and stir in cilantro leaves. Finely grate some lime zest from one of the lime halves into beans, then squeeze in its juice. Season with salt and pepper. Cover to keep warm.", details: "Not apt for vegetarians")
+# #create ingredients
+@steaks_and_eggs_eggs = RecipeIngredient.create(recipe_id: @steaks_and_eggs.id, ingredient_id: @eggs.id, ammount: 5, unit: "units")
+@steaks_and_eggs_meat = RecipeIngredient.create(recipe_id: @steaks_and_eggs.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
+@steaks_and_eggs_butter = RecipeIngredient.create(recipe_id: @steaks_and_eggs.id, ingredient_id: @butter.id, ammount: 100, unit: "grams")
+@steaks_and_eggs_lemons = RecipeIngredient.create(recipe_id: @steaks_and_eggs.id, ingredient_id: @lemons.id, ammount: 2, unit: "units")
 
 
+# # join recipe with dietary restriction
+@steaks_and_eggs_pescetarian = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @pescetarian.id)
+@steaks_and_eggs_celiac = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @celiac.id)
+@steaks_and_eggs_kosher = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @kosher.id)
+@steaks_and_eggs_halal = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @halal.id)
+@steaks_and_eggs_peanut_allergy = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @peanut_allergy.id)
+@steaks_and_eggs_shellfish_allergy = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @shellfish_allergy.id)
+@steaks_and_eggs_sugar_free = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @sugar_free.id)
+
+@vegan_pasta = Recipe.create(name: "Vegan Pasta", instructions: "Marinate them like you would olives or cheese. Sauté a sliced leek, shallot, or onion in plenty of oil. Add spices—mustard/fennel/cumin/coriander seeds in the oil, along with chile flakes and lemon peel—and cook until fragrant. Remove from heat and grate in garlic. Pour over any kind of drained and rinsed beans (or even cooked lentils). Let them hang out for 20 minutes or an hour or as long as you can handle. Add a squeeze of lemon juice or a splash of vinegar. Spoon over toast.", details: "Delicious and healthy vegan pasta")
+# #create ingredients
+@vegan_pasta_pasta = RecipeIngredient.create(recipe_id: @vegan_pasta.id, ingredient_id: @pasta.id, ammount: 500, unit: "grams")
+@vegan_pasta_tomato = RecipeIngredient.create(recipe_id: @vegan_pasta.id, ingredient_id: @tomato.id, ammount: 300, unit: "grams")
+@vegan_pasta_black_pepper = RecipeIngredient.create(recipe_id: @vegan_pasta.id, ingredient_id: @black_pepper.id, ammount: 3, unit: "cups")
 
 
+# # join recipe with dietary restriction
+@vegan_pasta_vegetarian = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @vegetarian.id)
+@vegan_pasta_vegan = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @vegan.id)
+@vegan_pasta_pescetarian = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @pescetarian.id)
+@vegan_pasta_dairy_intolerant = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @dairy_intolerant.id)
+@vegan_pasta_kosher = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @kosher.id)
+@vegan_pasta_peanut_allergy = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @peanut_allergy.id)
+@vegan_pasta_shellfish_allergy = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @shellfish_allergy.id)
+@vegan_pasta_sugar_free = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @sugar_free.id)
+
+@veggie_burger = Recipe.create(name: "Veggie Burger", instructions: "Step 1 Cook wheat berries in a medium saucepan of boiling salted water until tender (they will remain quite chewy), 45–50 minutes. Drain, spread out on a baking sheet, and let cool. Step 2 Meanwhile, place porcini mushrooms in a small bowl and cover with 1 cup very hot water. Let stand 20 minutes to soften; drain, reserving ¼ cup mushroom soaking liquid. Step 3 Heat 2 Tbsp. oil in a large skillet over medium-high heat. Add shallot and cook, stirring often, until softened, about 3 minutes. Add shiitake mushrooms and cook, tossing occasionally, until golden brown and tender, 6–8 minutes. Transfer shallot and shiitake mushrooms to a food processor. Add chickpeas and rehydrated porcini mushrooms and pulse until coarsely chopped. Add wheat berries, liquid aminos, and reserved mushroom soaking liquid and process until fairly smooth (mixture should still have some texture). Transfer to a large bowl; season with salt and pepper and fold in carrot and egg. Form mixture into four 5” patties; place on a plate and chill, uncovered, at least 30 minutes.", details: "Not apt for vegetarians")
+# #create ingredients
+@veggie_burger_onions = RecipeIngredient.create(recipe_id: @veggie_burger.id, ingredient_id: @onions.id, ammount: 500, unit: "grams")
+@veggie_burger_carrots = RecipeIngredient.create(recipe_id: @veggie_burger.id, ingredient_id: @carrots.id, ammount: 300, unit: "grams")
+@veggie_burger_bread = RecipeIngredient.create(recipe_id: @veggie_burger.id, ingredient_id: @bread.id, ammount: 4, unit: "units")
+
+@mushrooms = Ingredient.create(name: "Mushrooms")
+@veggie_burger_mushrooms = RecipeIngredient.create(recipe_id: @veggie_burger.id, ingredient_id: @mushrooms.id, ammount: 150, unit: "grams")
 
 
-
-
-
-
-
-
-
-
+# # join recipe with dietary restriction
+@veggie_burger_vegetarian = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @vegetarian.id)
+@veggie_burger_vegan = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @vegan.id)
+@veggie_burger_pescetarian = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @pescetarian.id)
+@veggie_burger_celiac = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @celiac.id)
+@veggie_burger_dairy_intolerant = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @dairy_intolerant.id)
+@veggie_burger_kosher = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @kosher.id)
+@veggie_burger_halal = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @halal.id)
+@veggie_burger_peanut_allergy = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @peanut_allergy.id)
+@veggie_burger_shellfish_allergy = RecipeOption.create(recipe_id: @veggie_burger.id, option_id: @shellfish_allergy.id)
 
 
 
@@ -832,7 +1013,58 @@ orange_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/uploa
 egg_roll_bowls_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614984224/zrrpxhzifzhhttmptvs5.png')
 @egg_roll_bowls.photo.attach(io: egg_roll_bowls_file, filename: 'egg_roll_bowls.jpg', content_type: 'image/jpg')
 
-# replace_file = URI.open('replace')
-# @replace.photo.attach(io: replace_file, filename: 'replace.jpg', content_type: 'image/jpg')
 
 # Cloudinary::Uploader.upload("app/assets/images/replace.jpg")
+
+
+
+# @replacerecipe = Recipe.create(name: "X", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
+# replacerecipe_file = URI.open('X')
+# @replacerecipe.photo.attach(io: replacerecipe_file, filename: 'replacerecipe.jpg', content_type: 'image/jpg')
+
+
+
+
+
+burger_alfresco_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058494/k1q4afeu8dx3gwqhbih0.png')
+@burger_alfresco.photo.attach(io: burger_alfresco_file, filename: 'burger_alfresco.png', content_type: 'image/png')
+
+
+chicken_mushroom_noodles_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058498/vjiika1yvyi5dth9t9pf.png')
+@chicken_mushroom_noodles.photo.attach(io: chicken_mushroom_noodles_file, filename: 'chicken_mushroom_noodles.png', content_type: 'image/png')
+
+
+herbs_fusilli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058502/pzhhqj4ptq8uimd9wlsl.png')
+@herbs_fusilli.photo.attach(io: herbs_fusilli_file, filename: 'herbs_fusilli.png', content_type: 'image/png')
+
+
+juicy_steak_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058506/yeprsjgrlfencomslewt.png')
+@juicy_steak.photo.attach(io: juicy_steak_file, filename: 'juicy_steak.png', content_type: 'image/png')
+
+
+macncheese_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058509/o8fe22vfjgnjihhqfbpr.png')
+@macncheese.photo.attach(io: macncheese_file, filename: 'macncheese.png', content_type: 'image/png')
+
+
+marinated_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058512/jehhgsl2mkilcgofetvl.png')
+@marinated_chicken.photo.attach(io: marinated_chicken_file, filename: 'marinated_chicken.png', content_type: 'image/png')
+
+
+noodle_puttanesca_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058516/stfnpajmemr3zs7ul9d4.png')
+@noodle_puttanesca.photo.attach(io: noodle_puttanesca_file, filename: 'noodle_puttanesca.png', content_type: 'image/png')
+
+
+steak_wraps_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058519/vsw6xq0tb1jvfy2idepa.png')
+@steak_wraps.photo.attach(io: steak_wraps_file, filename: 'steak_wraps.png', content_type: 'image/png')
+
+
+steaks_and_eggs_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058522/ve0xvqkfitgykgk6rhne.png')
+@steaks_and_eggs.photo.attach(io: steaks_and_eggs_file, filename: 'steaks_and_eggs.png', content_type: 'image/png')
+
+
+vegan_pasta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058526/k60t0kva3lam3fjefc2a.png')
+@vegan_pasta.photo.attach(io: vegan_pasta_file, filename: 'vegan_pasta.png', content_type: 'image/png')
+
+
+veggie_burger_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058528/vncwmvvrmhxbltu3whkh.png')
+@veggie_burger.photo.attach(io: veggie_burger_file, filename: 'veggie_burger.png', content_type: 'image/png')

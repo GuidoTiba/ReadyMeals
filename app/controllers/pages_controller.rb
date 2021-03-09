@@ -25,7 +25,10 @@ class PagesController < ApplicationController
   private
 
   def set_recipes
-    @recipes = Recipe.all.sort{|a,b| a.name <=> b.name}
+    @recipes = Recipe.all
   end
 
 end
+
+
+# .sort{|a,b| a.name <=> b.name}

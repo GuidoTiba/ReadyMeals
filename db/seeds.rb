@@ -28,34 +28,26 @@ puts "Creating recipes"
 puts "Creating ingredients"
 
 @salt = Ingredient.create(name: "Salt")
-
 @meat = Ingredient.create(name: "Meat")
 @barbequesauce = Ingredient.create(name: "Barbeque Sauce")
-
 @potatoes = Ingredient.create(name: "Potatoes")
 @flour = Ingredient.create(name: "Flour")
 @tomato_sauce = Ingredient.create(name: "Tomato Sauce")
-
 @mozzarela = Ingredient.create(name: "Mozzarela")
 @tomato = Ingredient.create(name: "Tomato")
 @oregano = Ingredient.create(name: "Oregano")
-
 @chicken = Ingredient.create(name: "Chicken")
 @caesar_dressing = Ingredient.create(name: "Caesar Dressing")
 @greens = Ingredient.create(name: "Greens")
 @cheese = Ingredient.create(name: "Cheese")
-
 @salmon = Ingredient.create(name: "Salmon")
 @tuna = Ingredient.create(name: "Tuna")
 @rice = Ingredient.create(name: "Rice")
 @algae = Ingredient.create(name: "Algae")
 @soy_sauce = Ingredient.create(name: "Soy sauce")
-
 @dough = Ingredient.create(name: "Dough")
 @filling = Ingredient.create(name: "Filling")
-
 @empanada_top = Ingredient.create(name: "Empanada top")
-
 @chocolate = Ingredient.create(name: "Chocolate")
 @white_chocolate = Ingredient.create(name: "White Chocolate")
 @butter = Ingredient.create(name: "Butter")
@@ -68,13 +60,11 @@ puts "Creating ingredients"
 @dulce_de_leche = Ingredient.create(name: "Dulce de Leche")
 @cream = Ingredient.create(name: "Cream")
 @casancrem = Ingredient.create(name: "Casancrem")
-
 @kosher_kosher_salt = Ingredient.create(name: "Kosher salt")
 @lager = Ingredient.create(name: "Lager")
 @cod = Ingredient.create(name: "Cod")
 @black_pepper = Ingredient.create(name: "Black pepper")
 @vegetable_oil = Ingredient.create(name: "Vegetable oil")
-
 @baking_soda = Ingredient.create(name: "Baking soda")
 @granulated_sugar = Ingredient.create(name: "Granulated sugar")
 @cinnamon = Ingredient.create(name: "Cinnamon")
@@ -84,7 +74,6 @@ puts "Creating ingredients"
 @raisins = Ingredient.create(name: "Raisins")
 @cream_cheese = Ingredient.create(name: "Cream cheese")
 @powdered_sugar = Ingredient.create(name: "Powdered sugar")
-
 @bowtie_pasta = Ingredient.create(name: "Bowtie pasta")
 @adobo_seasoning = Ingredient.create(name: "Adobo seasoning")
 @paprika = Ingredient.create(name: "Paprika")
@@ -105,14 +94,11 @@ puts "Creating ingredients"
 @blue_cheese = Ingredient.create(name: "Blue cheese")
 @cherry_tomatos = Ingredient.create(name: "Cherry tomatos")
 @chives = Ingredient.create(name: "Chives")
-
 @brown_sugar = Ingredient.create(name: "Brown sugar")
 @chocolate_chips = Ingredient.create(name: "Choclate chips")
-
 @baking_powder = Ingredient.create(name: "Baking powder")
 @maple_syrup = Ingredient.create(name: "Maple syrup")
 @green_onions = Ingredient.create(name: "Green onions")
-
 @ginger = Ingredient.create(name: "Ginger")
 @garlic = Ingredient.create(name: "Garlic")
 @bread_crumbs = Ingredient.create(name: "Bread crumbs")
@@ -121,27 +107,22 @@ puts "Creating ingredients"
 @oranges = Ingredient.create(name: "Oranges")
 @cornstarch = Ingredient.create(name: "Cornstarch")
 @garnish = Ingredient.create(name: "Garnish")
-
 @garlic = Ingredient.create(name: "Garlic")
 @pork = Ingredient.create(name: "Pork")
 @sesame_oil = Ingredient.create(name: "Sesame oil")
 @cabbage = Ingredient.create(name: "Cabbage")
 @sriracha = Ingredient.create(name: "Sriracha")
 @sesame_seeds = Ingredient.create(name: "Sesame seeds")
-
 @rice_noodles = Ingredient.create(name: "Rice noodles")
 @leaves = Ingredient.create(name: "Leaves")
-
 @chocolate_chips = Ingredient.create(name: "Chocolate chips")
 @cocoa_powder = Ingredient.create(name: "Cocoa powder")
-
 @basmati_rice = Ingredient.create(name: "Basmati rice")
 @shallot = Ingredient.create(name: "Shallot")
 @turmeric = Ingredient.create(name: "Turmeric")
 @coconut_milk = Ingredient.create(name: "Coconut milk")
 @kale = Ingredient.create(name: "Kale")
 @oats = Ingredient.create(name: "Oats")
-
 @dates = Ingredient.create(name: "Dates")
 @golden_raisins = Ingredient.create(name: "Golden raisins")
 @flaxseed = Ingredient.create(name: "Flaxseed")
@@ -149,47 +130,38 @@ puts "Creating ingredients"
 @shredded_coconut = Ingredient.create(name: "Shredded Coconut")
 @black_currants = Ingredient.create(name: "Black currants")
 @heavy_cream = Ingredient.create(name: "Heavy cream")
-
 @sesame_sauce = Ingredient.create(name: "Sesame sauce")
 @mixed_herbs = Ingredient.create(name: "miexed herbs")
 @mushrooms = Ingredient.create(name: "Mushrooms")
 @pumpkin_sauce = Ingredient.create(name: "Pumpkin sauce")
-
 @pumpkin = Ingredient.create(name: "Pumpkin")
 @cider_vinegar = Ingredient.create(name: "Cider vinegar")
 @lime_juice = Ingredient.create(name: "Lime juice")
 @lemon_juice = Ingredient.create(name: "Lemon juice")
-
 @tofu = Ingredient.create(name: "Tofu")
 @broccoli = Ingredient.create(name: "Broccoli")
 @scallion = Ingredient.create(name: "Scallion")
 @tahini = Ingredient.create(name: "Tahini")
 @rice_vinegar = Ingredient.create(name: "Rice vinegar")
 @sesamae_seeds = Ingredient.create(name: "Sesamae Seeds")
-
 @maple_syrup = Ingredient.create(name: "Maple syrup")
 @scallions = Ingredient.create(name: "Scallions")
-
 @chickpeas = Ingredient.create(name: "Chickpeas")
 @mayonnaise = Ingredient.create(name: "Mayonnaise")
 @endives = Ingredient.create(name: "Endives")
-
 @rice_vinegar = Ingredient.create(name: "Rice vinegar")
 @cauliflower = Ingredient.create(name: "Cauliflower")
 @cumin = Ingredient.create(name: "Cumin")
 @tortilla_chips = Ingredient.create(name: "Tortilla chips")
 @beans = Ingredient.create(name: "Beans")
 @tortilla_chips = Ingredient.create(name: "Tortilla chips")
-
 @beets = Ingredient.create(name: "Beets")
 @shrimps = Ingredient.create(name: "Shrimps")
 @sweet_potatoes = Ingredient.create(name: "Sweet potatoes")
 @fusilli = Ingredient.create(name: "Fusilli")
-
 @nuts = Ingredient.create(name: "Nuts")
 @nori_sheets = Ingredient.create(name: "Nori sheets")
 @kimchi = Ingredient.create(name: "Kimchi")
-
 @pepperoni = Ingredient.create(name: "Pepperoni")
 @fleur_de_sel = Ingredient.create(name: "Fleur de sel")
 @maccaroni = Ingredient.create(name: "Macaronis")
@@ -799,7 +771,6 @@ puts "Creating B cake"
 puts "Creating chicken rice"
 @chicken_rice = Recipe.create(name: "Chicken rice", instructions: "Place rice in a medium bowl and pour in cold water to cover. Agitate rice with your hands until water is cloudy. Drain and repeat until water is almost clear (about 3 times). Pour in water to cover rice by 2; let soak 30–45 minutes. Heat oil in a heavy pot with a wide base (preferably 10) over medium-high. Add shallot and cook, stirring occasionally, until golden, about 3 minutes. Add garlic and cook, stirring until softened, about 1 minute. Add chicken, turmeric, cayenne, and 1½ tsp. salt. Cook, turning and moving around chicken thighs as needed, until chicken begins to turn opaque, about 2 minutes. Pour in ¾ cup water and bring to a simmer. Reduce heat to low, cover, and simmer, turning chicken once, until chicken is cooked through and very tender, about 20 minutes. Drain rice and add to pot with chicken, then add coconut milk and remaining 1 tsp. salt. Stir to incorporate and bring to a boil. Drape a kitchen towel over pot; cover with lid. Bring corners of towel up and over lid and secure with a rubber band. Reduce heat to lowest setting and cook, undisturbed, 15 minutes. Remove from heat and remove towel and lid. Arrange kale in an even layer over chicken and rice and cover with lid. Let sit until wilted, about 10 minutes. Divide chicken and rice among bowls. Top with chiles if using. Serve with lime wedges", details: "You can make the rice sticky!")
 
-#create ingredients
 @chicken_rice_vegetable_oil = RecipeIngredient.create(recipe_id: @chicken_rice.id, ingredient_id: @vegetable_oil.id, ammount: 500, unit: "grams")
 @chicken_rice_garlic = RecipeIngredient.create(recipe_id: @chicken_rice.id, ingredient_id: @garlic.id, ammount: 500, unit: "grams")
 @chicken_rice_chicken = RecipeIngredient.create(recipe_id: @chicken_rice.id, ingredient_id: @chicken.id, ammount: 500, unit: "grams")
@@ -1132,12 +1103,6 @@ puts "Creating BA pizza"
 @ba_pizza_cheese = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @cheese.id, ammount: 500, unit: "grams")
 @ba_pizza_garlic = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @garlic.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @ba_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @ba_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @ba_pizza.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @ba_pizza_vegetarian = RecipeOption.create(recipe_id: @ba_pizza.id, option_id: @vegetarian.id)
 @ba_pizza_vegan = RecipeOption.create(recipe_id: @ba_pizza.id, option_id: @vegan.id)
 @ba_pizza_pescetarian = RecipeOption.create(recipe_id: @ba_pizza.id, option_id: @pescetarian.id)
@@ -1170,9 +1135,6 @@ puts "Creating Chocolate ganache"
 @chocolate_ganache_sugar = RecipeIngredient.create(recipe_id: @chocolate_ganache.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 @chocolate_ganache_nuts = RecipeIngredient.create(recipe_id: @chocolate_ganache.id, ingredient_id: @nuts.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @chocolate_ganache_replaceingredient = RecipeIngredient.create(recipe_id: @chocolate_ganache.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @chocolate_ganache_vegetarian = RecipeOption.create(recipe_id: @chocolate_ganache.id, option_id: @vegetarian.id)
 @chocolate_ganache_vegan = RecipeOption.create(recipe_id: @chocolate_ganache.id, option_id: @vegan.id)
 @chocolate_ganache_pescetarian = RecipeOption.create(recipe_id: @chocolate_ganache.id, option_id: @pescetarian.id)
@@ -1184,7 +1146,6 @@ puts "Creating Chocolate ganache"
 # 2½ cups mixed raw nuts (such as walnuts, blanched hazelnuts, pistachios, and/or almonds)
 # 6 Tbsp. sugar
 # ¾ tsp. kosher salt
-
 # 12 oz. bittersweet chocolate, chopped
 # 2 cups heavy cream
 # 6 Tbsp. unsalted butter, room temperature, cut into 1 pieces
@@ -1196,12 +1157,6 @@ puts "Creating Digestives"
 @digestives_chocolate = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
 @digestives_butter = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
 @digestives_sugar = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @digestives_replaceingredient = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @digestives_replaceingredient = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @digestives_vegetarian = RecipeOption.create(recipe_id: @digestives.id, option_id: @vegetarian.id)
 @digestives_vegan = RecipeOption.create(recipe_id: @digestives.id, option_id: @vegan.id)
@@ -1230,13 +1185,6 @@ puts "Creating lasagna"
 @lasagna_olive_oil = RecipeIngredient.create(recipe_id: @lasagna.id, ingredient_id: @olive_oil.id, ammount: 500, unit: "grams")
 @lasagna_salt = RecipeIngredient.create(recipe_id: @lasagna.id, ingredient_id: @salt.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @lasagna_replaceingredient = RecipeIngredient.create(recipe_id: @lasagna.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @lasagna_replaceingredient = RecipeIngredient.create(recipe_id: @lasagna.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
-# join recipe with dietary restriction
 @lasagna_vegetarian = RecipeOption.create(recipe_id: @lasagna.id, option_id: @vegetarian.id)
 @lasagna_vegan = RecipeOption.create(recipe_id: @lasagna.id, option_id: @vegan.id)
 @lasagna_pescetarian = RecipeOption.create(recipe_id: @lasagna.id, option_id: @pescetarian.id)
@@ -1260,7 +1208,6 @@ puts "Creating lasagna"
 # 1 28-oz. can whole peeled tomatoes
 # 1 cup low-sodium chicken broth
 # 1 cup whole milk
-
 # 7 Tbsp. unsalted butter
 # ¼ cup plus 3 Tbsp. all-purpose flour
 # 6 cups whole milk
@@ -1268,7 +1215,6 @@ puts "Creating lasagna"
 # Pinch of cayenne pepper
 # Pinch of ground nutmeg
 # Kosher salt, freshly ground pepper
-
 # 1¼ lb. dried lasagna noodles (we like De Cecco since they are wide and short)
 # Kosher salt
 # Extra-virgin olive oil (for greasing)
@@ -1280,12 +1226,6 @@ puts "Creating Molten caramel cake"
 @molten_caramel_cake_salt = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @salt.id, ammount: 500, unit: "grams")
 @molten_caramel_cake_dulce_de_leche = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @dulce_de_leche.id, ammount: 500, unit: "grams")
 @molten_caramel_cake_eggs = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @molten_caramel_cake_replaceingredient = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @molten_caramel_cake_replaceingredient = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @molten_caramel_cake_vegetarian = RecipeOption.create(recipe_id: @molten_caramel_cake.id, option_id: @vegetarian.id)
 @molten_caramel_cake_vegan = RecipeOption.create(recipe_id: @molten_caramel_cake.id, option_id: @vegan.id)
@@ -1308,7 +1248,7 @@ puts "Creating Molten caramel cake"
 # ½ tsp. vanilla extract
 
 puts "Creating Onigiri"
-@onigiri = Recipe.create(name: "Onigiri", instructions: "Place 2 cups sushi rice in a large bowl and pour in cold water to cover by 2"–3". Gently swish around with your hands to rinse, then drain. Repeat process until water is almost clear (about 3 more times). Pour cold water over rice to cover by 1 and let soak 30 minutes (this will help the grains cook more evenly). Drain well in a sieve. Combine rice and 2½ cups water in a medium saucepan and bring to a boil over high heat, stirring occasionally. Reduce heat to low, cover, and simmer rice until water is absorbed, 12–14 minutes. Remove from heat and let sit (still covered) 15 minutes. This will allow rice to steam and become tender. Uncover and gently fluff rice with a fork. Let sit until cool enough to handle but still warm. .Meanwhile, cut three 8½x7½ toasted nori sheets into 3x1¼ strips with kitchen shears; set aside. Prepare the fillings. Mix one 5-oz. can tuna, 2 Tbsp. mayonnaise, preferably Kewpie, and 1 tsp. soy sauce in a small bowl to combine. Place 4 umeboshi on a cutting board. Working one at a time, press a chef’s knife against fruit until pit is exposed; pull out and discard. Set fruit aside (no need to chop). Working over the sink and using your hands, squeeze liquid out of ⅓ cup kimchi; chop into small pieces. Place 1 cup water in a small bowl and stir in ¾ tsp. Diamond Crystal or ½ tsp. Morton kosher salt. Dip your hands in the salted water, then scoop a little less than ⅓ cup rice into 1 hand. Form into a thick disk 3–4 in diameter (keep remaining rice in pot covered). Create a small indentation in the center and add 1–2 tsp. filling of choice (or a whole umeboshi). Mold rice up and over filling to create a sphere (filling should not be visible), then press firmly with index finger and thumb to form into a triangle. Place on cutting board or a baking sheet. Repeat with remaining rice and filling, dipping your hands in salt water each time. (You’ll have extra tuna—save it for making a tuna salad sandwich or spooning onto crackers.) Place ¼ cup furikake or toasted sesame seeds on a small plate. Wrap bottom of each onigiri with a strip of reserved nori, then roll remaining exposed sides in furikake.", details: "Not apt for vegetarians")
+@onigiri = Recipe.create(name: "Onigiri", instructions: "Place 2 cups sushi rice in a large bowl and pour in cold water to cover by 2–3. Gently swish around with your hands to rinse, then drain. Repeat process until water is almost clear (about 3 more times). Pour cold water over rice to cover by 1 and let soak 30 minutes (this will help the grains cook more evenly). Drain well in a sieve. Combine rice and 2½ cups water in a medium saucepan and bring to a boil over high heat, stirring occasionally. Reduce heat to low, cover, and simmer rice until water is absorbed, 12–14 minutes. Remove from heat and let sit (still covered) 15 minutes. This will allow rice to steam and become tender. Uncover and gently fluff rice with a fork. Let sit until cool enough to handle but still warm. .Meanwhile, cut three 8½x7½ toasted nori sheets into 3x1¼ strips with kitchen shears; set aside. Prepare the fillings. Mix one 5-oz. can tuna, 2 Tbsp. mayonnaise, preferably Kewpie, and 1 tsp. soy sauce in a small bowl to combine. Place 4 umeboshi on a cutting board. Working one at a time, press a chef’s knife against fruit until pit is exposed; pull out and discard. Set fruit aside (no need to chop). Working over the sink and using your hands, squeeze liquid out of ⅓ cup kimchi; chop into small pieces. Place 1 cup water in a small bowl and stir in ¾ tsp. Diamond Crystal or ½ tsp. Morton kosher salt. Dip your hands in the salted water, then scoop a little less than ⅓ cup rice into 1 hand. Form into a thick disk 3–4 in diameter (keep remaining rice in pot covered). Create a small indentation in the center and add 1–2 tsp. filling of choice (or a whole umeboshi). Mold rice up and over filling to create a sphere (filling should not be visible), then press firmly with index finger and thumb to form into a triangle. Place on cutting board or a baking sheet. Repeat with remaining rice and filling, dipping your hands in salt water each time. (You’ll have extra tuna—save it for making a tuna salad sandwich or spooning onto crackers.) Place ¼ cup furikake or toasted sesame seeds on a small plate. Wrap bottom of each onigiri with a strip of reserved nori, then roll remaining exposed sides in furikake.", details: "Not apt for vegetarians")
 
 @onigiri_salmon = RecipeIngredient.create(recipe_id: @onigiri.id, ingredient_id: @salmon.id, ammount: 500, unit: "grams")
 @onigiri_rice = RecipeIngredient.create(recipe_id: @onigiri.id, ingredient_id: @rice.id, ammount: 500, unit: "grams")
@@ -1344,12 +1284,6 @@ puts "Creating Pepperoni pizza"
 @pepperoni_pizza_pepperoni = RecipeIngredient.create(recipe_id: @pepperoni_pizza.id, ingredient_id: @pepperoni.id, ammount: 500, unit: "grams")
 @pepperoni_pizza_cheese = RecipeIngredient.create(recipe_id: @pepperoni_pizza.id, ingredient_id: @cheese.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @pepperoni_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @pepperoni_pizza.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @pepperoni_pizza_replaceingredient = RecipeIngredient.create(recipe_id: @pepperoni_pizza.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @pepperoni_pizza_kosher = RecipeOption.create(recipe_id: @pepperoni_pizza.id, option_id: @kosher.id)
 @pepperoni_pizza_halal = RecipeOption.create(recipe_id: @pepperoni_pizza.id, option_id: @halal.id)
 @pepperoni_pizza_peanut_allergy = RecipeOption.create(recipe_id: @pepperoni_pizza.id, option_id: @peanut_allergy.id)
@@ -1359,7 +1293,7 @@ puts "Creating Pepperoni pizza"
 
 
 puts "Creating Pie crust"
-@pie_crust = Recipe.create(name: "Pie crust", instructions: "Whisk sugar, salt, and 2⅔ cups flour in a large bowl. Add butter and, using your fingers, smash each piece into a thin disk. Take your time doing this and don’t feel compelled to break butter into even smaller pieces. Drizzle ⅔ cup ice water over, dispersing it as widely as possible, and mix with a rubber spatula to bring mixture together into a shaggy mass. Turn dough out onto a surface and work together with your hands, pushing and flattening until dough holds together when squeezed in your palm but some streaks of dry flour are still visible. Divide dough into 2 portions. Flatten 1 portion of dough into an 8"-diameter disk. Cut into quarters, stack pieces on top of one another, and flatten dough with a rolling pin to about half of its original height. At this point dough should hold together with no dry spots remaining, and have nice big flakes of butter showing. Use a bench scraper or a large knife to clean any clingy bits of dough from surface. Dust surface with flour, then dust top of dough with flour. Roll out to a ¼"–⅜"-thick round. Wrap dough around rolling pin and transfer to a standard 9"-diameter pie dish. Unfurl into dish, then lift edges and allow dough to slump down into dish. Trim overhang to an even 1" (there will be some excess). Fold overhang under and crimp as desired. Cover and chill until very cold, at least 1 hour and up to 12 hours (cover tightly if chilling longer than 1 hour). Repeat process with remaining dough and another pie dish. Or form into a 1½"-thick disk, wrap in plastic, and chill up to 3 days (or freeze up to 1 month). Place a rack in middle of oven; preheat oven to 400°. Lay 2 sheets of parchment paper over dough and fill with pie weights or dried beans (they should fill the dish). Set on a foil-lined rimmed baking sheet (this will keep any butter drips from smoking up your oven). Bake until edges are golden brown and bottom is opaque (carefully lift parchment to check), 30–35 minutes. Remove from oven; reduce oven temperature to 300°. Lift out parchment and weights. Bake crust until evenly chestnut brown all over, 10–15 minutes. If baking both crusts, turn oven dial back up to 400° and let oven preheat; repeat with remaining crust.", details: "Not apt for vegetarians")
+@pie_crust = Recipe.create(name: "Pie crust", instructions: "Whisk sugar, salt, and 2⅔ cups flour in a large bowl. Add butter and, using your fingers, smash each piece into a thin disk. Take your time doing this and don’t feel compelled to break butter into even smaller pieces. Drizzle ⅔ cup ice water over, dispersing it as widely as possible, and mix with a rubber spatula to bring mixture together into a shaggy mass. Turn dough out onto a surface and work together with your hands, pushing and flattening until dough holds together when squeezed in your palm but some streaks of dry flour are still visible. Divide dough into 2 portions. Flatten 1 portion of dough into an 8-diameter disk. Cut into quarters, stack pieces on top of one another, and flatten dough with a rolling pin to about half of its original height. At this point dough should hold together with no dry spots remaining, and have nice big flakes of butter showing. Use a bench scraper or a large knife to clean any clingy bits of dough from surface. Dust surface with flour, then dust top of dough with flour. Roll out to a ¼–⅜-thick round. Wrap dough around rolling pin and transfer to a standard 9-diameter pie dish. Unfurl into dish, then lift edges and allow dough to slump down into dish. Trim overhang to an even 1 (there will be some excess). Fold overhang under and crimp as desired. Cover and chill until very cold, at least 1 hour and up to 12 hours (cover tightly if chilling longer than 1 hour). Repeat process with remaining dough and another pie dish. Or form into a 1½-thick disk, wrap in plastic, and chill up to 3 days (or freeze up to 1 month). Place a rack in middle of oven; preheat oven to 400°. Lay 2 sheets of parchment paper over dough and fill with pie weights or dried beans (they should fill the dish). Set on a foil-lined rimmed baking sheet (this will keep any butter drips from smoking up your oven). Bake until edges are golden brown and bottom is opaque (carefully lift parchment to check), 30–35 minutes. Remove from oven; reduce oven temperature to 300°. Lift out parchment and weights. Bake crust until evenly chestnut brown all over, 10–15 minutes. If baking both crusts, turn oven dial back up to 400° and let oven preheat; repeat with remaining crust.", details: "Not apt for vegetarians")
 
 @pie_crust_flour = RecipeIngredient.create(recipe_id: @pie_crust.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @pie_crust_sugar = RecipeIngredient.create(recipe_id: @pie_crust.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
@@ -1392,12 +1326,6 @@ puts "Creating Pork roast"
 @pork_roast_onions = RecipeIngredient.create(recipe_id: @pork_roast.id, ingredient_id: @onions.id, ammount: 500, unit: "grams")
 @pork_roast_pork = RecipeIngredient.create(recipe_id: @pork_roast.id, ingredient_id: @pork.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @pork_roast_replaceingredient = RecipeIngredient.create(recipe_id: @pork_roast.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @pork_roast_replaceingredient = RecipeIngredient.create(recipe_id: @pork_roast.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @pork_roast_celiac = RecipeOption.create(recipe_id: @pork_roast.id, option_id: @celiac.id)
 @pork_roast_dairy_intolerant = RecipeOption.create(recipe_id: @pork_roast.id, option_id: @dairy_intolerant.id)
 @pork_roast_kosher = RecipeOption.create(recipe_id: @pork_roast.id, option_id: @kosher.id)
@@ -1429,9 +1357,6 @@ puts "Creating Salted caramel tart"
 @salted_caramel_tart_sugar = RecipeIngredient.create(recipe_id: @salted_caramel_tart.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 @salted_caramel_tart_eggs = RecipeIngredient.create(recipe_id: @salted_caramel_tart.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
 @salted_caramel_tart_fleur_de_sel = RecipeIngredient.create(recipe_id: @salted_caramel_tart.id, ingredient_id: @fleur_de_sel.id, ammount: 20, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @salted_caramel_tart_replaceingredient = RecipeIngredient.create(recipe_id: @salted_caramel_tart.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
 
 @salted_caramel_tart_vegetarian = RecipeOption.create(recipe_id: @salted_caramel_tart.id, option_id: @vegetarian.id)
 @salted_caramel_tart_vegan = RecipeOption.create(recipe_id: @salted_caramel_tart.id, option_id: @vegan.id)
@@ -1468,12 +1393,6 @@ puts "Creating Sushi salmon"
 @sushi_salmon_sugar = RecipeIngredient.create(recipe_id: @sushi_salmon.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 @sushi_salmon_soy_sauce = RecipeIngredient.create(recipe_id: @sushi_salmon.id, ingredient_id: @soy_sauce.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @sushi_salmon_replaceingredient = RecipeIngredient.create(recipe_id: @sushi_salmon.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @sushi_salmon_replaceingredient = RecipeIngredient.create(recipe_id: @sushi_salmon.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @sushi_salmon_pescetarian = RecipeOption.create(recipe_id: @sushi_salmon.id, option_id: @pescetarian.id)
 @sushi_salmon_celiac = RecipeOption.create(recipe_id: @sushi_salmon.id, option_id: @celiac.id)
 @sushi_salmon_dairy_intolerant = RecipeOption.create(recipe_id: @sushi_salmon.id, option_id: @dairy_intolerant.id)
@@ -1507,12 +1426,6 @@ puts "Creating Tomato pie"
 @tomato_pie_flour = RecipeIngredient.create(recipe_id: @tomato_pie.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @tomato_pie_sugar = RecipeIngredient.create(recipe_id: @tomato_pie.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 @tomato_pie_butter = RecipeIngredient.create(recipe_id: @tomato_pie.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @tomato_pie_replaceingredient = RecipeIngredient.create(recipe_id: @tomato_pie.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @tomato_pie_replaceingredient = RecipeIngredient.create(recipe_id: @tomato_pie.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @tomato_pie_vegetarian = RecipeOption.create(recipe_id: @tomato_pie.id, option_id: @vegetarian.id)
 @tomato_pie_vegan = RecipeOption.create(recipe_id: @tomato_pie.id, option_id: @vegan.id)
@@ -1551,12 +1464,6 @@ puts "Creating Tuna rolls"
 @tuna_rolls_vegetable_oil = RecipeIngredient.create(recipe_id: @tuna_rolls.id, ingredient_id: @vegetable_oil.id, ammount: 500, unit: "grams")
 @tuna_rolls_nori_sheets = RecipeIngredient.create(recipe_id: @tuna_rolls.id, ingredient_id: @nori_sheets.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @tuna_rolls_replaceingredient = RecipeIngredient.create(recipe_id: @tuna_rolls.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @tuna_rolls_replaceingredient = RecipeIngredient.create(recipe_id: @tuna_rolls.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @tuna_rolls_pescetarian = RecipeOption.create(recipe_id: @tuna_rolls.id, option_id: @pescetarian.id)
 @tuna_rolls_celiac = RecipeOption.create(recipe_id: @tuna_rolls.id, option_id: @celiac.id)
 @tuna_rolls_dairy_intolerant = RecipeOption.create(recipe_id: @tuna_rolls.id, option_id: @dairy_intolerant.id)
@@ -1589,12 +1496,6 @@ puts "Creating Biscotti"
 @biscotti_butter = RecipeIngredient.create(recipe_id: @biscotti.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
 @biscotti_sugar = RecipeIngredient.create(recipe_id: @biscotti.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @biscotti_replaceingredient = RecipeIngredient.create(recipe_id: @biscotti.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @biscotti_replaceingredient = RecipeIngredient.create(recipe_id: @biscotti.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @biscotti_vegetarian = RecipeOption.create(recipe_id: @biscotti.id, option_id: @vegetarian.id)
 @biscotti_pescetarian = RecipeOption.create(recipe_id: @biscotti.id, option_id: @pescetarian.id)
 @biscotti_kosher = RecipeOption.create(recipe_id: @biscotti.id, option_id: @kosher.id)
@@ -1620,12 +1521,6 @@ puts "Creating Chicken adobo"
 @chicken_adobo_salt = RecipeIngredient.create(recipe_id: @chicken_adobo.id, ingredient_id: @salt.id, ammount: 500, unit: "grams")
 @chicken_adobo_garlic = RecipeIngredient.create(recipe_id: @chicken_adobo.id, ingredient_id: @garlic.id, ammount: 500, unit: "grams")
 @chicken_adobo_onions = RecipeIngredient.create(recipe_id: @chicken_adobo.id, ingredient_id: @onions.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @chicken_adobo_replaceingredient = RecipeIngredient.create(recipe_id: @chicken_adobo.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @chicken_adobo_replaceingredient = RecipeIngredient.create(recipe_id: @chicken_adobo.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @chicken_adobo_celiac = RecipeOption.create(recipe_id: @chicken_adobo.id, option_id: @celiac.id)
 @chicken_adobo_dairy_intolerant = RecipeOption.create(recipe_id: @chicken_adobo.id, option_id: @dairy_intolerant.id)
@@ -1655,13 +1550,7 @@ puts "Creating Huevos rancheros"
 
 @huevos_rancheros_eggs = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
 @huevos_rancheros_salt = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @salt.id, ammount: 500, unit: "grams")
-@huevos_rancheros_olive_oil = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @huevos_rancheros_replaceingredient = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @huevos_rancheros_replaceingredient = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
+@huevos_rancheros_olive_oil = RecipeIngredient.create(recipe_id: @huevos_rancheros.id, ingredient_id: @olive_oil.id, ammount: 500, unit: "grams")
 
 @huevos_rancheros_vegetarian = RecipeOption.create(recipe_id: @huevos_rancheros.id, option_id: @vegetarian.id)
 @huevos_rancheros_pescetarian = RecipeOption.create(recipe_id: @huevos_rancheros.id, option_id: @pescetarian.id)
@@ -1700,13 +1589,6 @@ puts "Creating Potato gratin"
 @potato_gratin_cheese = RecipeIngredient.create(recipe_id: @potato_gratin.id, ingredient_id: @cheese.id, ammount: 500, unit: "grams")
 @potato_gratin_black_pepper = RecipeIngredient.create(recipe_id: @potato_gratin.id, ingredient_id: @black_pepper.id, ammount: 500, unit: "grams")
 @potato_gratin_butter = RecipeIngredient.create(recipe_id: @potato_gratin.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @potato_gratin_replaceingredient = RecipeIngredient.create(recipe_id: @potato_gratin.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @potato_gratin_replaceingredient = RecipeIngredient.create(recipe_id: @potato_gratin.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @potato_gratin_vegetarian = RecipeOption.create(recipe_id: @potato_gratin.id, option_id: @vegetarian.id)
 @potato_gratin_vegan = RecipeOption.create(recipe_id: @potato_gratin.id, option_id: @vegan.id)
@@ -1764,9 +1646,6 @@ puts "Creating Shrimp churry"
 @shrimp_curry_paprika = RecipeIngredient.create(recipe_id: @shrimp_curry.id, ingredient_id: @paprika.id, ammount: 500, unit: "grams")
 @shrimp_curry_shrimps = RecipeIngredient.create(recipe_id: @shrimp_curry.id, ingredient_id: @shrimps.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @shrimp_curry_replaceingredient = RecipeIngredient.create(recipe_id: @shrimp_curry.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @shrimp_curry_pescetarian = RecipeOption.create(recipe_id: @shrimp_curry.id, option_id: @pescetarian.id)
 @shrimp_curry_celiac = RecipeOption.create(recipe_id: @shrimp_curry.id, option_id: @celiac.id)
 @shrimp_curry_dairy_intolerant = RecipeOption.create(recipe_id: @shrimp_curry.id, option_id: @dairy_intolerant.id)
@@ -1796,9 +1675,6 @@ puts "Creating Sweet potatoes"
 @sweet_potatoes_black_pepper = RecipeIngredient.create(recipe_id: @sweet_potatoes.id, ingredient_id: @black_pepper.id, ammount: 500, unit: "grams")
 @sweet_potatoes_sweet_potatoes = RecipeIngredient.create(recipe_id: @sweet_potatoes.id, ingredient_id: @sweet_potatoes.id, ammount: 500, unit: "grams")
 
-# @replaceingredient = Ingredient.create(name: "X")
-# @sweet_potatoes_replaceingredient = RecipeIngredient.create(recipe_id: @sweet_potatoes.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
-
 @sweet_potatoes_vegetarian = RecipeOption.create(recipe_id: @sweet_potatoes.id, option_id: @vegetarian.id)
 @sweet_potatoes_vegan = RecipeOption.create(recipe_id: @sweet_potatoes.id, option_id: @vegan.id)
 @sweet_potatoes_pescetarian = RecipeOption.create(recipe_id: @sweet_potatoes.id, option_id: @pescetarian.id)
@@ -1820,12 +1696,6 @@ puts "Creating Wings"
 @wings_black_pepper = RecipeIngredient.create(recipe_id: @wings.id, ingredient_id: @black_pepper.id, ammount: 500, unit: "grams")
 @wings_olive_oil = RecipeIngredient.create(recipe_id: @wings.id, ingredient_id: @olive_oil.id, ammount: 500, unit: "grams")
 @wings_lemons = RecipeIngredient.create(recipe_id: @wings.id, ingredient_id: @lemons.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @wings_replaceingredient = RecipeIngredient.create(recipe_id: @wings.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
-
-# @replaceingredient = Ingredient.create(name: "X")
-# @wings_replaceingredient = RecipeIngredient.create(recipe_id: @wings.id, ingredient_id: @replaceingredient.id, ammount: 20, unit: "grams")
 
 @wings_celiac = RecipeOption.create(recipe_id: @wings.id, option_id: @celiac.id)
 @wings_dairy_intolerant = RecipeOption.create(recipe_id: @wings.id, option_id: @dairy_intolerant.id)
@@ -1872,16 +1742,14 @@ puts "Creating Herbs fusilli"
 @herbs_fusilli_sugar_free = RecipeOption.create(recipe_id: @herbs_fusilli.id, option_id: @sugar_free.id)
 
 
-puts "Creating juicy steak"
+puts "Creating Juicy steak"
 @juicy_steak = Recipe.create(name: "Juicy Steaks", instructions: "Clip (or stand) sous vide machine to a tall large pot. Fill pot with warm water to height according to manufacturer’s instructions (keep in mind that steaks when added will cause water to rise). Heat a large cast-iron skillet over high until very hot. Add oil and cook all 4 sides of steak until a nice crust forms, 1–2 minutes total (it happens fast, so don’t walk away). The steak is already perfectly cooked; this step is to get some color and texture on the exterior. Slice steak against the grain, if desired, and season with salt and pepper. (The steak may appear slightly gray when you first cut into it but will turn bright pink when exposed to air.)", details: "You will never eat a steak as delicious as this one")
 
 @juicy_steak_meat = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @meat.id, ammount: 1500, unit: "grams")
 @juicy_steak_vegetable_oil = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @vegetable_oil.id, ammount: 5, unit: "cups")
 @juicy_steak_black_pepper = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @black_pepper.id, ammount: 5, unit: "cups")
-
 @juicy_steak_salt = RecipeIngredient.create(recipe_id: @juicy_steak.id, ingredient_id: @salt.id, ammount: 3, unit: "cups")
 
-# # join recipe with dietary restriction
 @juicy_steak_pescetarian = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @pescetarian.id)
 @juicy_steak_celiac = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @celiac.id)
 @juicy_steak_dairy_intolerant = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @dairy_intolerant.id)
@@ -1892,8 +1760,9 @@ puts "Creating juicy steak"
 @juicy_steak_sugar_free = RecipeOption.create(recipe_id: @juicy_steak.id, option_id: @sugar_free.id)
 
 
+puts "Creating Burger alfresco"
 @burger_alfresco = Recipe.create(name: "Burger Alfresco", instructions: "Prepare a grill for high heat. Place a cast-iron griddle, flat side up, on grate; heat until very hot, at least 20 minutes. Mix together pickles, mayonnaise, ketchup, adobo sauce, and ½ tsp. salt in a medium bowl; set special sauce aside. Wrap all the buns together in a large sheet of foil to make a packet (this will keep buns soft and from getting too toasted on the grill). Place packet on grate and grill, turning once, until buns are warmed through, about 1 minute. Spread sauce over cut sides of buns. Place 3–4 pieces of lettuce on bottom buns and top each with some onion and a tomato slice, if using.", details: "Everybody love Burgers!")
-# #create ingredients
+
 @burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 10, unit: "slices")
 @burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 2, unit: "cups")
 @burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
@@ -1908,7 +1777,7 @@ puts "Creating juicy steak"
 @burger_alfresco_sugar_free = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @sugar_free.id)
 
 
-puts "Create Mac n cheese"
+puts "Creating Mac n cheese"
 @macncheese = Recipe.create(name: "Mac n' Cheese", instructions: "Peel ½ small butternut squash (about 1¼ lb.) and cut flesh into ½ cubes. Peel and finely chop 1 onion. Using the flat side of your chef’s knife, crush 1 garlic clove, then peel and finely chop. Coarsely chop 1 cup kimchi (some kimchi juice is okay; no need to drain).", details: "The good 'ol mac n cheese")
 
 @macncheese_cheddar = RecipeIngredient.create(recipe_id: @macncheese.id, ingredient_id: @cheddar.id, ammount: 500, unit: "grams")
@@ -1925,7 +1794,7 @@ puts "Create Mac n cheese"
 @macncheese_sugar_free = RecipeOption.create(recipe_id: @macncheese.id, option_id: @sugar_free.id)
 
 
-puts "Create Marinated chicken"
+puts "Creating Marinated chicken"
 @marinated_chicken = Recipe.create(name: "Delicious marinated Chicken", instructions: "Pour oil into a small skillet; stir in paprika, coriander, and cumin. Set over medium heat and cook, stirring occasionally, until tiny bubbles form and oil around spices starts to sizzle and is very fragrant, about 2 minutes. (This step extracts oils from the spices, bringing out their flavors.) Immediately pour half of spiced oil into a large bowl; set remaining spiced oil aside for borani. Let oil in bowl cool 5 minutes, then add yogurt, garlic, ginger, and red pepper flakes and whisk until smooth.", details: "Not apt for vegetarians")
 
 @marinated_chicken_chicken = RecipeIngredient.create(recipe_id: @marinated_chicken.id, ingredient_id: @chicken.id, ammount: 1500, unit: "grams")
@@ -1942,7 +1811,7 @@ puts "Create Marinated chicken"
 @marinated_chicken_sugar_free = RecipeOption.create(recipe_id: @marinated_chicken.id, option_id: @sugar_free.id)
 
 
-puts "Created Noodle puttanesca"
+puts "Creating Noodle puttanesca"
 @noodle_puttanesca = Recipe.create(name: "Noodles Puttanesca", instructions: "Step 1 Pulse beefsteak tomatoes, garlic, red pepper flakes, and 2 tsp. salt in a food processor until smooth; transfer sauce to a large bowl and mix in cherry tomatoes, olives, capers, and ¼ cup oil. Step 2 Cook spaghetti in a large pot of boiling salted water, stirring occasionally, until al dente. Drain pasta, reserving ¼ cup pasta cooking liquid. Step 3 Add pasta, parsley, and butter to sauce. Toss vigorously with tongs, adding a splash of pasta cooking liquid or more as needed to create an emulsified sauce that coats pasta. Divide among bowls and drizzle with more oil.", details: "Delicious pasta")
 
 @noodle_puttanesca_tomato = RecipeIngredient.create(recipe_id: @noodle_puttanesca.id, ingredient_id: @tomato.id, ammount: 300, unit: "grams")
@@ -1964,7 +1833,7 @@ puts "Created Noodle puttanesca"
 @noodle_puttanesca_sugar_free = RecipeOption.create(recipe_id: @noodle_puttanesca.id, option_id: @sugar_free.id)
 
 
-puts "Create steak wraps"
+puts "Creating Steak wraps"
 @steak_wraps = Recipe.create(name: "Lettuce and Steak Wraps", instructions: "This recipe is simple: marinate some skirt steak in the adobo sauce from canned chipotles in adobo, lime juice, salt, pepper, and neutral oil. Cook it in a ripping-hot cast iron pan, let it rest, slice, and slide into iceberg lettuce. That’s all fine and dandy, but the reason this recipe is so exciting isn’t because it’s weeknight friendly or because it’s way to eat less carbs without feeling like you’re depriving yourself. It’s amazing because you are eating corn nuts, a snack that your mom probably didn’t let you buy from the gas station! There are radishes there for a sharp bite and extra vegetables, spicy yogurt sauce, cilantro, and lime too, but really, my eyes are on those corn nuts.", details: "Delicious and healthy")
 
 @steak_wraps_lettuce = RecipeIngredient.create(recipe_id: @steak_wraps.id, ingredient_id: @lettuce.id, ammount: 500, unit: "grams")
@@ -1982,7 +1851,7 @@ puts "Create steak wraps"
 @steak_wraps_sugar_free = RecipeOption.create(recipe_id: @steak_wraps.id, option_id: @sugar_free.id)
 
 
-puts "Create Steaj and eggs"
+puts "Creating Steak and eggs"
 @steaks_and_eggs = Recipe.create(name: "Steak and Eggs with Saucy Beans", instructions: "Step 1 Mix paprika, Aleppo-style pepper, 2½ tsp. salt, and 1 tsp. black pepper in a bowl. Rub all over steaks, pressing to adhere. Let sit while you make the beans. Step 2 Heat 2 Tbsp. oil in a medium saucepan over medium-low. Cook shallots, garlic, and cilantro stems, stirring often, until softened but not yet browned, about 3 minutes. Add beans, butter, and ¾ cup water. Bring to a simmer and cook, stirring occasionally, until beans are saucy, 6–9 minutes. Remove from heat and stir in cilantro leaves. Finely grate some lime zest from one of the lime halves into beans, then squeeze in its juice. Season with salt and pepper. Cover to keep warm.", details: "Not apt for vegetarians")
 
 @steaks_and_eggs_eggs = RecipeIngredient.create(recipe_id: @steaks_and_eggs.id, ingredient_id: @eggs.id, ammount: 5, unit: "units")
@@ -1999,7 +1868,7 @@ puts "Create Steaj and eggs"
 @steaks_and_eggs_sugar_free = RecipeOption.create(recipe_id: @steaks_and_eggs.id, option_id: @sugar_free.id)
 
 
-puts "Create vegan pasta"
+puts "Creating Vegan pasta"
 @vegan_pasta = Recipe.create(name: "Vegan Pasta", instructions: "Marinate them like you would olives or cheese. Sauté a sliced leek, shallot, or onion in plenty of oil. Add spices—mustard/fennel/cumin/coriander seeds in the oil, along with chile flakes and lemon peel—and cook until fragrant. Remove from heat and grate in garlic. Pour over any kind of drained and rinsed beans (or even cooked lentils). Let them hang out for 20 minutes or an hour or as long as you can handle. Add a squeeze of lemon juice or a splash of vinegar. Spoon over toast.", details: "Delicious and healthy vegan pasta")
 
 @vegan_pasta_pasta = RecipeIngredient.create(recipe_id: @vegan_pasta.id, ingredient_id: @pasta.id, ammount: 500, unit: "grams")
@@ -2016,7 +1885,7 @@ puts "Create vegan pasta"
 @vegan_pasta_sugar_free = RecipeOption.create(recipe_id: @vegan_pasta.id, option_id: @sugar_free.id)
 
 
-puts "Create veggie burger"
+puts "Creating Veggie burger"
 @veggie_burger = Recipe.create(name: "Veggie Burger", instructions: "Step 1 Cook wheat berries in a medium saucepan of boiling salted water until tender (they will remain quite chewy), 45–50 minutes. Drain, spread out on a baking sheet, and let cool. Step 2 Meanwhile, place porcini mushrooms in a small bowl and cover with 1 cup very hot water. Let stand 20 minutes to soften; drain, reserving ¼ cup mushroom soaking liquid. Step 3 Heat 2 Tbsp. oil in a large skillet over medium-high heat. Add shallot and cook, stirring often, until softened, about 3 minutes. Add shiitake mushrooms and cook, tossing occasionally, until golden brown and tender, 6–8 minutes. Transfer shallot and shiitake mushrooms to a food processor. Add chickpeas and rehydrated porcini mushrooms and pulse until coarsely chopped. Add wheat berries, liquid aminos, and reserved mushroom soaking liquid and process until fairly smooth (mixture should still have some texture). Transfer to a large bowl; season with salt and pepper and fold in carrot and egg. Form mixture into four 5” patties; place on a plate and chill, uncovered, at least 30 minutes.", details: "Not apt for vegetarians")
 
 @veggie_burger_onions = RecipeIngredient.create(recipe_id: @veggie_burger.id, ingredient_id: @onions.id, ammount: 500, unit: "grams")
@@ -2037,8 +1906,332 @@ puts "Create veggie burger"
 
 
 
+puts "1"
+# Cloudinary::Uploader.upload("app/assets/images/barbeque.png")
+barbeque_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256264/eew0n336b79qib2x8qj1.png')
+@barbeque.photo.attach(io: barbeque_file, filename: 'barbeque.png', content_type: 'image/png')
+
+puts "2"
+# Cloudinary::Uploader.upload("app/assets/images/gnochi.png")
+gnocchi_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256394/xvpbnbnrpsrwj75vjirm.png')
+@gnocchi.photo.attach(io: gnocchi_file, filename: 'gnocchi.png', content_type: 'image/png')
+
+puts "3"
+# Cloudinary::Uploader.upload("app/assets/images/pizza.png")
+pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256473/xzfteqtukavyprlf0wzu.png')
+@pizza.photo.attach(io: pizza_file, filename: 'pizza.png', content_type: 'image/png')
+
+puts "4"
+# Cloudinary::Uploader.upload("app/assets/images/caesarSalad.png")
+caesar_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256672/qopzzr4g57o4bv8lzn2h.png')
+@caesar_salad.photo.attach(io: caesar_salad_file, filename: 'caesarSalad.png', content_type: 'image/png')
+
+puts "5"
+# Cloudinary::Uploader.upload("app/assets/images/sushi.png")
+sushi_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256881/t1y7bgubtkg6hsl22dzt.png')
+@sushi.photo.attach(io: sushi_file, filename: 'sushi.png', content_type: 'image/png')
+
+puts "6"
+# Cloudinary::Uploader.upload("app/assets/images/ravioli.png")
+ravioli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615256927/mhv5nxkbpyyrz3uta9yr.png')
+@ravioli.photo.attach(io: ravioli_file, filename: 'ravioli.png', content_type: 'image/png')
+
+puts "7"
+# Cloudinary::Uploader.upload("app/assets/images/empanadas.png")
+empanadas_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257041/j91q1eagtew157svrgvs.png')
+@empanadas.photo.attach(io: empanadas_file, filename: 'empanadas.png', content_type: 'image/png')
+
+puts "8"
+# Cloudinary::Uploader.upload("app/assets/images/chocolateCake.png")
+chocolate_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257062/zxgtifippiykwzru3p7w.png')
+@chocolate_cake.photo.attach(io: chocolate_cake_file, filename: 'chocolateCake.png', content_type: 'image/png')
+
+puts "9"
+# Cloudinary::Uploader.upload("app/assets/images/brownies.png")
+brownies_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257108/dcoivopnlc8wxce3rhux.png')
+@brownies.photo.attach(io: brownies_file, filename: 'brownies.png', content_type: 'image/png')
+
+puts "10"
+# Cloudinary::Uploader.upload("app/assets/images/lemonSquares.png")
+lemon_squares_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257121/ckhrrxbxt7x8hevbbml7.png')
+@lemon_squares.photo.attach(io: lemon_squares_file, filename: 'lemonSquares.png', content_type: 'image/png')
+
+puts "11"
+# Cloudinary::Uploader.upload("app/assets/images/chocotorta.png")
+chocotorta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257158/dqm8v5m9lfjthzunxuz5.png')
+@chocotorta.photo.attach(io: chocotorta_file, filename: 'chocotorta.png', content_type: 'image/png')
+
+puts "12"
+# Cloudinary::Uploader.upload("app/assets/images/fishAndChips.png")
+fish_and_chips_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257170/hzauliix2pvqtrf78jra.png')
+@fish_and_chips.photo.attach(io: fish_and_chips_file, filename: 'fishAndChips.png', content_type: 'image/png')
+
+puts "13"
+# Cloudinary::Uploader.upload("app/assets/images/carrotCake.png")
+carrot_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257220/mbqbfxbz8kxg94bhqhcw.png')
+@carrot_cake.photo.attach(io: carrot_cake_file, filename: 'carrotCake.png', content_type: 'image/png')
+
+puts "14"
+# Cloudinary::Uploader.upload("app/assets/images/cheesyBowtiePasta.png")
+cheesy_bowtie_pasta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257235/pkc096h94jhi4uu9y7su.png')
+@cheesy_bowtie_pasta.photo.attach(io: cheesy_bowtie_pasta_file, filename: 'cheesyBowtiePasta.png', content_type: 'image/png')
+
+puts "15"
+# Cloudinary::Uploader.upload("app/assets/images/cacioPepe.png")
+cacio_pepe_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257292/ncy7skmsqddrxcjcsemb.png')
+@cacio_pepe.photo.attach(io: cacio_pepe_file, filename: 'cacioPepe.png', content_type: 'image/png')
+
+puts "16"
+# Cloudinary::Uploader.upload("app/assets/images/grilledCheese.png")
+grilled_cheese_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257301/rqx3vavfrsbussf9gusz.png')
+@grilled_cheese.photo.attach(io: grilled_cheese_file, filename: 'grilledCheese.png', content_type: 'image/png')
+
+puts "17"
+# Cloudinary::Uploader.upload("app/assets/images/cobbSalad.png")
+cobb_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257336/gf7yoakkoieualypcgyz.png')
+@cobb_salad.photo.attach(io: cobb_salad_file, filename: 'cobbSalad.png', content_type: 'image/png')
+
+puts "18"
+# Cloudinary::Uploader.upload("app/assets/images/cookies.png")
+cookies_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257348/bqfgj1bva6mvxd9yhqkw.png')
+@cookies.photo.attach(io: cookies_file, filename: 'cookies.png', content_type: 'image/png')
+
+puts "19"
+# Cloudinary::Uploader.upload("app/assets/images/pancakes.png")
+pancakes_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257354/crvuxjdlfl4bwop1dzja.png')
+@pancakes.photo.attach(io: pancakes_file, filename: 'pancakes.png', content_type: 'image/png')
+
+puts "20"
+# Cloudinary::Uploader.upload("app/assets/images/orangeChicken.png")
+orange_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257412/r4rvpm0j5dhjwslciewt.png')
+@orange_chicken.photo.attach(io: orange_chicken_file, filename: 'orangeChicken.png', content_type: 'image/png')
+
+puts "21"
+# Cloudinary::Uploader.upload("app/assets/images/eggRollBowls.png")
+egg_roll_bowls_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257428/p7yrj0dpkqjfmmqt87ys.png')
+@egg_roll_bowls.photo.attach(io: egg_roll_bowls_file, filename: 'eggRollBowls.png', content_type: 'image/png')
+
+puts "22"
+# Cloudinary::Uploader.upload("app/assets/images/beefPho.png")
+beef_pho_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257443/ptsfdjistbginwwl5msa.png')
+@beef_pho.photo.attach(io: beef_pho_file, filename: 'beefPho.png', content_type: 'image/png')
+
+puts "23"
+# Cloudinary::Uploader.upload("app/assets/images/buckwheatCake.png")
+buckwheat_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257514/iwmlusg3dzjyqrts7rjx.png')
+@buckwheat_cake.photo.attach(io: buckwheat_cake_file, filename: 'buckwheatCake.png', content_type: 'image/png')
+
+puts "24"
+# Cloudinary::Uploader.upload("app/assets/images/chickenRice.png")
+chicken_rice_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257529/vzenbqfbug0d6jjfql5y.png')
+@chicken_rice.photo.attach(io: chicken_rice_file, filename: 'chickenRice.png', content_type: 'image/png')
+
+puts "25"
+# Cloudinary::Uploader.upload("app/assets/images/granolaScones.png")
+granola_scones_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257543/wrzozmjveozjog5urgwo.png')
+@granola_scones.photo.attach(io: granola_scones_file, filename: 'granolaScones.png', content_type: 'image/png')
+
+puts "26"
+# Cloudinary::Uploader.upload("app/assets/images/grilledMushrooms.png")
+grilled_mushrooms_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257599/aczgvpgh4ywtvzmiq6xa.png')
+@grilled_mushrooms.photo.attach(io: grilled_mushrooms_file, filename: 'grilledMushrooms.png', content_type: 'image/png')
+
+puts "27"
+# Cloudinary::Uploader.upload("app/assets/images/pumpkinSoup.png")
+pumpkin_soup_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257609/so1gluig2xdtyddscgge.png')
+@pumpkin_soup.photo.attach(io: pumpkin_soup_file, filename: 'pumpkinSoup.png', content_type: 'image/png')
+
+puts "28"
+# Cloudinary::Uploader.upload("app/assets/images/tofuBowl.png")
+tofu_bowl_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257619/z9kaospdvkucvx1xzprg.png')
+@tofu_bowl.photo.attach(io: tofu_bowl_file, filename: 'tofuBowl.png', content_type: 'image/png')
+
+puts "29"
+# Cloudinary::Uploader.upload("app/assets/images/tofuBroccoli.png")
+tofu_broccoli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257631/ex0txfohv3itc7tgqmlj.png')
+@tofu_broccoli.photo.attach(io: tofu_broccoli_file, filename: 'tofuBroccoli.png', content_type: 'image/png')
+
+puts "30"
+# Cloudinary::Uploader.upload("app/assets/images/tunaSalad.png")
+tuna_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257651/dygkkufrcxvrrzjh4ol5.png')
+@tuna_salad.photo.attach(io: tuna_salad_file, filename: 'tunaSalad.png', content_type: 'image/png')
+
+puts "31"
+# Cloudinary::Uploader.upload("app/assets/images/veggieNachos.png")
+veggie_nachos_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257745/cabyjfwkjayn6mzmrbze.png')
+@veggie_nachos.photo.attach(io: veggie_nachos_file, filename: 'veggieNachos.png', content_type: 'image/png')
+
+puts "32"
+# Cloudinary::Uploader.upload("app/assets/images/baPizza.png")
+ba_pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257755/xwozf2lnp3huqtrbrg0i.png')
+@ba_pizza.photo.attach(io: ba_pizza_file, filename: 'baPizza.png', content_type: 'image/png')
+
+puts "33"
+# Cloudinary::Uploader.upload("app/assets/images/chocolateGanache.png")
+chocolate_ganache_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257768/twbol7sazrqe1xdup1ij.png')
+@chocolate_ganache.photo.attach(io: chocolate_ganache_file, filename: 'chocolateGanache.png', content_type: 'image/png')
+
+puts "34"
+# Cloudinary::Uploader.upload("app/assets/images/digestives.png")
+digestives_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257779/jv6qnjlmppfoozhelc2z.png')
+@digestives.photo.attach(io: digestives_file, filename: 'digestives.png', content_type: 'image/png')
+
+puts "35"
+# Cloudinary::Uploader.upload("app/assets/images/lasagna.png")
+lasagna_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257788/fbopllieejjcthqgsnp4.png')
+@lasagna.photo.attach(io: lasagna_file, filename: 'lasagna.png', content_type: 'image/png')
+
+puts "36"
+# Cloudinary::Uploader.upload("app/assets/images/moltenCaramelCake.png")
+molten_caramel_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257892/lj3oqdaqvdzjp4bnjhox.png')
+@molten_caramel_cake.photo.attach(io: molten_caramel_cake_file, filename: 'moltenCaramelCake.png', content_type: 'image/png')
+
+puts "37"
+# Cloudinary::Uploader.upload("app/assets/images/onigiri.png")
+onigiri_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257905/enjxbipqkngftitrkoi2.png')
+@onigiri.photo.attach(io: onigiri_file, filename: 'onigiri.png', content_type: 'image/png')
+
+puts "38"
+# Cloudinary::Uploader.upload("app/assets/images/pepperoniPizza.png")
+pepperoni_pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258025/mjiheebagty0a9b0jmwj.png')
+@pepperoni_pizza.photo.attach(io: pepperoni_pizza_file, filename: 'pepperoniPizza.png', content_type: 'image/png')
+
+puts "39"
+# Cloudinary::Uploader.upload("app/assets/images/pieCrust.png")
+pie_crust_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257914/esus8kst3sta2sdiztro.png')
+@pie_crust.photo.attach(io: pie_crust_file, filename: 'pieCrust.png', content_type: 'image/png')
+
+puts "40"
+# Cloudinary::Uploader.upload("app/assets/images/porkRoast.png")
+pork_roast_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257925/ow1hokndvjen2vbfsrwx.png')
+@pork_roast.photo.attach(io: pork_roast_file, filename: 'porkRoast.png', content_type: 'image/png')
+
+puts "41"
+# Cloudinary::Uploader.upload("app/assets/images/saltedCaramelTart.png")
+salted_caramel_tart_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615257938/gifyyyb5nlfwfgctr2se.png')
+@salted_caramel_tart.photo.attach(io: salted_caramel_tart_file, filename: 'saltedCaramelTart.png', content_type: 'image/png')
+
+puts "42"
+# Cloudinary::Uploader.upload("app/assets/images/sushiSalmon.png")
+sushi_salmon_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258153/ebbnby2qxbaktkdhuxek.png')
+@sushi_salmon.photo.attach(io: sushi_salmon_file, filename: 'sushiSalmon.png', content_type: 'image/png')
+
+puts "43"
+# Cloudinary::Uploader.upload("app/assets/images/tomatoPie.png")
+tomato_pie_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258163/iyq5y7g24rk8tfwf7qvg.png')
+@tomato_pie.photo.attach(io: tomato_pie_file, filename: 'tomatoPie.png', content_type: 'image/png')
+
+puts "44"
+# Cloudinary::Uploader.upload("app/assets/images/tunaRolls.png")
+tuna_rolls_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258171/mmntl19hxyncxeaipvke.png')
+@tuna_rolls.photo.attach(io: tuna_rolls_file, filename: 'tunaRolls.png', content_type: 'image/png')
+
+puts "45"
+# Cloudinary::Uploader.upload("app/assets/images/biscotti.png")
+biscotti_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258182/q7qt9p22yo3tlinqcoda.png')
+@biscotti.photo.attach(io: biscotti_file, filename: 'biscotti.png', content_type: 'image/png')
+
+puts "46"
+# Cloudinary::Uploader.upload("app/assets/images/chickenAdobo.png")
+chicken_adobo_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258194/sinmodhcdnlszymgur4g.png')
+@chicken_adobo.photo.attach(io: chicken_adobo_file, filename: 'chickenAdobo.png', content_type: 'image/png')
+
+puts "47"
+# Cloudinary::Uploader.upload("app/assets/images/huevosRancheros.png")
+huevos_rancheros_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258213/k2wwuyjvwu3ip4gq82vz.png')
+@huevos_rancheros.photo.attach(io: huevos_rancheros_file, filename: 'huevosRancheros.png', content_type: 'image/png')
+
+puts "48"
+# Cloudinary::Uploader.upload("app/assets/images/potatoGratin.png")
+potato_gratin_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258254/izklubaz2kd2wq3hfwm9.png')
+@potato_gratin.photo.attach(io: potato_gratin_file, filename: 'potatoGratin.png', content_type: 'image/png')
+
+puts "49"
+# Cloudinary::Uploader.upload("app/assets/images/roastedBeets.png")
+roasted_beets_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258264/mwuuhc59rkwjqyeq1ibk.png')
+@roasted_beets.photo.attach(io: roasted_beets_file, filename: 'roastedBeets.png', content_type: 'image/png')
+
+puts "50"
+# Cloudinary::Uploader.upload("app/assets/images/shrimpCurry.png")
+shrimp_curry_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258288/rnbjup6unfmbd8ihhdnp.png')
+@shrimp_curry.photo.attach(io: shrimp_curry_file, filename: 'shrimpCurry.png', content_type: 'image/png')
+
+puts "51"
+# Cloudinary::Uploader.upload("app/assets/images/sweetPotatoes.png")
+sweet_potatoes_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258311/rstf7v3vby0ntqi23yzs.png')
+@sweet_potatoes.photo.attach(io: sweet_potatoes_file, filename: 'sweetPotatos.png', content_type: 'image/png')
+
+puts "52"
+# Cloudinary::Uploader.upload("app/assets/images/wings.png")
+wings_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258332/tjwdfks5bkxawiksohnd.png')
+@wings.photo.attach(io: wings_file, filename: 'wings.png', content_type: 'image/png')
+
+puts "53"
+# Cloudinary::Uploader.upload("app/assets/images/burgerAlfresco.png")
+burger_alfresco_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258379/sjket1ib4ljdl8pokisf.png')
+@burger_alfresco.photo.attach(io: burger_alfresco_file, filename: 'burgerAlfresco.png', content_type: 'image/png')
+
+puts "54"
+# Cloudinary::Uploader.upload("app/assets/images/chickenMushroomNoodles.png")
+chicken_mushroom_noodles_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258395/nkz2df5lwujeyemzscw4.png')
+@chicken_mushroom_noodles.photo.attach(io: chicken_mushroom_noodles_file, filename: 'chickenMushroomNoodles.png', content_type: 'image/png')
+
+puts "55"
+# Cloudinary::Uploader.upload("app/assets/images/herbsFusilli.png")
+herbs_fusilli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258404/fhcwe38sdjgyesghapzx.png')
+@herbs_fusilli.photo.attach(io: herbs_fusilli_file, filename: 'herbsFusilli.png', content_type: 'image/png')
+
+puts "56"
+# Cloudinary::Uploader.upload("app/assets/images/juicySteak.png")
+juicy_steak_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258419/baxrjlyl8besjp6gc7zb.png')
+@juicy_steak.photo.attach(io: juicy_steak_file, filename: 'juicySteak.png', content_type: 'image/png')
+
+puts "57"
+# Cloudinary::Uploader.upload("app/assets/images/macncheese.png")
+macncheese_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258443/cdeowwn7hukssehms7fc.png')
+@macncheese.photo.attach(io: macncheese_file, filename: 'macncheese.png', content_type: 'image/png')
+
+puts "58"
+# Cloudinary::Uploader.upload("app/assets/images/marinatedChicken.png")
+marinated_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258489/dwtmtjgdzjvaf64cvapa.png')
+@marinated_chicken.photo.attach(io: marinated_chicken_file, filename: 'marinatedChicken.png', content_type: 'image/png')
+
+puts "59"
+# Cloudinary::Uploader.upload("app/assets/images/noodlePuttanesca.png")
+noodle_puttanesca_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258501/g8mqsoqye3vawuoh2krl.png')
+@noodle_puttanesca.photo.attach(io: noodle_puttanesca_file, filename: 'noodlePuttanesca.png', content_type: 'image/png')
+
+puts "60"
+# Cloudinary::Uploader.upload("app/assets/images/steakWraps.png")
+steak_wraps_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258511/kditicydz8htomwps5pv.png')
+@steak_wraps.photo.attach(io: steak_wraps_file, filename: 'steakWraps.png', content_type: 'image/png')
+
+puts "61"
+# Cloudinary::Uploader.upload("app/assets/images/steakAndEggs.png")
+steaks_and_eggs_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258523/oc5cc3zqewuxrysxafkn.png')
+@steaks_and_eggs.photo.attach(io: steaks_and_eggs_file, filename: 'steakAndEggs.png', content_type: 'image/png')
+
+puts "62"
+# Cloudinary::Uploader.upload("app/assets/images/veganPasta.png")
+vegan_pasta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258567/oofolegirmkndxzlqrsv.png')
+@vegan_pasta.photo.attach(io: vegan_pasta_file, filename: 'veganPasta.png', content_type: 'image/png')
+
+puts "63"
+# Cloudinary::Uploader.upload("app/assets/images/veggieBurger.png")
+veggie_burger_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258577/k5zs8vnppkas3ruxuw9y.png')
+@veggie_burger.photo.attach(io: veggie_burger_file, filename: 'veggieBurger.png', content_type: 'image/png')
 
 
+
+
+
+
+
+# Cloudinary::Uploader.upload("app/assets/images/replace.jpg")
+
+# @replacerecipe = Recipe.create(name: "X", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
+# replacerecipe_file = URI.open('X')
+# @replacerecipe.photo.attach(io: replacerecipe_file, filename: 'replacerecipe.jpg',filen.png content_type: 'image/png')
 
 # #create ingredients
 # @replacerecipe_replaceingredient = RecipeIngredient.create(recipe_id: @replacerecipe.id, ingredient_id: @replaceingredient.id, ammount: 500, unit: "grams")
@@ -2069,252 +2262,3 @@ puts "Create veggie burger"
 
 
 
-
-
-# #create recipe with image
-# @replacerecipe = Recipe.create(name: "X", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
-# replacerecipe_file = URI.open('X')
-# @replacerecipe.photo.attach(io: replacerecipe_file, filename: 'replacerecipe.png', content_type: 'image/png')
-
-
-
-barbeque_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614125987/swuqcu0j0d2jfmfwqmj8.jpg')
-@barbeque.photo.attach(io: barbeque_file, filename: 'barbeque.jpg', content_type: 'image/jpg')
-
-gnocchi_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615053381/kzbtd0ohtwl5lbroobv9.png')
-@gnocchi.photo.attach(io: gnocchi_file, filename: 'gnochi.png', content_type: 'image/png')
-
-pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615053480/i9qipvofntu9ziqtqyqf.png')
-@pizza.photo.attach(io: pizza_file, filename: 'pizza.png', content_type: 'image/png')
-
-caesar_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614126458/xda3j02xma6gzxh331jn.jpg')
-@caesar_salad.photo.attach(io: caesar_salad_file, filename: 'caesar_salad.jpg', content_type: 'image/jpg')
-
-puts "1 min"
-sleep(1.minutes)
-
-sushi_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614126514/giiyj8swmlkjdgplinrb.jpg')
-@sushi.photo.attach(io: sushi_file, filename: 'sushi.jpg', content_type: 'image/jpg')
-
-ravioli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615053559/huebfmbla6aqe2rfz7on.png')
-@ravioli.photo.attach(io: ravioli_file, filename: 'ravioli.png', content_type: 'image/png')
-
-empanadas_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614126783/m61fdr3at6l4gjqofzc1.jpg')
-@empanadas.photo.attach(io: empanadas_file, filename: 'empanadas.jpg', content_type: 'image/jpg')
-
-chocolate_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615049914/yq2xftypucmcn4qvq7iw.png')
-@chocolate_cake.photo.attach(io: chocolate_cake_file, filename: 'chocolate_cake.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-brownies_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615053361/j6v4pcmkyqqanfjrl6mz.png')
-@brownies.photo.attach(io: brownies_file, filename: 'brownies.png', content_type: 'image/png')
-
-lemon_squares_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055058/urfxo5zjewf7c665wtgl.png')
-@lemon_squares.photo.attach(io: lemon_squares_file, filename: 'lemon_squares.png', content_type: 'image/png')
-
-mousse_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615053433/uvzbd4wf9j2c66gs3v68.png')
-@mousse.photo.attach(io: mousse_file, filename: 'mousse.png', content_type: 'image/png')
-
-chocotorta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055015/dgukk9jpiv5ixzmiws3q.png')
-@chocotorta.photo.attach(io: chocotorta_file, filename: 'chocotorta.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-fish_and_chips_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614977184/zdh5ckmlou6phzqd1lyq.png')
-@fish_and_chips.photo.attach(io: fish_and_chips_file, filename: 'fish_and_chips.png', content_type: 'image/png')
-
-carrot_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614976782/ioslx2dvdmguj2dmbsfv.png')
-@carrot_cake.photo.attach(io: carrot_cake_file, filename: 'carrot_cake.png', content_type: 'image/png')
-
-cheesy_bowtie_pasta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614977754/jk66xk1efqmjds9iyc3z.png')
-@cheesy_bowtie_pasta.photo.attach(io: cheesy_bowtie_pasta_file, filename: 'cheesy_bowtie_pasta.png', content_type: 'image/png')
-
-cacio_pepe_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614979373/usipaqkezh9ltvf8re36.png')
-@cacio_pepe.photo.attach(io: cacio_pepe_file, filename: 'cacio_pepe.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-grilled_cheese_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614979606/uraw1axzeypw2fkrwoei.png')
-@grilled_cheese.photo.attach(io: grilled_cheese_file, filename: 'grilled_cheese.png', content_type: 'image/png')
-
-cobb_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614979403/cfw7mixkokytpylsizxi.png')
-@cobb_salad.photo.attach(io: cobb_salad_file, filename: 'cobb_salad.png', content_type: 'image/png')
-
-cookies_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614983834/zqif1btjsxsvfjrusr2w.png')
-@cookies.photo.attach(io: cookies_file, filename: 'cookies.png', content_type: 'image/png')
-
-pancakes_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614983923/pn1hujzyopmkeosm6t0o.png')
-@pancakes.photo.attach(io: pancakes_file, filename: 'pancakes.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-orange_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614983988/gww2qfcsg2i5gazlghlg.png')
-@orange_chicken.photo.attach(io: orange_chicken_file, filename: 'orange_chicken.png', content_type: 'image/png')
-
-egg_roll_bowls_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1614984224/zrrpxhzifzhhttmptvs5.png')
-@egg_roll_bowls.photo.attach(io: egg_roll_bowls_file, filename: 'egg_roll_bowls.png', content_type: 'image/png')
-
-beef_pho_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615038978/e3bb3ndn37sdx5wnehwt.png')
-@beef_pho.photo.attach(io: beef_pho_file, filename: 'beef_pho.png', content_type: 'image/png')
-
-buckwheat_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039153/mbitzfksk6qsum5yxozl.png')
-@buckwheat_cake.photo.attach(io: buckwheat_cake_file, filename: 'buckwheat_cake.png', content_type: 'image/png')
-
-chicken_rice_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039178/qstvuvu8n1bgkaxr8wiu.png')
-@chicken_rice.photo.attach(io: chicken_rice_file, filename: 'chicken_rice.png', content_type: 'image/png')
-
-granola_scones_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039212/krfhzfexkjmjyul2s7dg.png')
-@granola_scones.photo.attach(io: granola_scones_file, filename: 'granola_scones.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-grilled_mushrooms_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039248/ap92jkqlqmheqms413in.png')
-@grilled_mushrooms.photo.attach(io: grilled_mushrooms_file, filename: 'grilled_mushrooms.png', content_type: 'image/png')
-
-pumpkin_soup_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039318/gta8bditbevstdtrzse2.png')
-@pumpkin_soup.photo.attach(io: pumpkin_soup_file, filename: 'pumpkin_soup.png', content_type: 'image/png')
-
-tofu_bowl_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039397/mz7lhznzqjfhzzdihbra.png')
-@tofu_bowl.photo.attach(io: tofu_bowl_file, filename: 'tofu_bowl.png', content_type: 'image/png')
-
-tofu_broccoli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039423/vtdmdfaajtqvclkivuez.png')
-@tofu_broccoli.photo.attach(io: tofu_broccoli_file, filename: 'tofu_broccoli.png', content_type: 'image/png')
-
-tuna_salad_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039468/zw6nak8m2bnmjuekey4a.png')
-@tuna_salad.photo.attach(io: tuna_salad_file, filename: 'tuna_salad.png', content_type: 'image/png')
-
-veggie_nachos_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615039560/y9wr62kkvfbevbmin2fr.png')
-@veggie_nachos.photo.attach(io: veggie_nachos_file, filename: 'veggie_nachos.png', content_type: 'image/png')
-
-ba_pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051559/zpvxi1krxmzfyilopddt.png')
-@ba_pizza.photo.attach(io: ba_pizza_file, filename: 'ba_pizza.png', content_type: 'image/png')
-
-puts "1 min"
-sleep(1.minutes)
-
-chocolate_ganache_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051591/ffm5ywew7panzu70udrd.png')
-@chocolate_ganache.photo.attach(io: chocolate_ganache_file, filename: 'chocolate_ganache.png', content_type: 'image/png')
-
-digestives_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051643/c0cvg4pawjvgspfpftgm.png')
-@digestives.photo.attach(io: digestives_file, filename: 'digestives.png', content_type: 'image/png')
-
-lasagna_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051750/mf2ktv8zhybdezbfchpm.png')
-@lasagna.photo.attach(io: lasagna_file, filename: 'lasagna.png', content_type: 'image/png')
-
-molten_caramel_cake_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051699/clmqhyfnw2f1zyriiwr5.png')
-@molten_caramel_cake.photo.attach(io: molten_caramel_cake_file, filename: 'molten_caramel_cake.png', content_type: 'image/png')
-
-onigiri_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051794/mjoqr2ifpyiocj0fremf.png')
-@onigiri.photo.attach(io: onigiri_file, filename: 'onigiri.png', content_type: 'image/png')
-
-pepperoni_pizza_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051858/fzfjyoxpvyuayfjti19k.png')
-@pepperoni_pizza.photo.attach(io: pepperoni_pizza_file, filename: 'pepperoni_pizza.png', content_type: 'image/png')
-
-pie_crust_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051939/wbdal91sgi96mm83sejt.png')
-@pie_crust.photo.attach(io: pie_crust_file, filename: 'pie_crust.png', content_type: 'image/png')
-
-pork_roast_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615051979/cnqbxkwinwfuqgintfgz.png')
-@pork_roast.photo.attach(io: pork_roast_file, filename: 'pork_roast.png', content_type: 'image/png')
-
-salted_caramel_tart_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615052018/c5tpdzjqeckinekwmqlk.png')
-@salted_caramel_tart.photo.attach(io: salted_caramel_tart_file, filename: 'salted_caramel_tart.png', content_type: 'image/png')
-
-sushi_salmon_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615052040/bbq88pfhr7e9f3xojcxd.png')
-@sushi_salmon.photo.attach(io: sushi_salmon_file, filename: 'sushi_salmon.png', content_type: 'image/png')
-
-tomato_pie_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615052241/jucxzogvaw0d3ut563ka.png')
-@tomato_pie.photo.attach(io: tomato_pie_file, filename: 'tomato_pie.png', content_type: 'image/png')
-
-tuna_rolls_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615052288/mbhxba00t4scais15eir.png')
-@tuna_rolls.photo.attach(io: tuna_rolls_file, filename: 'tuna_rolls.png', content_type: 'image/png')
-
-biscotti_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055370/qdrdodmparxwrpiblje4.png')
-@biscotti.photo.attach(io: biscotti_file, filename: 'biscotti.png', content_type: 'image/png')
-
-chicken_adobo_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055413/lr7cdf0kampon8vqemlx.png')
-@chicken_adobo.photo.attach(io: chicken_adobo_file, filename: 'chicken_adobo.png', content_type: 'image/png')
-
-huevos_rancheros_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055519/t8o3irotehexzwre04xn.png')
-@huevos_rancheros.photo.attach(io: huevos_rancheros_file, filename: 'huevos_rancheros.png', content_type: 'image/png')
-
-potato_gratin_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615055535/gljzslasbax9p8gswq4z.png')
-@potato_gratin.photo.attach(io: potato_gratin_file, filename: 'potato_gratin.png', content_type: 'image/png')
-
-roasted_beets_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615056101/jce9q690zl5dit4aoydb.png')
-@roasted_beets.photo.attach(io: roasted_beets_file, filename: 'roasted_beets.png', content_type: 'image/png')
-
-shrimp_curry_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615056186/pyoxhvkikn7y2ymshumv.png')
-@shrimp_curry.photo.attach(io: shrimp_curry_file, filename: 'shrimp_curry.png', content_type: 'image/png')
-
-sweet_potatoes_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615056205/q2yjahym9fl0riatxgtw.png')
-@sweet_potatoes.photo.attach(io: sweet_potatoes_file, filename: 'sweet_potatoes.png', content_type: 'image/png')
-
-wings_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615056238/x0ybovdm6nxqgjfoccrn.png')
-@wings.photo.attach(io: wings_file, filename: 'wings.png', content_type: 'image/png')
-
-burger_alfresco_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058494/k1q4afeu8dx3gwqhbih0.png')
-@burger_alfresco.photo.attach(io: burger_alfresco_file, filename: 'burger_alfresco.png', content_type: 'image/png')
-
-chicken_mushroom_noodles_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058498/vjiika1yvyi5dth9t9pf.png')
-@chicken_mushroom_noodles.photo.attach(io: chicken_mushroom_noodles_file, filename: 'chicken_mushroom_noodles.png', content_type: 'image/png')
-
-herbs_fusilli_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058502/pzhhqj4ptq8uimd9wlsl.png')
-@herbs_fusilli.photo.attach(io: herbs_fusilli_file, filename: 'herbs_fusilli.png', content_type: 'image/png')
-
-juicy_steak_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058506/yeprsjgrlfencomslewt.png')
-@juicy_steak.photo.attach(io: juicy_steak_file, filename: 'juicy_steak.png', content_type: 'image/png')
-
-macncheese_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058509/o8fe22vfjgnjihhqfbpr.png')
-@macncheese.photo.attach(io: macncheese_file, filename: 'macncheese.png', content_type: 'image/png')
-
-marinated_chicken_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058512/jehhgsl2mkilcgofetvl.png')
-@marinated_chicken.photo.attach(io: marinated_chicken_file, filename: 'marinated_chicken.png', content_type: 'image/png')
-
-noodle_puttanesca_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058516/stfnpajmemr3zs7ul9d4.png')
-@noodle_puttanesca.photo.attach(io: noodle_puttanesca_file, filename: 'noodle_puttanesca.png', content_type: 'image/png')
-
-steak_wraps_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058519/vsw6xq0tb1jvfy2idepa.png')
-@steak_wraps.photo.attach(io: steak_wraps_file, filename: 'steak_wraps.png', content_type: 'image/png')
-
-steaks_and_eggs_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058522/ve0xvqkfitgykgk6rhne.png')
-@steaks_and_eggs.photo.attach(io: steaks_and_eggs_file, filename: 'steaks_and_eggs.png', content_type: 'image/png')
-
-vegan_pasta_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058526/k60t0kva3lam3fjefc2a.png')
-@vegan_pasta.photo.attach(io: vegan_pasta_file, filename: 'vegan_pasta.png', content_type: 'image/png')
-
-veggie_burger_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615058528/vncwmvvrmhxbltu3whkh.png')
-@veggie_burger.photo.attach(io: veggie_burger_file, filename: 'veggie_burger.png', content_type: 'image/png')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Cloudinary::Uploader.upload("app/assets/images/replace.jpg")
-
-
-
-# @replacerecipe = Recipe.create(name: "X", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
-# replacerecipe_file = URI.open('X')
-# @replacerecipe.photo.attach(io: replacerecipe_file, filename: 'replacerecipe.jpg', content_type: 'image/jpg')
-
-
-
-
-
-# Cloudinary::Uploader.upload("app/assets/images/chocolate_cake.png")

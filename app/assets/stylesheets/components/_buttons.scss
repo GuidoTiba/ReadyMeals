@@ -18,13 +18,12 @@
   }
 }
 
-.btn-light-green {
+.btn-highlight-green {
   background-color: white;
   color: $green;
-  border-color: #B3DEB4;
   &:hover {
-    background-color: #B3DEB4;
     color: white;
+  box-shadow: 0 0 15px #B3DEB4;
   }
 }
 

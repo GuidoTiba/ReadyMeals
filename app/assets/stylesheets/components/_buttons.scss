@@ -18,13 +18,12 @@
   }
 }
 
-.btn-light-green {
+.btn-highlight-green {
   background-color: white;
   color: $green;
-  border-color: #B3DEB4;
   &:hover {
-    background-color: #B3DEB4;
     color: white;
+  box-shadow: 0 0 15px #B3DEB4;
   }
 }
 
@@ -165,9 +164,6 @@
   min-width: 70px;
   font-size: 16px;
   cursor: pointer;
-  &:hover {
-    font-weight: bold;
-  }
 }
 
 .clickable.active {
@@ -175,7 +171,6 @@
   background-color: rgb(236, 237, 254);
   border-color: inherit;
   &:hover {
-    font-weight: bold;
     background-color: rgb(236, 237, 254);
   }
 }
@@ -231,12 +226,5 @@
   z-index: 2;
   &:hover{
     cursor: pointer;
-  }
-}
-
-.number-box {
-  width: 30px;
-  &:hover{
-    background-color: white !important;
   }
 }

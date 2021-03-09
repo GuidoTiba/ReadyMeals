@@ -4,47 +4,47 @@
 <% end %>
 
 <div class="row align-self-center home-background" style="height:100%; opacity: 0.9;">
-<!-- <div class="block py-3 pb-4 w-75 mx-auto"> -->
 
   <div class="text-center" style="margin-right: 35%; margin-left: 35%">
     <div>
-      <h3 class="py-3 pt-5 green"><strong>Create your group</strong></h3>
-      <div class="mx-auto">
+      <h3 class="py-3 pt-4 green"><strong>Create your group</strong></h3>
+      <div class="mx-auto mt-3 w-75">
         <%= simple_form_for @event do |e| %>
-          <%= e.input :title, label: 'Group Name', input_html: { id: "event-form-title" } %>
+          <%= e.input :title, label: 'Group Name', input_html: { id: "event-form-title", class: "fill-in"  } %>
           <%= e.input :number_of_members, as: :numeric, as: :hidden %>
-          <div class="d-flex justify-content-center">
-            <%= e.input :start_date, as: :string, input_html: {id: "range_start", class: "mr-1" } %>
-            <%= e.input :end_date, as: :string, input_html: {id: "range_end" , class: "ml-1" } %>
+          <div class="d-flex justify-content-center mt-0 calendar w-100 pt-2 justify-content-center" style="border-radius: 30px;">
+            <%= e.input :start_date, as: :string, input_html: {id: "range_start", class: "dates text-center no-highlight" } %>
+            <%= e.input :end_date, as: :string, input_html: {id: "range_end", class: "dates text-center no-highlight" } %>
           </div>
 
-          <label for="Number of Members">Number of members: </label>
+          <label for="Number of Members" class="mt-4">Number of members: </label>
 
           <div class="row justify-content-center">
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-1" data-number="1"><i class="fas fa-child"></i>1</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-2" data-number="2"><i class="fas fa-child"></i><i class="fas fa-child"></i>2</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-3" data-number="3"><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i>3</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-4" data-number="4"><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i>4</div>
 
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-5" data-number="5"><i class="fas fa-child"></i>x5</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-6" data-number="6"><i class="fas fa-child"></i>x6</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-7" data-number="7"><i class="fas fa-child"></i>x7</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-8" data-number="8"><i class="fas fa-child"></i>x8</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-1" data-number="1" style="height: 40px;><i class="fas fa-child"></i>1</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-2" data-number="2" style="height: 40px;><i class="fas fa-child"></i><i class="fas fa-child"></i>2</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-3" data-number="3" style="height: 40px;><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i>3</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-4" data-number="4" style="height: 40px;><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i>4</div>
 
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-9" data-number="9"><i class="fas fa-child"></i>x9</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-10" data-number="10"><i class="fas fa-child"></i>x10</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-11" data-number="11"><i class="fas fa-child"></i>x11</div>
-            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-12" data-number="12"><i class="fas fa-child"></i>x12</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-5" data-number="5" style="height: 40px;><i class="fas fa-child"></i>x5</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-6" data-number="6" style="height: 40px;><i class="fas fa-child"></i>x6</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-7" data-number="7" style="height: 40px;><i class="fas fa-child"></i>x7</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-8" data-number="8" style="height: 40px;><i class="fas fa-child"></i>x8</div>
+
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-9" data-number="9" style="height: 40px;><i class="fas fa-child"></i>x9</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-10" data-number="10" style="height: 40px;><i class="fas fa-child"></i>x10</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-11" data-number="11" style="height: 40px;><i class="fas fa-child"></i>x11</div>
+            <div class="col-3 number-box btn btn-green oval clickable mx-3 py-2 my-2" id="number-12" data-number="12" style="height: 40px;><i class="fas fa-child"></i>x12</div>
+
           </div>
 
-          <h5 class="py-2 pt-4">Dietary Preferences</h5>
-          <div id="simple_field_for_event_options" class="d-flex align-items-center">
+          <h6 class="pb-2 pt-4">Dietary Preferences</h6>
+          <div id="simple_field_for_event_options" class="d-flex row justify-content-center">
             <%= simple_fields_for :event_options do |of| %>
-            <div class="cards">
-              <% Option.all.each do |o| %>
-              <div> <%= of.input o.name.to_sym, label_html: { class: "btn btn btn-light-green oval clickable" }, as: :boolean, id: "event_options_#{o.name}" %></div>
-              <!-- poner una class en el div de arriba para  que wrappee y no siga ad infinitum en la misma linea-->
-              <% end %>
+              <div class="d-flex row justify-content-center">
+                <% Option.all.each do |o| %>
+                  <div> <%= of.input o.name.to_sym, label_html: { class: "btn btn-highlight-green oval clickable p-2 m-0" }, as: :boolean, id: "event_options_#{o.name}" %></div>
+                <% end %>
               </div>
             <% end %>
           </div>

@@ -22,7 +22,6 @@ puts "Creating recipes"
 @chocolate_cake = Recipe.create(name: "Chocolate cake", instructions: "Mix chocolate and eggs", details: "Everybody likes chocolate cake")
 @brownies = Recipe.create(name: "Brownies", instructions: "Mix batter with chocolate", details: "You can even make them magical")
 @lemon_squares = Recipe.create(name: "Lemon squares", instructions: "Place the dough in the bottom and the lemon liquid on the top", details: "For those who don't prefer chocolate")
-@mousse = Recipe.create(name: "Mousse", instructions: "You can make it of any flavour, in this case, we are making it a white chocolate special", details: "Mousse, what else shall I say?")
 @chocotorta = Recipe.create(name: "Chocotorta", instructions: "Dip the cookies in milk, do a layer and then add the dulce de leche mix", details: "An argentine classic")
 
 puts "Creating ingredients"
@@ -238,12 +237,6 @@ puts "Joining recipe with its ingredients"
 @lemon_squares_eggs = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
 
 
-@mousse_flour = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
-@mousse_white_chocolate = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @white_chocolate.id, ammount: 500, unit: "grams")
-@mousse_butter = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-@mousse_eggs = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-@mousse_sugar = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
-@mousse_chocolate = RecipeIngredient.create(recipe_id: @mousse.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
 
 
 @chocotorta_chocolinas = RecipeIngredient.create(recipe_id: @chocotorta.id, ingredient_id: @chocolinas.id, ammount: 500, unit: "grams")
@@ -313,15 +306,7 @@ puts "Joining recipe with its dietary restriction"
 @chocolate_cake_peanut_allergy = RecipeOption.create(recipe_id: @chocolate_cake.id, option_id: @peanut_allergy.id)
 @chocolate_cake_paleo = RecipeOption.create(recipe_id: @chocolate_cake.id, option_id: @paleo.id)
 
-@mousse_vegetarian = RecipeOption.create(recipe_id: @mousse.id, option_id: @vegetarian.id)
-@mousse_vegan = RecipeOption.create(recipe_id: @mousse.id, option_id: @vegan.id)
-@mousse_pescetarian = RecipeOption.create(recipe_id: @mousse.id, option_id: @pescetarian.id)
-@mousse_celiac = RecipeOption.create(recipe_id: @mousse.id, option_id: @celiac.id)
-@mousse_dairy_intolerant = RecipeOption.create(recipe_id: @mousse.id, option_id: @dairy_intolerant.id)
-@mousse_kosher = RecipeOption.create(recipe_id: @mousse.id, option_id: @kosher.id)
-@mousse_halal = RecipeOption.create(recipe_id: @mousse.id, option_id: @halal.id)
-@mousse_peanut_allergy = RecipeOption.create(recipe_id: @mousse.id, option_id: @peanut_allergy.id)
-@mousse_diabetic = RecipeOption.create(recipe_id: @mousse.id, option_id: @diabetic.id)
+
 
 @brownies_vegetarian = RecipeOption.create(recipe_id: @brownies.id, option_id: @vegetarian.id)
 @brownies_vegan = RecipeOption.create(recipe_id: @brownies.id, option_id: @vegan.id)
@@ -2220,6 +2205,7 @@ puts "63"
 # Cloudinary::Uploader.upload("app/assets/images/veggieBurger.png")
 veggie_burger_file = URI.open('https://res.cloudinary.com/db61r7r8g/image/upload/v1615258577/k5zs8vnppkas3ruxuw9y.png')
 @veggie_burger.photo.attach(io: veggie_burger_file, filename: 'veggieBurger.png', content_type: 'image/png')
+
 
 
 

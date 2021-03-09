@@ -165,9 +165,6 @@
   min-width: 70px;
   font-size: 16px;
   cursor: pointer;
-  &:hover {
-    font-weight: bold;
-  }
 }
 
 .clickable.active {
@@ -175,7 +172,6 @@
   background-color: rgb(236, 237, 254);
   border-color: inherit;
   &:hover {
-    font-weight: bold;
     background-color: rgb(236, 237, 254);
   }
 }
@@ -231,12 +227,5 @@
   z-index: 2;
   &:hover{
     cursor: pointer;
-  }
-}
-
-.number-box {
-  width: 30px;
-  &:hover{
-    background-color: white !important;
   }
 }

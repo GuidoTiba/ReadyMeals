@@ -56,7 +56,6 @@
       <h3 class="green pb-3"><strong>New desserts added this week!</strong></h3>
       <div class="cards overflow-hidden">
 
-
         <div class="card-containter">
           <%= cl_image_tag @recipes.find_by(name: "Chocolate cake").photo.key, class: "big-card"%>
           <h5 class="green pt-3"><%= @recipes.find_by(name: "Chocolate cake").name %></h5>
@@ -76,6 +75,7 @@
           <%= cl_image_tag @recipes.find_by(name: "Buckwheat cake").photo.key, class: "big-card"%>
           <h5 class="green pt-3"><%= @recipes.find_by(name: "Buckwheat cake").name %></h5>
         </div>
+
 
       </div>
     </div>

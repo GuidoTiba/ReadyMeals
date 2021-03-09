@@ -1,43 +1,64 @@
+
+
+
 <div class="white-background">
+  <h1 class="pt-4 pb-4 text-center green"><strong>My events</strong></h1>
 
-  <h3 class="pt-4 pb-3 text-center green"><strong>My events</strong></h3>
+  <% @events.each do |event| %>
+    <div class="selection-box w-50 mx-auto mb-5">
 
-  <div class="white-background">
-
-    <% @events.each do |event|%>
-
-        <div class="block py-3 pb-4 w-50 mx-auto selection mb-5">
-          <%= link_to event_path(event), class:"no-text-decoration align-self-center d-flex justify-content-between pt-2" do %>
-            <h4 class="green"><%= event.title %></h4>
-            <p class="subtitles">Monday 3 to Tuesday 4</p>
-          <% end %>
+      <div class="d-flex align-items-center">
+        <div class="w-25">
           <p class="subtitles"> <%= event.number_of_members %> members</p>
-          <h5 class="pt-4 pb-2">Meals list</h5>
-
-
-          <div class="cards row px-3">
-          <% event.meals.each do |meal| %>
-            <%= cl_image_tag meal.recipe.photo.key, class: "list-card" %>
-          <% end %>
-          </div>
-
-
-          <h5 class="pt-4 pb-2 " >Saved dietary preferences</h5>
-          <% event.event_options.each do |option| %>
-            <p class="oval clickable px-3"><%= option.option.name %></p>
-          <% end %>
-
-          <%= link_to ingredient_list_path(event), class:"no-text-decoration ml-auto p-2 bd-highlight" do %>
-            <div class="main-rectangular-card">
-              <%= image_tag "List_of_ingredients.png" %>
-              <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
-            </div>
-          <% end %>
-
         </div>
+        <div class="flex-grow-1 h-100 text-center">
+          <%= link_to event_path(event), class:"no-text-decoration" do %>
+            <h4 class="green"><%= event.title %></h4>
+          <% end %>
+        </div>
+        <div class="w-25 text-right">
+          <p class="subtitles">Monday 3 to Tuesday 4</p>
+        </div>
+      </div>
 
-    <% end %>
+      <div class=" d-flex justify-content-center my-3">
+        <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
+          <div class="main-rectangular-card">
+            <%= image_tag "List_of_ingredients.png" %><p class="green my-0 mx-2">List of ingredients</p></div>
+        <% end %>
+      </div>
 
-  </div>
+      <div class="d-flex cards row px-3 justify-content-center">
+        <% event.meals.each do |meal| %>
+          <%= cl_image_tag meal.recipe.photo.key, class: "list-card" %>
+        <% end %>
+      </div>
+
+
+      <% unless event.event_options.count == 0 %>
+        <div class="text-right">
+          <p class="pt-4 mb-0"><small>Selected dietary preferences</small></p>
+          <% event.event_options.each do |option| %>
+            <p class="oval clickable active px-3" id="add"><small><%= option.option.name %></small></p>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+  <% end %>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

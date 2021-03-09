@@ -29,3 +29,6 @@ class PagesController < ApplicationController
   end
 
 end
+
+
+# .sort{|a,b| a.name <=> b.name}

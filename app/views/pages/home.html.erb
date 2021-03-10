@@ -25,37 +25,6 @@
       <% end %>
     </div>
 
-<!--   <div class="light-violet-block p-3 mt-4">
-    <div class="d-flex ml-4 pl-4">
-      <div class="mb-4 ml-4 mr-5 align-self-center">
-        <h5>Event coming up next:</h5>
-        <h4><strong><%= @nextevent.title %></strong></h4>
-      </div>
-      <div class="ml-4 mt-2 pr-4 w-25">
-        <h6 class="mb-2"> Dining members:  <%= @nextevent.number_of_members %></h6>
-        <h6 class="mb-2"> Meals to be prepared:  <%= @nextevent.meals.count %></h6>
-        <h6 class="mb-2"> Day meals:  <%= (@nextevent.meals.count)/2 %></h6>
-        <h6 class="mb-2"> Night meals:  <%= (@nextevent.meals.count)/2 %></h6>
-        <img src="https://source.unsplash.com/400x300/?yummy,food" alt="" class="mini-card mb-3">
-      </div>
-      <div class="pl-4 separator mr-4 w-25">
-        <h6 class="mt-3">Shop at once for all you'll need!</h6>
-        <%= link_to ingredient_list_path(@nextevent), class:"no-text-decoration" do %>
-        <div class="rectangular-card">
-          <%= image_tag "List_of_ingredients.png" %>
-          <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
-        </div>
-        <% end %>
-      </div>
-      <div class="pl-4 separator w-25">
-        <h6 class="mt-3">Dietary Options:</h6>
-        <% @nextevent.event_options.each do |option| %>
-          <p><%= option.option.name %></p>
-        <% end %>
-      </div>
-    </div>
-  </div> -->
-
   <div class="white-background">
     <div class="block py-3">
       <h3 class="pt-4 pb-1"><strong>Discover new recipes</strong></h3>
@@ -107,9 +76,6 @@
     </div>
   </div>
 
-<% #align-self-center ml-auto p-2 ml-3 mr-5 pr-5 %>
-
-
   <div class="white-background">
     <div class="block py-3 pb-4">
 
@@ -140,13 +106,4 @@
     </div>
   </div>
 
-     <!--  <div class="light-violet-block p-3">
-        <h4>Your last event:</h4>
-        <h4 class="mb-4"><%= @lastevent.title %></h4>
-        <h6 class="mb-2"> Dining members:  <%= @lastevent.number_of_members %></h6>
-        <h6 class="mb-2"> Meals prepared:  <%= @lastevent.meals.count %></h6>
-        <h6 class="pt-4">Rate it!</h6>
-        <h6>☆ ☆ ☆ ☆ ☆</h6>
-      </div>
- -->
 </div>

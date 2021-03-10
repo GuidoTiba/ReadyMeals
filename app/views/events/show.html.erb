@@ -2,50 +2,40 @@
   <div class="container">
 
     <div class="d-flex justify-content-between mb-3 pt-5">
-
       <div class="subtitles align-self-center">
         <p class="">02.03.2021 - 05.03.2021</p>
       </div>
-
       <div class="align-self-center">
         <h2 class="text-center"><%= @event.title %></h2>
         <p class="subtitles text-center"> <%= @event.number_of_members %> members</p>
       </div>
-      <div>
-        <div class="d-flex">
-        <div class="mb-4 align-self-center">
-          <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
-            <div class="main-rectangular-card">
-              <%= image_tag "List_of_ingredients.png" %>
-              <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
-            </div>
-          <% end %>
-        </div>
+      <div class="mb-4 align-self-center d-flex">
+        <%= link_to ingredient_list_path(@event), class:"no-text-decoration" do %>
+          <div class="main-rectangular-card">
+            <%= image_tag "List_of_ingredients.png" %>
+            <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
+          </div>
+        <% end %>
       </div>
-
-
-      </div>
-      </div>
-
     </div>
 
 
-    <div class="d-flex row">
+    <div class="d-flex row pb-5">
       <% @event.meals.each do |meal| %>
         <div class="selection-box w-50 px-5 pb-3 pt-2 m-2">
 
           <div class="mt-5 d-flex">
-            <%= cl_image_tag meal.recipe.photo.key, class: "medium-card " %>
+            <%= cl_image_tag meal.recipe.photo.key, class: "medium-card" %>
 
             <div class="pl-4">
               <h5 class="separator-bottom pb-3"> <%= meal.recipe.name%></h5>
               <div class="pt-2">
-                <span id="recipe_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Show Recipe</strong></span>
+                <span id="recipe_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Recipe →</strong></span>
                 <p></p>
                 <div id="recipe_instructions_<%= meal.recipe.id %>" class="d-none"><%= meal.recipe.instructions %></div>
                 <p></p>
 
-                <span id="ingredient_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Show Ingredient</strong></span>
+                <span id="ingredient_id" class="link-primary" data-recipe-id="<%= meal.recipe.id %>"><strong>Ingredients →</strong></span>
                 <p></p>
                 <div id="recipe_ingredient_<%= meal.recipe.id %>" class="d-none">
                   <% meal.recipe.ingredients.each do |ingredient| %>

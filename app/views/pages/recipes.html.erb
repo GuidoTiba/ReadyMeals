@@ -20,6 +20,43 @@
       <% end %>
     </div>
 
+</div>
+
+
+
+<div class="d-flex">
+  <div class="d-flex w-50 justify-content-end"> 
+    <% @recipes.first(2).each do |recipe| %>
+      <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
+        <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card m-3"%>
+      </span>
+      <div id="recipe_instructions_<%= recipe.id %>" class="d-none"><%= recipe.instructions %></div>
+      <div id="recipe_ingredient_<%= recipe.id %>" class="d-none">
+        <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="w-50" style="width:100%; background-color: #433FB0; border-radius: 30px;"></div>
+</div>
+
+
+<!--     <div class="d-flex">
+      <div class="w-50" style="width:100%; background-color: #433FB0; border-radius: 30px;"></div>
+      <div class="d-flex w-50 justify-content-start"> 
+        <% @recipes.first(2).each do |recipe| %>
+          <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
+            <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card m-3"%>
+          </span>
+        <% end %>
+      </div>
+    </div> -->
+
+
+
+
+<!--
     <div class="d-flex justify-content-center row">
       <% @recipes.each do |recipe| %>
         <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
@@ -37,8 +74,4 @@
     </div>
 
 
-
-</div>
-
-
-
+ -->

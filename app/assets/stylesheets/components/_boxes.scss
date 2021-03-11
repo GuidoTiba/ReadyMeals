@@ -12,10 +12,23 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 1.5rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   &:hover {
     transition: 400ms cubic-bezier(0.4, 0, 1, 1);
     transition-property: transform,box-shadow;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+}
+
+.selection-box-index {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+    box-shadow: 0 0 15px #B3DEB4;
+  &:hover {
+    transition: 400ms cubic-bezier(0.4, 0, 1, 1);
+    transition-property: transform,box-shadow;
+  box-shadow: 0 0 15px green;
   }
 }
 
@@ -55,4 +68,11 @@
 
 .form-control {
   border-radius: 100px;
+}
+
+.search-bar {
+  background-color: rgb(236, 237, 254);
+  margin-right: 39%;
+  margin-left: 39%;
+  border-radius: 30px;
 }

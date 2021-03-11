@@ -9,6 +9,14 @@ class PagesController < ApplicationController
   end
 
   def recipes
+    @recipes.each do |recipe|
+      @vegetarian = []
+      @carnivore = []
+      if recipe.options == { name: "Vegetarian" } && { name: "Pescetarian" } && { name: "Kosher" } && { name: "Halal" } && { name: "Shellfish Allergy" }
+        recipe > @vegetarian
+      end
+    end
+    # quiero poder dividirlos por options
   end
 
   private
@@ -16,7 +24,6 @@ class PagesController < ApplicationController
   def set_recipes
     @recipes = Recipe.all
   end
-
 end
 
 

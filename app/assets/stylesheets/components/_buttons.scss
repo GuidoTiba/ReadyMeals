@@ -220,3 +220,14 @@
     cursor: pointer;
   }
 }
+
+.btn-search {
+    background-color: #433FB0;
+    color: white;
+  border-radius: 30px;
+  &:hover {
+  color: white;
+  // background-color: rgb(236, 237, 254);
+  // border-color: #433FB0;
+  }
+}

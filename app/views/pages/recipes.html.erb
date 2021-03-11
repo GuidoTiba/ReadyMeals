@@ -1,11 +1,78 @@
 <div class="block">
+
   <h3 class="text-center pt-5 green"><strong>Browse <em>all</em> recipes</strong></h3>
-  <h6 class="text-center pb-5 green"><strong>and start choosing the right ones for your next event</strong></h6>
-  <div class="card-containter">
-    <div class="cards block d-flex row">
+  <h6 class="text-center pb-1 green"><strong>and start choosing the right ones for your next event</strong></h6>
+
+    <div class="px-4" id="search-bar" style="background-color: rgb(236, 237, 254); margin-right: 41%; margin-left: 41%; border-radius: 30px;">
+      <%= form_tag recipes_path, method: :get, class:"d-flex mx-auto my-4 justify-content-between" do %>
+        <div class="align-self-center">
+        <select data-placeholder="Browse!" class="select2 " name="query" multiple="multiple">
+          <option value=""></option>
+          <% possible_searchs.each do |search| %>
+            <option value="<%= search %>"><%= search %></option>
+          <% end %>
+        </select>
+        </div>
+        <div class="d-flex btn btn-search my-2">
+          <i class="fas fa-search align-self-center py-0"></i>
+          <%= submit_tag "Search", class: "btn btn-search py-0" %>
+        </div>
+      <% end %>
+    </div>
+
+</div>
+
+
+<div class="d-flex m-5 row">
+  <% @recipes.each do |recipe| %>
+    <div class="d-flex">
+      <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
+        <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card m-3"%>
+      </span>
+
+      <div class="violet-card hover-big-card m-3 p-4">
+
+        <div id="recipe_instructions_<%= recipe.id %>" class="d-none">
+          <h4 class="text-center"> <%= recipe.name %> </h4>
+          <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+          Ingredients:<% recipe.ingredients.each do |ingredient| %>
+            <li><%= ingredient.name %></li>
+          <% end %>
+        </div>
+
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+<!--     <div class="d-flex">
+      <div class="w-50" style="width:100%; background-color: #433FB0; border-radius: 30px;"></div>
+      <div class="d-flex w-50 justify-content-start"> 
+        <% @recipes.first(2).each do |recipe| %>
+          <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
+            <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card m-3"%>
+          </span>
+        <% end %>
+      </div>
+    </div> -->
+
+
+
+
+<!--
+    <div class="d-flex justify-content-center row">
       <% @recipes.each do |recipe| %>
         <span id="recipe_id" class="link-primary" data-recipe-id="<%= recipe.id %>">
-          <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card"%>
+          <%=  cl_image_tag recipe.photo.key, class: "big-card hover-big-card m-3"%>
         </span>
         <p></p>
         <div id="recipe_instructions_<%= recipe.id %>" class="d-none"><%= recipe.instructions %></div>
@@ -17,8 +84,6 @@
         </div>
       <% end %>
     </div>
-  </div>
-</div>
 
 
-
+ -->

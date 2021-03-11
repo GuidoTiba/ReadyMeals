@@ -13,17 +13,25 @@
 
     <div class="white-background w-100">
       <%= render 'shared/navbar' %>
-      <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
+      <h3 class="text-center pt-5 green"><strong>Choose your meals!</strong></h3>
 
-      <%= form_tag event_select_meals_path(@event), method: :get, class:"d-flex w-25 mx-auto my-4" do %>
-        <select data-placeholder="Find your favourite meals!" class="select2" name="query" multiple="multiple">
+    <div class="px-4" id="search-bar" style="background-color: rgb(236, 237, 254); margin-right: 41%; margin-left: 41%; border-radius: 30px;">
+      <%= form_tag event_select_meals_path(@event), method: :get, class:"d-flex mx-auto my-4 justify-content-between" do %>
+        <div class="align-self-center">
+        <select data-placeholder="Browse!" class="select2 " name="query" multiple="multiple">
           <option value=""></option>
           <% possible_searchs.each do |search| %>
             <option value="<%= search %>"><%= search %></option>
           <% end %>
         </select>
-        <%= submit_tag "Search", class: "btn btn-green" %>
+        </div>
+        <div class="d-flex btn btn-search my-2">
+          <i class="fas fa-search align-self-center py-0"></i>
+          <%= submit_tag "Search", class: "btn btn-search py-0" %>
+        </div>
       <% end %>
+    </div>
+
 
       <div class="block">
         <div class="card-containter">
@@ -39,14 +47,25 @@
     <div class="white-background">
       <%= render 'shared/navbar' %>
       <h3 class="text-center pt-5"><strong>Choose your meals!</strong></h3>
-      <%= form_tag event_select_meals_path(@event), method: :get, class:"w-25 mx-auto d-flex my-4" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find your recipe!"
-        %>
-        <%= submit_tag "Search", class: "btn btn-green" %>
-      <% end %>
+
+      <div class="px-4" id="search-bar" style="background-color: rgb(236, 237, 254); margin-right: 38%; margin-left: 38%; border-radius: 30px;">
+        <%= form_tag event_select_meals_path(@event), method: :get, class:"d-flex mx-auto my-4 justify-content-between" do %>
+          <div class="align-self-center">
+          <select data-placeholder="Browse!" class="select2 " name="query" multiple="multiple">
+            <option value=""></option>
+            <% possible_searchs.each do |search| %>
+              <option value="<%= search %>"><%= search %></option>
+            <% end %>
+          </select>
+          </div>
+          <div class="d-flex btn btn-search my-2">
+            <i class="fas fa-search align-self-center py-0"></i>
+            <%= submit_tag "Search", class: "btn btn-search py-0" %>
+          </div>
+        <% end %>
+      </div>
+
+
       <div class="block">
         <div class="card-containter">
           <div class="sidebox-cards">

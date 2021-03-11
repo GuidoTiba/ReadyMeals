@@ -1,14 +1,14 @@
-class ErrorController < ApplicationController
+class ErrorsController < ApplicationController
   def not_found
-    render :status => 404
+    render status: :not_found
   end
-
-  def unacceptable
-    render :status => 422
+ 
+  def unprocessable_entity
+    render status: :unprocessable_entity
   end
-
-  def internal_error
-    render :status => 500
+ 
+  def server_error
+    render status: :server_error
   end
 
 end

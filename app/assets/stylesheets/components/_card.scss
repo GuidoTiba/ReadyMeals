@@ -172,6 +172,7 @@
 // }
 
 .hover-recipe-details {
+  max-height: 340px;
   background: white;
   color: black;
   opacity: 0;
@@ -204,4 +205,8 @@
   height: 340px;
   width: 620px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.img-card {
+  max-width: 340px;
 }

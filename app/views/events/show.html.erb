@@ -20,123 +20,43 @@
   </div>
 
 
-  <div class="">
-    <% @event.meals.each do |meal| %>
+  <div>
+    <% @recipe_hash.each do |recipe, ammount| %>
 
-    <div class="d-flex p-3">
-
-
-      <div class="mx-auto">
-        <a data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">
-          <div class="py-5 selection-box px-5 m-2 d-flex m-3">
-            <%= cl_image_tag meal.recipe.photo.key, class: "medium-card" %>
-            <div class="pl-4 align-self-center">
-              <h5 class="separator-bottom pb-2 text green-link"> <%= meal.recipe.name%></h5>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="collapse multi-collapse" id="multiCollapseExample4">
-        <div class="violet-card hover-big-card m-3 p-4">
-          <p><strong>Instructions:</strong> <%= meal.recipe.instructions %></p>
-          Ingredients:
-          <% meal.recipe.ingredients.each do |ingredient| %>
-          <%= ingredient.name %>  |
-          <% end %>
-        </div>
-      </div>
+      <div class="d-flex p-3">
 
 
-
-
-    </div>
-
-    <% end %>
-  </div>
-
-
-  <div class="">
-    <% @event.meals.each do |meal| %>
-
-    <div class="d-flex p-3">
-
-
-      <div class="mx-auto">
-        <a data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">
-          <div class="py-5 selection-box px-5 m-2 d-flex m-3">
-            <%= cl_image_tag meal.recipe.photo.key, class: "medium-card" %>
-            <div class="pl-4 align-self-center">
-              <h5 class="separator-bottom pb-2 text green-link"> <%= meal.recipe.name%></h5>
-            </div>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="row">
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample4">
-            <div class="py-5 violet-card hover-big-card m-3 p-4">
-
-              <div class="d-flex justify-content-around">
-                <div>
-                  <a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-                    <h6><strong><em>Instructions</em></strong></h6>
-                    <p class="text-center">↓</p>
-                  </a>
-                  <div class="row">
-                    <div class="col">
-                      <div class="collapse multi-collapse" id="multiCollapseExample1">
-                        <%= meal.recipe.instructions %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
-                    <h6><strong><em>Ingredients</em></strong></h6>
-                    <p class="text-center">↓</p>
-                  </a>
-                  <div class="row">
-                    <div class="col">
-                      <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <% meal.recipe.ingredients.each do |ingredient| %>
-                        <%= ingredient.name %>  |
-                        <% end %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <a data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">
-                    <h6><strong><em>Details</em></strong></h6>
-                    <p class="text-center">↓</p>
-                  </a>
-                  <div class="row">
-                    <div class="col">
-                      <div class="collapse multi-collapse" id="multiCollapseExample3">
-                        <%= meal.recipe.details %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
+        <div class="mx-auto">
+          <a class="no-text-decoration-card" data-toggle="collapse" href=<%= "#multiCollapseExample#{recipe.id}" %> role="button" aria-expanded="false" aria-controls=<%= "multiCollapseExample#{recipe.id}" %>>
+            <div class="py-5 selection-box px-5 m-2 d-flex m-3">
+              <%= cl_image_tag recipe.photo.key, class: "medium-card" %>
+              <div class="pl-4 align-self-center">
+                <h5 class="separator-bottom pb-2 text green-link"> <%= recipe.name%></h5>
               </div>
+              <h5 class="ml-auto"><%= "x#{ammount}" %></h5>
             </div>
+          </a>
+        </div>
+
+        <div class="collapse multi-collapse" id=<%= "multiCollapseExample#{recipe.id}" %>>
+          <div class="violet-card hover-big-card m-3 p-4">
+            <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+            Ingredients:
+            <% recipe.ingredients.each do |ingredient| %>
+            <%= ingredient.name %>  |
+            <% end %>
           </div>
         </div>
+
+
+
+
       </div>
-
-
-
-    </div>
 
     <% end %>
   </div>
+
+
 
 </div>
 

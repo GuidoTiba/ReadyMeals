@@ -42,6 +42,14 @@ class EventsController < ApplicationController
   end
 
   def show
+    @recipe_hash = {}
+    @event.meals.each do |meal|
+      if(@recipe_hash[meal.recipe])
+        @recipe_hash[meal.recipe] += 1
+      else
+        @recipe_hash[meal.recipe] = 1
+      end
+    end
   end
 
   def list_ingredients

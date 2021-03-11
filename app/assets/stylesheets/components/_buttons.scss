@@ -180,9 +180,15 @@
   margin-bottom: 10px;
 }
 
+.no-text-decoration-card {
+  &:hover{
+    text-decoration: none !important;
+  }
+}
+
 .no-text-decoration {
   &:hover{
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 

@@ -16,7 +16,6 @@ class PagesController < ApplicationController
         recipe > @vegetarian
       end
     end
-    # quiero poder dividirlos por options
   end
 
   private

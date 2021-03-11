@@ -1,5 +1,5 @@
 <% @recipes.each do |recipe| %>
-  <div class="position-relative pb-4">
+  <div class="position-relative img-card pb-4">
     <%=  cl_image_tag recipe.photo.key, height: 300, width: 400, class: "big-card" %>
     <div class="hover-recipe-details container">
       <h5 class="text-center mt-4"><strong><%= recipe.name %></strong></h5>

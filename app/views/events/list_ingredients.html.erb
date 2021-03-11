@@ -13,7 +13,7 @@
 
     <div>
       <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
-      
+
       <div class="mb-4 align-self-center">
         <%= link_to recipes_list_path(@event), class:"no-text-decoration" do %>
           <div class="lilac-rectangular-card">
@@ -21,7 +21,7 @@
             <p class="green text-center my-0 mx-2 flex-fill">List of Recipes</p>
           </div>
         <% end %>
-      </div>    
+      </div>
     </div>
 
 
@@ -50,28 +50,27 @@
 
 <div class="container">
 
-  <div class="w100 d-flex flex-row-reverse justify-content-between">
+  <div class="w100 d-flex flex-row-reverse justify-content-between mb-3 pt-5">
 
     <div class="align-self-right">
       <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
     </div>
     <div class="align-self-center">
       <h1 class="text-center"><%= @event.title %></h1>
-      <div class="text-center text-secondary"><%= @event.number_of_members %> members</div>
+      <div class="text-center text-secondary"><%= @event.number_of_members %> members - <%= @event.meals.count %> meals </div>
     </div>
     <div class="align-self-right">
       <div class="text-secondary"> Weather in...</div>
     </div>
   </div>
 
-  <div class="block">
-    <div class="mx-auto">
+  <div class="block pb-5">
+    <div class="mx-auto w-50">
       <% @ingredients_hash.each do |ingredient_id, ammount| %>
-        <div class="d-flex align-items-center">
-          <div class="w-25">Photo</div>
-          <div class="flex-grow-1 h-100"><%= Ingredient.find(ingredient_id).name %></div>
+        <div class="d-flex align-items-center separator-bottom py-3 ">
+          <div class="flex-grow-1 h-100 "><%= Ingredient.find(ingredient_id).name %></div>
           <div class="flex-grow-0 text-right"><%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></div>
-          <div class="flex-grow-0 text-right">Check point</div>
+          <input class="form-check-input" type="checkbox" value="meat" id="defaultCheck1">
         </div>
       <% end %>
     </div>

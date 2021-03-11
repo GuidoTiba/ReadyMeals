@@ -1,40 +1,9 @@
 <div class="white-background">
 
-
-
-
-  <div class="block w-100 d-flex flex-row-reverse justify-content-between mb-3 pt-5">
-    <div class="align-self-right flex-grow-0">
-      <div id="search-bar" style="background-color: rgb(236, 237, 254); border-radius: 30px;">
-        <%= form_tag recipes_path, method: :get, class:"d-flex mx-auto my-4 justify-content-between" do %>
-          <div class="align-self-center">
-          <select data-placeholder="Browse!" class="select2" name="query" multiple="multiple">
-            <option value=""></option>
-            <% possible_searchs.each do |search| %>
-              <option value="<%= search %>"><%= search %></option>
-            <% end %>
-          </select>
-          </div>
-          <div class="d-flex btn btn-search my-2">
-            <i class="fas fa-search align-self-center py-0"></i>
-            <%= submit_tag "Search", class: "btn btn-search py-0" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="align-self-center flex-grow-1">
-      <h3 class="text-center green"><strong>Browse <em>all my</em> events</strong></h3>
-      <h6 class="text-center green"><strong>and start choosing the right ones for your next event</strong></h6>
-    </div>
-    <div class="align-self-right flex-grow-0">
-      <div class="text-secondary"> Weather in...</div>
-    </div>
+  <div class="block mb-3 pt-5">
+    <h3 class="text-center green"><strong>Browse <em>all my</em> events</strong></h3>
+    <h6 class="text-center green"><strong>and start choosing the right ones for your next event</strong></h6>
   </div>
-
-
-
-
-
 
   <% @events.each do |event| %>
     <div class="selection-box-index w-50 mx-auto my-5">
@@ -86,17 +55,3 @@
   <% end %>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

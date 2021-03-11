@@ -21,7 +21,7 @@
 .green-link {
   color: $green;
   &:hover {
-    text-decoration: none;
+    text-decoration: none!important;
     font-weight: bold;
     color: $green;
 

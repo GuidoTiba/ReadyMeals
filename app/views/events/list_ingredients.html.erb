@@ -1,57 +1,6 @@
-<!-- <div class="container">
-
-  <div class="d-flex justify-content-between mb-3 pt-5">
-    <div class="subtitles align-self-center">
-      <p> </p>
-      <p> </p>
-    </div>
-    <div class="align-self-center">
-      <h2 class="text-center"><%= @event.title %></h2>
-      <p class="subtitles text-center"> <%= @event.number_of_members %> members</p>
-      <p class="subtitles text-center"> Listado de Compras</p>
-    </div>
-
-    <div>
-      <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
-
-      <div class="mb-4 align-self-center">
-        <%= link_to recipes_list_path(@event), class:"no-text-decoration" do %>
-          <div class="lilac-rectangular-card">
-            <%= image_tag "List_of_ingredients.png" %>
-            <p class="green text-center my-0 mx-2 flex-fill">List of Recipes</p>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-
-  </div>
-
-
-
-  <div class="mx-auto">
-    <div class="form-check w-50 text-center">
-      <div class="list-group" id="list-tab" role="tablist">
-        <% @ingredients_hash.each do |ingredient_id, ammount| %>
-          <div class="list-group-item list-group-item-action" id="list-home-list" role="tab" aria-controls="home">
-            <input class="form-check-input" type="checkbox" value="meat" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-             <p> <%= Ingredient.find(ingredient_id).name %>: <%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></p>
-            </label>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-
-</div> -->
-
-
 <div class="container">
 
   <div class="w100 d-flex flex-row-reverse justify-content-between mb-3 pt-5">
-
     <div class="align-self-right">
       <%= link_to " ↩︎ Back", event_path, id: :btn_back, class: "ml-auto p-0" %>
     </div>
@@ -77,19 +26,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

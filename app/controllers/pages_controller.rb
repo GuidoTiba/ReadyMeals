@@ -8,6 +8,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def recipes
+    @recipes = Recipe.global_search(params[:query]) if params[:query].present?
+  end
+
   private
 
   def set_recipes

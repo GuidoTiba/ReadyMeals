@@ -23,7 +23,7 @@
     <% end %>
   </div>
 
-  <div class="white-background">
+  <div class="white-background pb-3">
     <div class="block py-3">
       <h3 class="pt-4 pb-1"><strong>Discover new recipes</strong></h3>
       <h6 class="pb-4">Find recipes you can add to your next event!</h6>
@@ -108,9 +108,11 @@
     <div class="form-group">
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Have you found what you were looking for?" style="border-radius: 15px!important;"></textarea>
     </div>
-    <div class="text-center pt-2">
-      <div class="btn btn-green w-25 justify-content-center">Review!</div>
-    </div>
+    <%= link_to home_path, method: :get, id: :btn do %>
+      <div class="text-center pt-2">
+        <div class="btn btn-green w-25 justify-content-center">Review!</div>
+      </div>
+    <% end %>
   </form>
 </div>
 

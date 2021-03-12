@@ -16,6 +16,12 @@
   background-size: cover;
 }
 
+.about-background {
+  background-image: url(image_path('kitchen.jpg'));
+  height: 600px;
+  background-size: cover;
+}
+
 html, body {
   background-color: $white;
 }

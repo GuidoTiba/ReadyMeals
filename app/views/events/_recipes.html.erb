@@ -5,7 +5,7 @@
       <h5 class="text-center mt-4"><strong><%= recipe.name %></strong></h5>
       <h6 class="text-left"><em><strong>Ingredients</strong></em></h6>
         <% recipe.ingredients.each do |ingredient| %>
-        <p class="my-0 py-0"><%= ingredient.name %></p>
+          <%= ingredient.name %>  |
         <% end %>
       <h6 class="text-left mt-3 pt-3" style="border-top: 2px solid rgba(0, 0, 0, 0.15);"><em><strong>Details</strong></em></h6>
         <p><%= recipe.details %></p>

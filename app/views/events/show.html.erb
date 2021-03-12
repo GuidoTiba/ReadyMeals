@@ -26,12 +26,12 @@
 
         <div class="mx-auto">
           <a class="no-text-decoration-card" data-toggle="collapse" href=<%= "#multiCollapseExample#{recipe.id}" %> role="button" aria-expanded="false" aria-controls=<%= "multiCollapseExample#{recipe.id}" %>>
-            <div class="py-5 selection-box px-5 m-2 d-flex m-3">
-              <%= cl_image_tag recipe.photo.key, class: "medium-card" %>
+            <div class="py-5 selection-box px-4 m-2 d-flex">
+              <%= cl_image_tag recipe.photo.key, class: "medium-card ml-2" %>
               <div class="pl-4 align-self-center">
-                <h5 class="separator-bottom pb-2 text green-link"> <%= recipe.name%></h5>
+                <h5 class="separator-bottom pb-2 text green-link"> <%= recipe.name%> ⇢</h5>
               </div>
-              <h5 class="ml-auto"><%= "x#{ammount}" %></h5>
+              <h5 class="ml-auto green micro-letter"><%= "x#{ammount}" %></h5>
             </div>
           </a>
         </div>

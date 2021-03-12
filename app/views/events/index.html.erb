@@ -1,57 +1,77 @@
 <div class="white-background">
 
-  <div class="block mb-3 pt-5">
-    <h3 class="text-center green"><strong>Browse <em>all my</em> events</strong></h3>
-    <h6 class="text-center green"><strong>and start choosing the right ones for your next event</strong></h6>
-  </div>
 
-  <% @events.each do |event| %>
-    <%= link_to event_path(event), class:"no-text-decoration-card" do %>
-      <div class="selection-box-index w-50 mx-auto my-5">
+  <% if @events.count >= 1 %>
+    <div class="block mb-3 pt-5 text-center green">
+      <h3><strong><em>All my</em> events</strong></h3>
+      <h6><strong>A refresher of what is to come</strong></h6>
+    </div>
+    <% @events.each do |event| %>
+      <%= link_to event_path(event), class:"no-text-decoration-card" do %>
+        <div class="selection-box-index w-50 mx-auto my-5">
 
-        <div class="d-flex align-items-center">
-          <div class="w-25">
-            <p class="subtitles"> <%= event.number_of_members %> members</p>
-          </div>
-          <div class="flex-grow-1 h-100 text-center">
+          <div class="d-flex align-items-center">
+            <div class="w-25">
+              <p class="subtitles"> <%= event.number_of_members %> members</p>
+            </div>
+            <div class="flex-grow-1 h-100 text-center">
               <h4 class="green"><%= event.title %></h4>
-          </div>
-          <div class="w-25 text-right">
-            <p class="subtitles"><%= "#{event.start_date.strftime("%e %b %Y")} - #{event.end_date.strftime("%e %b %Y")}" %></p>
-          </div>
-        </div>
-
-        <div class="d-flex cards row px-3 py-4 justify-content-center">
-          <% event.meals.each do |meal| %>
-            <%= cl_image_tag meal.recipe.photo.key, class: "list-card" %>
-          <% end %>
-        </div>
-
-        <div class="d-flex justify-content-between">
-
-          <% if event.event_options.count >= 1 %>
-            <div class="text-left align-self-center">
-              <p class="pt-4 mb-0"><small>Selected dietary preferences</small></p>
-              <% event.event_options.each do |option| %>
-                <p class="oval clickable active px-3" id="add"><small><%= option.option.name %></small></p>
-              <% end %>
             </div>
-            <% else %>
+            <div class="w-25 text-right">
+              <p class="subtitles"><%= "#{event.start_date.strftime("%e %b %Y")} - #{event.end_date.strftime("%e %b %Y")}" %></p>
+            </div>
+          </div>
+
+          <div class="d-flex cards row px-3 py-4 justify-content-center">
+            <% event.meals.each do |meal| %>
+              <%= cl_image_tag meal.recipe.photo.key, class: "list-card" %>
+            <% end %>
+          </div>
+
+          <div class="d-flex justify-content-between">
+
+            <% if event.event_options.count >= 1 %>
+
               <div class="text-left align-self-center">
-              <p class="pt-4 mb-0"><small>No dietary preferences selected</small></p>
-            </div>
-          <% end %>
+                <p class="pt-4 mb-0"><small>Selected dietary preferences</small></p>
+                <% event.event_options.each do |option| %>
+                  <p class="oval clickable active px-3" id="add"><small><%= option.option.name %></small></p>
+                <% end %>
+              </div>
+
+            <% else %>
+
+              <div class="text-left align-self-center">
+                <p class="pt-4 mb-0"><small>No dietary preferences selected</small></p>
+              </div>
+            <% end %>
+          </div>
 
           <div class=" d-flex my-3">
             <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
-              <div class="main-rectangular-card">
-                <%= image_tag "List_of_ingredients.png" %><p class="green my-0 mx-2">List of ingredients</p></div>
+                <%= image_tag "List_of_ingredients.png" %><p class="main-rectangular-card green my-0 mx-2">List of ingredients</p>
             <% end %>
           </div>
         </div>
+      <% end %>
+    <% end %>
 
+    <% else %>
+      <div class="green-speckled-background">
+        <div class="block pt-5 text-center green">
+          <h1> .</h1>
+          <h3 class="pt-5">Nothing planned yet? That is quite sad! </h3>
+          <h3 class="mt-4"><em>Get ready with RM to get cooking!</em></h3>
+        </div>
+        <div class="d-flex py-5 justify-content-center">
+          <%= link_to new_event_path, class:"no-text-decoration d-flex mx-0" do %>
+            <div class="main-rectangular-card ml-4">
+              <%= image_tag "new-event.png" %>
+              <p class="green my-0 pr-4 flex-fill mx-auto">New event!</p>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% end %>
-  <% end %>
 
-</div>
+  </div>

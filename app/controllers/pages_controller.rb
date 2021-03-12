@@ -8,16 +8,9 @@ class PagesController < ApplicationController
   def home
   end
 
-  def recipes
-    @recipes = Recipe.global_search(params[:query]) if params[:query].present?
-  end
-
   private
 
   def set_recipes
     @recipes = Recipe.all
   end
 end
-
-
-# .sort{|a,b| a.name <=> b.name}

@@ -10,13 +10,13 @@
     </div>
     <div class="d-flex justify-content-center">
       <% if user_signed_in? %>
-      <%= link_to home_path, method: :get, id: :btn do %>
-      <div class="btn btn-green">Get started</div>
-      <% end %>
+        <%= link_to home_path, method: :get, id: :btn do %>
+        <div class="btn btn-green">Get started</div>
+        <% end %>
       <% else %>
-      <%= link_to new_user_session_path, method: :get, id: :btn do %>
-      <div class="btn btn-green">Get started</div>
-      <% end %>
+        <%= link_to new_user_session_path, method: :get, id: :btn do %>
+        <div class="btn btn-green">Get started</div>
+        <% end %>
       <% end %>
       <div class="green ml-2 my-auto">in 1 minute</div>
     </div>

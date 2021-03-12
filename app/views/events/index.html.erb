@@ -33,7 +33,7 @@
             <% if event.event_options.count >= 1 %>
 
               <div class="text-left align-self-center">
-                <p class="pt-4 mb-0"><small>Selected dietary preferences</small></p>
+                <p class="pt-4 mb-0 green"><small>Selected dietary preferences</small></p>
                 <% event.event_options.each do |option| %>
                   <p class="oval clickable active px-3" id="add"><small><%= option.option.name %></small></p>
                 <% end %>
@@ -45,13 +45,18 @@
                 <p class="pt-4 mb-0"><small>No dietary preferences selected</small></p>
               </div>
             <% end %>
+
+            <div class="d-flex my-3">
+              <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
+                <div class="main-rectangular-card">
+                  <%= image_tag "List_of_ingredients.png" %>
+                  <p class="green text-center my-0 mx-2 flex-fill">List of ingredients</p>
+                </div>
+              <% end %>
+            </div>
+
           </div>
 
-          <div class=" d-flex my-3">
-            <%= link_to ingredient_list_path(event), class:"no-text-decoration" do %>
-                <%= image_tag "List_of_ingredients.png" %><p class="main-rectangular-card green my-0 mx-2">List of ingredients</p>
-            <% end %>
-          </div>
         </div>
       <% end %>
     <% end %>

@@ -24,25 +24,26 @@
 
       <div class="d-flex p-3">
 
-        <div class="mx-auto">
+        <div class="mx-auto position-relative">
           <a class="no-text-decoration-card" data-toggle="collapse" href=<%= "#multiCollapseExample#{recipe.id}" %> role="button" aria-expanded="false" aria-controls=<%= "multiCollapseExample#{recipe.id}" %>>
+            <h5 class="ml-auto green micro-letter" style="position:absolute; right:20px; top:20px;"><%= "x#{ammount}" %></h5>
             <div class="py-5 selection-box px-4 m-2 d-flex">
               <%= cl_image_tag recipe.photo.key, class: "medium-card ml-2" %>
               <div class="pl-4 align-self-center">
                 <h5 class="separator-bottom pb-2 text green-link"> <%= recipe.name%> ⇢</h5>
               </div>
-              <h5 class="ml-auto green micro-letter"><%= "x#{ammount}" %></h5>
             </div>
           </a>
         </div>
 
         <div class="collapse multi-collapse" id=<%= "multiCollapseExample#{recipe.id}" %>>
-          <div class="violet-card hover-big-card m-3 p-4">
+          <div class="violet-card hover-big-card m-2 p-4">
             <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
-            Ingredients:
-            <% recipe.ingredients.each do |ingredient| %>
-            <%= ingredient.name %>  |
-            <% end %>
+            <p><strong>Ingredients:</strong>
+              <% recipe.recipe_ingredients.each do |recipe_ingredient| %>
+                <em><%= recipe_ingredient.ingredient.name %> </em>  <%= "(#{recipe_ingredient.ammount * @event.number_of_members} #{recipe_ingredient.unit})" %>  |
+              <% end %>
+            </p>
           </div>
         </div>
 

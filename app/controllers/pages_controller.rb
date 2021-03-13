@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    flash.notice = "E-mail sent!" if params[:alert] == "mail"
   end
 
   private

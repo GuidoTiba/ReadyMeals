@@ -85,7 +85,7 @@
         <h6 class="py-3"><strong>Review</strong></h6>
 
         <div class="selection-box-select-meals pb-3">
-          <% @recipes.each do |recipe| %>
+          <% @all_recipes.each do |recipe| %>
             <% unless @event.meals_with_recipe(recipe).empty? %>
               <div class="d-flex my-3">
                 <%= cl_image_tag recipe.photo.key, class: "tiny-card" %>

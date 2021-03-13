@@ -19,6 +19,7 @@ class EventsController < ApplicationController
   end
 
   def select_meals
+    @all_recipes = Recipe.all
     if @event.options.empty?
       @recipes = Recipe.all.includes(:recipe_ingredients)
       @recipes = Recipe.global_search(params[:query]) if params[:query].present?

@@ -16,6 +16,6 @@ class RecipesController < ApplicationController
   end
 
   def set_recipe
-    @event = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
   end
 end

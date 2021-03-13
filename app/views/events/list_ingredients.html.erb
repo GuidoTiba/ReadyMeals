@@ -19,7 +19,7 @@
         <div class="d-flex align-items-center separator-bottom py-3 ">
           <div class="flex-grow-1 h-100 "><%= Ingredient.find(ingredient_id).name %></div>
           <div class="flex-grow-0 text-right"><%= "#{ammount} #{Ingredient.find(ingredient_id).recipe_ingredients.first.unit}" %></div>
-          <input class="form-check-input" type="checkbox" value="meat" id="defaultCheck1">
+          <input class="form-check-input" type="radio" value="meat" id="defaultCheck1">
         </div>
       <% end %>
     </div>

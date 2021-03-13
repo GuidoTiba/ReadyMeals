@@ -1,2 +1,29 @@
 <h1>Recipes#show</h1>
 <p>Find me in app/views/recipes/show.html.erb</p>
+
+
+
+  <div class="black-background">
+    <div class="block py-3">
+      <h3 class="pt-4 pb-1 white"><strong>Browse similar recipes</strong></h3>
+      <h6 class="white pb-4">These have been your choices for you lastest events</h6>
+      <div class="cards pb-4">
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Tuna salad").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Tuna salad").name %></h5>
+        </div>
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Sushi").name %></h5>
+        </div>
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Buckwheat cake").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Buckwheat cake").name %></h5>
+        </div>
+        <div>
+          <%= cl_image_tag @recipes.find_by(name: "Veggie nachos").photo.key, class: "big-card" %>
+          <h5 class="pt-3 white"><%= @recipes.find_by(name: "Veggie nachos").name %></h5>
+        </div>
+      </div>
+    </div>
+  </div>

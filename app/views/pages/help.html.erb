@@ -1,33 +1,40 @@
-  <div class="block py-3 green-speckled-background text-center">
-      <div class="text-center pt-5">
-          <%= image_tag "readymeals-logo.png", class:"w-25" %>
-      </div>
-
-    <div class="container">
-      <div class="p-4 w-50 mx-auto green">
-        <h5 class="pt-2">Having trouble planning events or cooking our recipes? </h5>
-        <h5>Do reach out to as at contact@readymeal.asia </h5>
-        <h6>Or fill the following form :)</h6>
-
-        <div class="block py-3 mx-auto">
-          <form class="pb-3">
-            <div class="form-group pb-2">
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail address" style="border-radius: 15px!important;">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How can we help?" style="border-radius: 15px!important;"></textarea>
-            </div>
-            <%= link_to home_path, method: :get, id: :btn do %>
-              <div class="text-center pt-2">
-                <div class="btn btn-green w-25 justify-content-center">Review!</div>
-              </div>
-            <% end %>
-          </form>
-        </div>
-
-        <h5 class="green">We will get back to you as soon as possible</h5>
-
-        <h5 class="green">Thank you and happy planning!</h5>
-      </div >
-    </div>
+<div class="about-background">
+  <div class="container">
+    <h1 class="pb-3"> </h1>
+    <h1 class="pb-3"> </h1>
+    <h1 class="pb-3"> </h1>
+    <h1 class="pb-3"> </h1>
+    <h1 class="pb-3"> </h1>
+    <h1 class="pb-3"> </h1>
+    <h1 class="text-center py-5 super-title">How can we help?</h1>
   </div>
+</div>
+
+<div class="white-background">
+  <div class="container text-center w-50 py-5">
+    <h2 class="pb-3 green"><em>Having trouble planning events or cooking our recipes?</em></h2>
+    <h6><em>Do reach out to as at contact@readymeal.asia </em></h6>
+    <h6><em>Or fill in the following form :)</em></h6>
+    <div class="block py-3 mx-auto">
+      <form class="pb-3">
+        <div class="form-group pb-2">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail address" style="border-radius: 15px!important;">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How can we help?" style="border-radius: 15px!important;"></textarea>
+        </div>
+        <%= link_to home_path, method: :get, id: :btn do %>
+          <div class="text-center pt-2">
+            <div class="btn btn-green w-25 justify-content-center">Review!</div>
+          </div>
+        <% end %>
+      </form>
+    </div>
+    <h5 class="green">We'll get back to you as soon as possible</h5>
+    <h5 class="green separator-bottom mb-3 pb-4">Thank you and happy planning!</h5>
+  </div>
+</div>
+
+
+
+

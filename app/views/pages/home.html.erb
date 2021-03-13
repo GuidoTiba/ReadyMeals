@@ -47,7 +47,9 @@
             <div class="cards pb-4">
               <% @recipes.last(12).each do |recipe| %>
                 <div class="d-flex">
-                  <%= cl_image_tag recipe.photo.key, class: "small-card" %>
+                  <%= link_to recipe_path(recipe), class:"no-text-decoration" do %>
+                    <%= cl_image_tag recipe.photo.key, class: "small-card" %>
+                  <% end %>
                   <div class="align-self-center ml-3">
                     <h5><strong><%= recipe.name %></strong></h5>
                     <h6><%= recipe.ingredients.count%> ingredients</h6>

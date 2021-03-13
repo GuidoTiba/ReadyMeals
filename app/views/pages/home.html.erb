@@ -1,6 +1,6 @@
 <div class="white-background">
 
-  <div class="home-background text-center pr-5 green ">
+  <div class="home-background text-center green ">
     <h1 class="pt-5"> </h1>
     <h1 class="pt-5"><strong>Welcome back to <em>your</em> </strong></h1>
     <h1 class="pb-3"><strong>virtual kitchen</strong></h1>
@@ -10,15 +10,21 @@
 
   <div class="d-flex py-5 justify-content-center">
     <%= link_to events_path, class:"no-text-decoration" do %>
-      <div class="main-rectangular-card mr-4">
-        <%= image_tag "List_of_ingredients.png" %>
+      <div class="main-rectangular-card mx-4" style="width:250px;">
+        <%= image_tag "List_of_ingredients.png", style: "border-radius:20px;" %>
         <p class="green my-0 mx-2 mr-4 flex-fill">Go to all my events</p>
       </div>
     <% end %>
     <%= link_to new_event_path, class:"no-text-decoration" do %>
-      <div class="main-rectangular-card ml-4">
-        <%= image_tag "new-event.png" %>
+      <div class="main-rectangular-card mx-4" style="width:250px;">
+        <%= image_tag "new-event.png", style: "border-radius:20px;" %>
         <p class="green my-0 mx-2 mr-4 flex-fill">New event!</p>
+      </div>
+    <% end %>
+    <%= link_to recipes_path, class:"no-text-decoration" do %>
+      <div class="main-rectangular-card mx-4" style="width:250px;">
+        <%= image_tag "recipes_logo_6.png", style: "border-radius:20px;" %>
+        <p class="green my-0 mx-2 mr-4 flex-fill">Browse all recipes!</p>
       </div>
     <% end %>
   </div>
@@ -79,19 +85,27 @@
       <h6 class="white pb-4">These have been your choices for you lastest events</h6>
       <div class="cards pb-4">
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Tuna salad").photo.key, class: "big-card" %>
+          <%= link_to recipes_path do  %>
+            <%= cl_image_tag @recipes.find_by(name: "Tuna salad").photo.key, class: "big-card" %>
+          <% end %>
           <h5 class="pt-3 white"><%= @recipes.find_by(name: "Tuna salad").name %></h5>
         </div>
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
+          <%= link_to recipes_path do  %>
+            <%= cl_image_tag @recipes.find_by(name: "Sushi").photo.key, class: "big-card" %>
+          <% end %>
           <h5 class="pt-3 white"><%= @recipes.find_by(name: "Sushi").name %></h5>
         </div>
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Buckwheat cake").photo.key, class: "big-card" %>
+          <%= link_to recipes_path do  %>
+            <%= cl_image_tag @recipes.find_by(name: "Buckwheat cake").photo.key, class: "big-card" %>
+          <% end %>
           <h5 class="pt-3 white"><%= @recipes.find_by(name: "Buckwheat cake").name %></h5>
         </div>
         <div>
-          <%= cl_image_tag @recipes.find_by(name: "Veggie nachos").photo.key, class: "big-card" %>
+          <%= link_to recipes_path do  %>
+            <%= cl_image_tag @recipes.find_by(name: "Veggie nachos").photo.key, class: "big-card" %>
+          <% end %>
           <h5 class="pt-3 white"><%= @recipes.find_by(name: "Veggie nachos").name %></h5>
         </div>
       </div>
@@ -110,7 +124,7 @@
     <div class="form-group">
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Have you found what you were looking for?" style="border-radius: 15px!important;"></textarea>
     </div>
-    <%= link_to home_path, method: :get, id: :btn do %>
+    <%= link_to home_path(:alert => "mail"), method: :get, id: :btn do %>
       <div class="text-center pt-2">
         <div class="btn btn-green w-25 justify-content-center">Review!</div>
       </div>

@@ -124,7 +124,7 @@
     <div class="form-group">
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Have you found what you were looking for?" style="border-radius: 15px!important;"></textarea>
     </div>
-    <%= link_to home_path, method: :get, id: :btn do %>
+    <%= link_to home_path(:alert => "mail"), method: :get, id: :btn do %>
       <div class="text-center pt-2">
         <div class="btn btn-green w-25 justify-content-center">Review!</div>
       </div>

@@ -12,17 +12,17 @@ Option.destroy_all
 
 puts "Creating recipes"
 
-@barbeque = Recipe.create(name: "Barbeque", instructions: "Add sauce to the meat", details: "Not apt for vegetarians")
+@barbeque = Recipe.create(name: "Barbeque", instructions: "Start your fire. Make a stack of dry wood sitting on top of a heap of lump charcoal under the left-hand side of your parrilla, a cast-iron grill which can be adjusted to different heights. Once the grill has heated up, give it a vigorous clean with newspaper to remove all yesterday’s carbonised cow and arm yourself with the tools of the asador – the shovel and rake – for moving embers around. Lower the grill to 15cm above the smouldering bed of coals. Waiting in the wings are your cuts of meat, very specific to the asado, so introduce the biggest cuts first, starting with the tira de asado (short rib).", details: "Not apt for vegetarians")
 @gnocchi = Recipe.create(name: "Gnocchi", instructions: "Gnocchi are a variety of pasta consisting of various thick, small, and soft dough that may be made from semolina, ordinary wheat flour, egg, cheese, potato, breadcrumbs, cornmeal or similar ingredients, and possibly including flavourings of herbs, vegetables, cocoa or prunes. The dough for gnocchi is most often rolled out before it is cut into small pieces about the size of a wine cork. The little dumplings are then pressed with a fork or a cheese grater to make ridges that can hold sauce. Alternatively, they are simply cut into little lumps. Gnocchi are usually eaten as a replacement for pasta in the first course, but they can also be served as a contorno to some main courses.", details: "So good")
-@pizza = Recipe.create(name: "Pizza", instructions: "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo.", details: "Put the sauce, the mozzarela and tada")
-@caesar_salad = Recipe.create(name: "Caesar salad", instructions: "Mix greens with chicken and add caesar dressing", details: "The dressing is the key")
-@sushi = Recipe.create(name: "Sushi", instructions: "Buy the sushi", details: "Don't forget the soy sauce")
-@ravioli = Recipe.create(name: "Ravioli", instructions: "Boil water and add the ravioli", details: "Choose savour carefully")
+@pizza = Recipe.create(name: "Pizza", instructions: "Process Parmesan, ricotta, cream, garlic, salt, pepper, ¾ cup corn, and 2 Tbsp. oil in a food processor until mostly smooth. Scrape creamed corn into a small bowl; stir in ¼ cup corn. Coat bottom and sides of a 13x9 rimmed baking sheet or baking dish with 2 Tbsp. oil. Place dough in center of baking sheet; gently press and stretch until it reaches to edges and into corners. Spread creamed corn over dough, leaving a ½ border. Top with pepperoni, tomatoes, mozzarella and remaining corn. Bake until crust is golden underneath and cooked through.", details: "Put the sauce, the mozzarela and tada")
+@caesar_salad = Recipe.create(name: "Caesar salad", instructions: "It is a green salad of romaine lettuce and croutons dressed with lemon juice (or lime juice), olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper. n its original form, this salad was prepared and served tableside", details: "The dressing is the key")
+@sushi = Recipe.create(name: "Sushi", instructions: "Sushi is a traditional Japanese dish of prepared vinegared rice,  usually with some sugar and salt, accompanying a variety of ingredients such as seafood, often raw, and vegetables. Styles of sushi and its presentation vary widely, but the one key ingredient is sushi rice, also referred to as shari.", details: "Don't forget the soy sauce")
+@ravioli = Recipe.create(name: "Ravioli", instructions: "Ravioli are a type of pasta comprising a filling enveloped in thin pasta dough. Usually served in broth or with a sauce, they originated as a traditional food in Italian cuisine. Ravioli are commonly square, though other forms are also used, including circular and semi-circular (mezzelune).", details: "Choose savour carefully")
 @empanadas = Recipe.create(name: "Empanadas", instructions: "An empanada is a type of baked or fried turnover consisting of pastry and filling, common in Southern European, Latin American, and the Philippines cultures. The name comes from the Galician verb empanar, and translates as enbreaded, that is, wrapped or coated in bread. They are made by folding dough over a filling, which may consist of meat, cheese, tomato, corn, or other ingredients, and then cooking the resulting turnover, either by baking or frying.", details: "An argentine classic")
-@chocolate_cake = Recipe.create(name: "Chocolate cake", instructions: "Mix chocolate and eggs", details: "Everybody likes chocolate cake")
-@brownies = Recipe.create(name: "Brownies", instructions: "Mix batter with chocolate", details: "You can even make them magical")
-@lemon_squares = Recipe.create(name: "Lemon squares", instructions: "Place the dough in the bottom and the lemon liquid on the top", details: "For those who don't prefer chocolate")
-@chocotorta = Recipe.create(name: "Chocotorta", instructions: "Dip the cookies in milk, do a layer and then add the dulce de leche mix", details: "An argentine classic")
+@chocolate_cake = Recipe.create(name: "Chocolate cake", instructions: "Heat milk and chocolate over medium-low, until chocolate is melted. Place ½ cup cold water in a small bowl and sprinkle gelatin evenly over top; chill until ready to use. Place chocolate and salt in a large wide bowl. Heat milk and corn syrup in a small saucepan over medium, whisking to combine. Remove from heat and add softened gelatin, whisking until dissolved. Pour over chocolate mixture, gently whisk until smooth; reserve saucepan. Heat cream over medium. Gradually stream cream into chocolate mixture, whisking constantly.", details: "Everybody likes chocolate cake")
+@brownies = Recipe.create(name: "Brownies", instructions: "Line a 13x9 baking pan with parchment paper. Toast pecans on a rimmed baking sheet, let cool and chop. Chop 1 pound chocolate and heat with butter in a heatproof bowl set over a saucepan of simmering water, stirring, until butter and chocolate are melted. Whisk flour, baking powder and salt in a small bowl. Using an electric mixer on medium-high speed, beat eggs, sugar, and vanilla in a large bowl until mixture is pale and thick. Reduce speed to low and add dry ingredients, mixing just to combine. Mix in chocolate mixture. Chop remaining chocolate. Using a wooden spoon or rubber spatula, fold in chopped chocolate and two-thirds of pecans. Scrape batter and sprinkle with remaining pecans. Bake brownie until puffed and top is cracked and looks dry and shiny.", details: "You can even make them magical")
+@lemon_squares = Recipe.create(name: "Lemon squares", instructions: "Whisk sugar, salt, and 2⅔ cups flour in a large bowl. Add butter and, using your fingers, smash each piece into a thin disk. Take your time doing this and don’t feel compelled to break butter into even smaller pieces. Drizzle ⅔ cup ice water over, dispersing it as widely as possible, and mix with a rubber spatula to bring mixture together into a shaggy mass. Turn dough out onto a surface and work together with your hands, pushing and flattening until dough holds together when squeezed in your palm but some streaks of dry flour are still visible. Divide dough into 2 portions. Flatten 1 portion of dough into an 8-diameter disk. Cut into quarters, stack pieces on top of one another, and flatten dough with a rolling pin to about half of its original height. At this point dough should hold together with no dry spots remaining, and have nice big flakes of butter showing. Use a bench scraper or a large knife to clean any clingy bits of dough from surface. Dust surface with flour, then dust top of dough with flour. Roll out to a ¼–⅜-thick round. Wrap dough around rolling pin and transfer to a standard 9-diameter pie dish. Unfurl into dish, then lift edges and allow dough to slump down into dish. Trim overhang to an even 1 (there will be some excess). Fold overhang under and crimp as desired. Cover and chill until very cold, at least 1 hour and up to 12 hours (cover tightly if chilling longer than 1 hour). Repeat process with remaining dough and another pie dish. Or form into a 1½-thick disk, wrap in plastic, and chill up to 3 days (or freeze up to 1 month). Place a rack in middle of oven; preheat oven to 400°. Lay 2 sheets of parchment paper over dough and fill with pie weights or dried beans (they should fill the dish). Set on a foil-lined rimmed baking sheet (this will keep any butter drips from smoking up your oven). Bake until edges are golden brown and bottom is opaque (carefully lift parchment to check), 30–35 minutes. Remove from oven; reduce oven temperature to 300°. Lift out parchment and weights. Bake crust until evenly chestnut brown all over, 10–15 minutes. If baking both crusts, turn oven dial back up to 400° and let oven preheat; repeat with remaining crust.", details: "For those who don't prefer chocolate")
+@chocotorta = Recipe.create(name: "Chocotorta", instructions: "Dip the cookies in milk, do a layer and then add the dulce de leche mix, and repeat as many times as you'd like.", details: "An argentine classic")
 
 puts "Creating ingredients"
 
@@ -189,16 +189,26 @@ puts "Creating options of dietary restrictions"
 puts "Joining recipe with its ingredients"
 
 @barbeque_meat = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @meat.id, ammount: 500, unit: "grams")
-@barbeque_sauce = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @barbequesauce.id, ammount: 20, unit: "grams")
+@barbeque_sauce = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @barbequesauce.id, ammount: 10, unit: "grams")
+@barbeque_salt = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @salt.id, ammount: 1, unit: "pinch")
+@barbeque_black_pepper = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @black_pepper.id, ammount: 1, unit: "pinch")
+@barbeque_olive_oil = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @olive_oil.id, ammount: 1, unit: "bit")
+@barbeque_garlic = RecipeIngredient.create(recipe_id: @barbeque.id, ingredient_id: @garlic.id, ammount: 2, unit: "heads")
 
 @gnocchi_potato = RecipeIngredient.create(recipe_id: @gnocchi.id, ingredient_id: @gnocchi.id, ammount: 500, unit: "grams")
 @gnocchi_flour = RecipeIngredient.create(recipe_id: @gnocchi.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @gnocchi_tomato_sauce = RecipeIngredient.create(recipe_id: @gnocchi.id, ingredient_id: @tomato_sauce.id, ammount: 500, unit: "grams")
 
-@pizza_tomato_sauce = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato_sauce.id, ammount: 500, unit: "grams")
-@pizza_tomato = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
+@pizza_tomato_sauce = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato_sauce.id, ammount: 1, unit: "carton")
+@pizza_tomato = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @tomato.id, ammount: 300, unit: "grams")
 @pizza_mozzarela = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @mozzarela.id, ammount: 500, unit: "grams")
-@pizza_oregano = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @oregano.id, ammount: 500, unit: "grams")
+@pizza_oregano = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @oregano.id, ammount: 1, unit: "pinch")
+@pizza_salt = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @salt.id, ammount: 1, unit: "pinch")
+@pizza_cheese = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @cheese.id, ammount: 300, unit: "grams")
+@pizza_rosemary_garlic = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @rosemary_garlic.id, ammount: 2, unit: "heads")
+@pizza_olive_oil = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @olive_oil.id, ammount: 1, unit: "bit")
+@pizza_cream = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @cream.id, ammount: 200, unit: "ml")
+@pizza_black_pepper = RecipeIngredient.create(recipe_id: @pizza.id, ingredient_id: @black_pepper.id, ammount: 1, unit: "pinch")
 
 @caesar_salad_chicken = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @chicken.id, ammount: 500, unit: "grams")
 @caesar_salad_ceasar_dressing = RecipeIngredient.create(recipe_id: @caesar_salad.id, ingredient_id: @caesar_dressing.id, ammount: 500, unit: "grams")
@@ -217,27 +227,28 @@ puts "Joining recipe with its ingredients"
 @empanadas_empanada_top = RecipeIngredient.create(recipe_id: @empanadas.id, ingredient_id: @empanada_top.id, ammount: 500, unit: "grams")
 @empanadas_filling = RecipeIngredient.create(recipe_id: @empanadas.id, ingredient_id: @filling.id, ammount: 500, unit: "grams")
 
-@chocolate_cake_chocolate = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
-@chocolate_cake_sugar = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
-@chocolate_cake_flour = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
-@chocolate_cake_eggs = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-@chocolate_cake_butter = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
+@chocolate_cake_chocolate = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @chocolate.id, ammount: 600, unit: "grams")
+@chocolate_cake_sugar = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @sugar.id, ammount: 400, unit: "grams")
+@chocolate_cake_flour = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @flour.id, ammount: 350, unit: "grams")
+@chocolate_cake_eggs = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @eggs.id, ammount: 4, unit: "whole")
+@chocolate_cake_butter = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @butter.id, ammount: 300, unit: "grams")
+@chocolate_cake_milk = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @milk.id, ammount: 1, unit: "cup")
+@chocolate_cake_brown_sugar = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @brown_sugar.id, ammount: 400, unit: "grams")
+@chocolate_cake_chocolate_chips = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @chocolate_chips.id, ammount: 100, unit: "grams")
+@chocolate_cake_cocoa_powder = RecipeIngredient.create(recipe_id: @chocolate_cake.id, ingredient_id: @cocoa_powder.id, ammount: 20, unit: "grams")
 
-@brownies_chocolate = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
-@brownies_flour = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
-@brownies_sugar = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
-@brownies_butter = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-@brownies_eggs = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-@brownies_peanuts = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @peanuts.id, ammount: 500, unit: "grams")
+@brownies_chocolate = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @chocolate.id, ammount: 400, unit: "grams")
+@brownies_flour = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @flour.id, ammount: 350, unit: "grams")
+@brownies_sugar = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @sugar.id, ammount: 550, unit: "grams")
+@brownies_butter = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @butter.id, ammount: 300, unit: "grams")
+@brownies_eggs = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @eggs.id, ammount: 4, unit: "whole")
+@brownies_peanuts = RecipeIngredient.create(recipe_id: @brownies.id, ingredient_id: @peanuts.id, ammount: 30, unit: "grams")
 
 @lemon_squares_butter = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
 @lemon_squares_lemons = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @lemons.id, ammount: 500, unit: "grams")
 @lemon_squares_sugar = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
 @lemon_squares_flour = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @lemon_squares_eggs = RecipeIngredient.create(recipe_id: @lemon_squares.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-
-
-
 
 @chocotorta_chocolinas = RecipeIngredient.create(recipe_id: @chocotorta.id, ingredient_id: @chocolinas.id, ammount: 500, unit: "grams")
 @chocotorta_dulce_de_leche = RecipeIngredient.create(recipe_id: @chocotorta.id, ingredient_id: @dulce_de_leche.id, ammount: 500, unit: "grams")
@@ -368,62 +379,44 @@ puts "Creating fish n chips"
 
 
 puts "Creating Carrot cake"
-@carrot_cake = Recipe.create(name: "Carrot cake", instructions: "Preheat oven to 350° and grease 2 - 8 round cake pans with cooking spray. In a large bowl, whisk together flour, salt, baking soda, and cinnamon. In another large bowl with a hand mixer (or in the bowl of a stand mixer), beat together sugar and oil until well combined. Add eggs one at a time beating well after each addition, then add vanilla. Mix in dry ingredients until just combined. Stir in carrots, pecans, and raisins. Divide batter evenly between prepared pans. Bake until a toothpick inserted into the middle comes out clean, 45 minutes. Let cool 15 minutes then invert cakes onto a cooling rack and let cool completely. Make frosting: In a large bowl with a hand mixer, beat together cream cheese and butter until smooth. Add vanilla and powdered sugar and beat again until smooth and a spreadable consistency. Frost cake as desired and garnish with pecans.", details: "Not apt for vegetarians")
+@carrot_cake = Recipe.create(name: "Carrot cake", instructions: "Whisk together flour, salt, baking soda, and cinnamon. In another large bowl, beat together sugar and oil until well combined. Add eggs one at a time beating well after each addition, then add vanilla. Mix in dry ingredients until just combined. Stir in carrots, pecans, and raisins. Divide batter evenly between prepared pans and bake. Let cool 15 minutes then invert cakes. Make frosting: beat together cream cheese and butter. Add vanilla and powdered sugar and beat again. Frost cake.", details: "A very special one")
 
-@carrot_cake_kosher_salt = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @kosher_kosher_salt.id, ammount: 500, unit: "grams")
-@carrot_cake_flour = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
-@carrot_cake_eggs = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @eggs.id, ammount: 500, unit: "grams")
-@carrot_cake_butter = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-@carrot_cake_vegetable_oil = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @vegetable_oil.id, ammount: 20, unit: "grams")
-@carrot_cake_baking_soda = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @baking_soda.id, ammount: 500, unit: "grams")
-@carrot_cake_granulated_sugar = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @granulated_sugar.id, ammount: 500, unit: "grams")
-@carrot_cake_cinnamon = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @cinnamon.id, ammount: 500, unit: "grams")
-@carrot_cake_vanilla_extract = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @vanilla_extract.id, ammount: 20, unit: "grams")
-@carrot_cake_carrots = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @carrots.id, ammount: 20, unit: "grams")
-@carrot_cake_pecans = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @pecans.id, ammount: 20, unit: "grams")
-@carrot_cake_raisins = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @raisins.id, ammount: 20, unit: "grams")
-@carrot_cake_cream_cheese = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @cream_cheese.id, ammount: 20, unit: "grams")
-@carrot_cake_powdered_sugar = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @powdered_sugar.id, ammount: 20, unit: "grams")
+@carrot_cake_kosher_salt = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @kosher_kosher_salt.id, ammount: 1, unit: "pinch")
+@carrot_cake_flour = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @flour.id, ammount: 200, unit: "grams")
+@carrot_cake_eggs = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @eggs.id, ammount: 2, unit: "whole")
+@carrot_cake_butter = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @butter.id, ammount: 100, unit: "grams")
+@carrot_cake_vegetable_oil = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @vegetable_oil.id, ammount: 1, unit: "spoon")
+@carrot_cake_baking_soda = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @baking_soda.id, ammount: 1, unit: "pinch")
+@carrot_cake_granulated_sugar = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @granulated_sugar.id, ammount: 100, unit: "grams")
+@carrot_cake_cinnamon = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @cinnamon.id, ammount: 1, unit: "pinch")
+@carrot_cake_vanilla_extract = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @vanilla_extract.id, ammount: 1, unit: "spoon")
+@carrot_cake_carrots = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @carrots.id, ammount: 200, unit: "grams")
+@carrot_cake_pecans = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @pecans.id, ammount: 10, unit: "grams")
+@carrot_cake_raisins = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @raisins.id, ammount: 10, unit: "grams")
+@carrot_cake_cream_cheese = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @cream_cheese.id, ammount: 80, unit: "grams")
+@carrot_cake_powdered_sugar = RecipeIngredient.create(recipe_id: @carrot_cake.id, ingredient_id: @powdered_sugar.id, ammount: 10, unit: "grams")
 
+@carrot_cake_vegetarian = RecipeOption.create(recipe_id: @carrot_cake.id, option_id: @vegetarian.id)
 @carrot_cake_pescetarian = RecipeOption.create(recipe_id: @carrot_cake.id, option_id: @pescetarian.id)
 @carrot_cake_kosher = RecipeOption.create(recipe_id: @carrot_cake.id, option_id: @kosher.id)
 @carrot_cake_halal = RecipeOption.create(recipe_id: @carrot_cake.id, option_id: @halal.id)
 @carrot_cake_shellfish_allergy = RecipeOption.create(recipe_id: @carrot_cake.id, option_id: @shellfish_allergy.id)
 
-# Cooking spray
-# 3 c. all-purpose flour
-# 1 1/2 tsp. kosher salt
-# 2 tsp. baking soda
-# 2 tsp. cinnamon
-# 2 c. granulated sugar
-# 1 1/2 c. vegetable oil
-# 4 large eggs
-# 1 tsp. pure vanilla extract
-# 3 c. grated carrots
-# 1 c. pecans, roughly chopped, plus more for garnish
-# 1 c. rasisins
-# FOR THE CREAM CHEESE FROSTING
-# 1 (8-oz.) block cream cheese, softened
-# 1/2 c. (1 stick) butter, softened
-# 1 tsp. pure vanilla extract
-# 4 c. powdered sugar
-
 
 puts "Creating cheesy bowtie pasta"
-@cheesy_bowtie_pasta = Recipe.create(name: "Cheesy bowtie pasta", instructions: "Preheat the oven to 375º. Bring a large pot of salted water to a boil and cook pasta for 10-12 minutes, or until tender. Drain and set aside. In a medium size pan over medium heat, add ground beef, breaking up meat with a wooden spoon. Add salt, pepper, adobo and paprika and cook until beef is no longer pink, then drain. Add sausage to ground beef and cook for another 4 mins; drain again if needed. Add onions and peppers to meat mixture and cook until softened. Stir in sauce and rosemary garlic seasoning, if using, to beef mixture and simmer on low for about 3-5 minutes. In a large casserole dish, combine cooked pasta with meat mixture and top with cheese. Bake for 8-12 minutes, until cheese is bubbly and melted. Let stand for 5 minutes.", details: "Not apt for vegetarians")
+@cheesy_bowtie_pasta = Recipe.create(name: "Cheesy bowtie pasta", instructions: "Bring a large pot of salted water to a boil and cook pasta. Drain and set aside. In a medium size pan over medium heat, add ground beef, breaking up meat with a wooden spoon. Add salt, pepper, adobo and paprika and cook until beef is no longer pink, then drain. Add sausage to ground beef and cook for another 4 mins; drain again if needed. Add onions and peppers to meat mixture and cook until softened. Stir in sauce and rosemary garlic seasoning. In a large casserole dish, combine pasta, meat and top with cheese; bake for 8-12 minutes.", details: "Make extra and eat it later!")
 
-@cheesy_bowtie_pasta_kosher_salt = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @kosher_kosher_salt.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_meat = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @meat.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_black_pepper = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @black_pepper.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_tomato_sauce = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @tomato_sauce.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_cheese = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @cheese.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_bowtie_pasta = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @bowtie_pasta.id, ammount: 500, unit: "grams")
-@cheesy_bowtie_pasta_adobo_seasoning = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @adobo_seasoning.id, ammount: 20, unit: "grams")
-@cheesy_bowtie_pasta_paprika = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @paprika.id, ammount: 20, unit: "grams")
-@cheesy_bowtie_pasta_somked_sausage = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @somked_sausage.id, ammount: 20, unit: "grams")
-@cheesy_bowtie_pasta_onions = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @onions.id, ammount: 20, unit: "grams")
-@cheesy_bowtie_pasta_green_peppers = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @green_peppers.id, ammount: 20, unit: "grams")
-@cheesy_bowtie_pasta_rosemary_garlic = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @rosemary_garlic.id, ammount: 20, unit: "grams")
+@cheesy_bowtie_pasta_meat = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @meat.id, ammount: 100, unit: "grams")
+@cheesy_bowtie_pasta_black_pepper = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @black_pepper.id, ammount: 1, unit: "pinch")
+@cheesy_bowtie_pasta_tomato_sauce = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @tomato_sauce.id, ammount: 100, unit: "grams")
+@cheesy_bowtie_pasta_cheese = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @cheese.id, ammount: 50, unit: "grams")
+@cheesy_bowtie_pasta_bowtie_pasta = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @bowtie_pasta.id, ammount: 2, unit: "hand-fulls")
+@cheesy_bowtie_pasta_adobo_seasoning = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @adobo_seasoning.id, ammount: 1, unit: "bit")
+@cheesy_bowtie_pasta_paprika = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @paprika.id, ammount: 1, unit: "spoon")
+@cheesy_bowtie_pasta_somked_sausage = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @somked_sausage.id, ammount: 50, unit: "grams")
+@cheesy_bowtie_pasta_onions = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @onions.id, ammount: 50, unit: "grams")
+@cheesy_bowtie_pasta_green_peppers = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @green_peppers.id, ammount: 1, unit: "unit")
+@cheesy_bowtie_pasta_rosemary_garlic = RecipeIngredient.create(recipe_id: @cheesy_bowtie_pasta.id, ingredient_id: @rosemary_garlic.id, ammount: 1, unit: "head")
 
 @cheesy_bowtie_pasta_kosher = RecipeOption.create(recipe_id: @cheesy_bowtie_pasta.id, option_id: @kosher.id)
 @cheesy_bowtie_pasta_halal = RecipeOption.create(recipe_id: @cheesy_bowtie_pasta.id, option_id: @halal.id)
@@ -446,13 +439,13 @@ puts "Creating cheesy bowtie pasta"
 
 
 puts "Creating cacio e pepe"
-@cacio_pepe = Recipe.create(name: "Cacio e Pepe", instructions: "In a pot of boiling salted water, cook pasta until al dente. Reserve ⅔ cup pasta water and drain pasta. In a large skillet over medium heat, melt 1 tablespoon butter with oil. Add a generous amount of black pepper and toast until fragrant, about 1 minute. Add ⅓ cup reserved pasta water and bring to simmer. Whisk in remaining butter then, using tongs, toss pasta into butter mixture.Add cheeses and toss constantly until cheese is melty, removing skillet from heat when about half the cheese has melted. (If sauce is too thick, loosen with more pasta water.)", details: "Not apt for vegetarians")
+@cacio_pepe = Recipe.create(name: "Cacio e Pepe", instructions: "In a pot of boiling salted water, cook pasta until al dente. Reserve ⅔ cup pasta water and drain pasta. In a large skillet over medium heat, melt 1 tablespoon butter with oil. Add a generous amount of black pepper and toast until fragrant, about 1 minute. Add ⅓ cup reserved pasta water and bring to simmer. Whisk in remaining butter then, using tongs, toss pasta into butter mixture.Add cheeses and toss constantly until cheese is melty, removing skillet from heat when about half the cheese has melted. (If sauce is too thick, loosen with more pasta water.)", details: "An italian basic classic")
 
-@cacio_pepe_butter = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-@cacio_pepe_black_pepper = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @black_pepper.id, ammount: 500, unit: "grams")
-@cacio_pepe_olive_oil = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @olive_oil.id, ammount: 500, unit: "grams")
-@cacio_pepe_pasta = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @pasta.id, ammount: 500, unit: "grams")
-@cacio_pepe_pecorino = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @pecorino.id, ammount: 20, unit: "grams")
+@cacio_pepe_butter = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @butter.id, ammount: 50, unit: "grams")
+@cacio_pepe_black_pepper = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @black_pepper.id, ammount: 1, unit: "pinch")
+@cacio_pepe_olive_oil = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @olive_oil.id, ammount: 1, unit: "spoon")
+@cacio_pepe_pasta = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @pasta.id, ammount: 2, unit: "hand-fulls")
+@cacio_pepe_pecorino = RecipeIngredient.create(recipe_id: @cacio_pepe.id, ingredient_id: @pecorino.id, ammount: 50, unit: "grams")
 
 @cacio_pepe_vegetarian = RecipeOption.create(recipe_id: @cacio_pepe.id, option_id: @vegetarian.id)
 @cacio_pepe_vegan = RecipeOption.create(recipe_id: @cacio_pepe.id, option_id: @vegan.id)
@@ -474,8 +467,8 @@ puts "Creating cacio e pepe"
 puts "Creating grilled cheese"
 @grilled_cheese = Recipe.create(name: "Grilled cheese", instructions: "Spread 1 tablespoon butter on one side of each slice of bread. With butter side down, top each slice of bread with about ½ cup cheddar. In a skillet over medium heat, melt 1 tablespoon butter. Add two slices of bread, butter side down. Cook until bread is golden and cheese is starting to melt, about 2 minutes. Flip one piece of bread on top of the other and continue to cook until cheese is melty, about 30 seconds more. Repeat for the second sandwich, wiping skillet clean if necessary.", details: "Fast n' easy")
 
-@grilled_cheese_butter = RecipeIngredient.create(recipe_id: @grilled_cheese.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
-@grilled_cheese_bread = RecipeIngredient.create(recipe_id: @grilled_cheese.id, ingredient_id: @bread.id, ammount: 500, unit: "grams")
+@grilled_cheese_butter = RecipeIngredient.create(recipe_id: @grilled_cheese.id, ingredient_id: @butter.id, ammount: 10, unit: "grams")
+@grilled_cheese_bread = RecipeIngredient.create(recipe_id: @grilled_cheese.id, ingredient_id: @bread.id, ammount: 50, unit: "grams")
 @grilled_cheese_cheddar = RecipeIngredient.create(recipe_id: @grilled_cheese.id, ingredient_id: @cheddar.id, ammount: 20, unit: "grams")
 
 @grilled_cheese_vegetarian = RecipeOption.create(recipe_id: @grilled_cheese.id, option_id: @vegetarian.id)
@@ -535,7 +528,7 @@ puts "Creating cobb salad"
 
 
 puts "Creating cookies"
-@cookies = Recipe.create(name: "Cookies", instructions: "Preheat oven to 375º and line a large baking sheet with parchment paper. Using an electric mixer, beat butter and sugars until light and fluffy, about 2 minutes. Slowly beat in vanilla extract and eggs. In a separate bowl, mix flour, baking soda and salt. Stir into butter-sugar mixture. Fold in chocolate chips. Roll dough into 1-inch balls, placing them about 2 inches apart on prepared baking sheet. Bake cookies for 10 to 12 minutes, or until lightly golden.", details: "Not apt for vegetarians")
+@cookies = Recipe.create(name: "Cookies", instructions: "Preheat oven to 375º and line a large baking sheet with parchment paper. Using an electric mixer, beat butter and sugars until light and fluffy, about 2 minutes. Slowly beat in vanilla extract and eggs. In a separate bowl, mix flour, baking soda and salt. Stir into butter-sugar mixture. Fold in chocolate chips. Roll dough into 1-inch balls, placing them about 2 inches apart on prepared baking sheet. Bake cookies for 10 to 12 minutes, or until lightly golden.", details: "A must")
 
 @cookies_butter = RecipeIngredient.create(recipe_id: @cookies.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
 @cookies_granulated_sugar = RecipeIngredient.create(recipe_id: @cookies.id, ingredient_id: @granulated_sugar.id, ammount: 500, unit: "grams")
@@ -568,7 +561,7 @@ puts "Creating cookies"
 
 
 puts "Creating pancakes"
-@pancakes = Recipe.create(name: "Pancakes", instructions: "Mix flour, baking powder, salt, and sugar in a large bowl. In a medium bowl, whisk to combine egg yolk, vanilla, milk, and melted butter. Gently fold dry ingredients into wet ingredients until just combined. In another medium bowl, using a hand mixer, beat egg white until stiff peaks form. Fold egg white into batter gently with a rubber spatula until just combined. In a large frying pan over medium heat, melt 1 tablespoon butter. Pour about 1/4 cup pancake batter into pan. When little bubbles appear, about 1 to 2 minutes, flip and continue cooking until both sides are lightly golden. Repeat with remaining batter. Serve with maple syrup.", details: "Not apt for vegetarians")
+@pancakes = Recipe.create(name: "Pancakes", instructions: "Mix flour, baking powder, salt, and sugar in a large bowl. In a medium bowl, whisk to combine egg yolk, vanilla, milk, and melted butter. Gently fold dry ingredients into wet ingredients until just combined. In another medium bowl, using a hand mixer, beat egg white until stiff peaks form. Fold egg white into batter gently with a rubber spatula until just combined. In a large frying pan over medium heat, melt 1 tablespoon butter. Pour about 1/4 cup pancake batter into pan. When little bubbles appear, about 1 to 2 minutes, flip and continue cooking until both sides are lightly golden. Repeat with remaining batter. Serve with maple syrup.", details: "A morning fovurite")
 
 @pancakes_flour = RecipeIngredient.create(recipe_id: @pancakes.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @pancakes_kosher_salt = RecipeIngredient.create(recipe_id: @pancakes.id, ingredient_id: @kosher_kosher_salt.id, ammount: 500, unit: "grams")
@@ -647,7 +640,7 @@ puts "Creating orange chicken"
 
 
 puts "Creating egg roll bowls"
-@egg_roll_bowls = Recipe.create(name: "Egg roll bowls", instructions: "In a large skillet over medium heat, heat vegetable oil. Add garlic and ginger and cook until fragrant, 1 to 2 minutes. Add pork and cook until no pink remains. Push pork to the side and add sesame oil. Add onion, carrot, and cabbage. Stir to combine with meat and add soy sauce and Sriracha. Cook until cabbage is tender, 5 to 8 minutes. Transfer mixture to a serving dish and garnish with green onions and sesame seeds. Serve.", details: "Not apt for vegetarians")
+@egg_roll_bowls = Recipe.create(name: "Egg roll bowls", instructions: "In a large skillet over medium heat, heat vegetable oil. Add garlic and ginger and cook until fragrant, 1 to 2 minutes. Add pork and cook until no pink remains. Push pork to the side and add sesame oil. Add onion, carrot, and cabbage. Stir to combine with meat and add soy sauce and Sriracha. Cook until cabbage is tender, 5 to 8 minutes. Transfer mixture to a serving dish and garnish with green onions and sesame seeds. Serve.", details: "Sesame seeds are the last perfect touch")
 
 @egg_roll_bowls_vegetable_oil = RecipeIngredient.create(recipe_id: @egg_roll_bowls.id, ingredient_id: @vegetable_oil.id, ammount: 500, unit: "grams")
 @egg_roll_bowls_onions = RecipeIngredient.create(recipe_id: @egg_roll_bowls.id, ingredient_id: @onions.id, ammount: 500, unit: "grams")
@@ -895,12 +888,12 @@ puts "Creating Chicken and Mushroom Noodles"
 puts "Creating pumpkin soup"
 @pumpkin_soup = Recipe.create(name: "Pumpkin soup", instructions: "Preheat oven to 425°. Place pumpkin on a large rimmed baking sheet and roast until tender (a paring knife should pierce flesh easily), about 1 hour. Let cool. Halve pumpkin through stem end; scoop out and discard seeds. Scoop 1½ cups flesh into a blender; reserve remaining pumpkin for another use. Add garlic, ginger, vinegar, lime juice, lemon juice, Allium Confit, salt, half of chiles, and ½ cup ice water and blend until very smooth and bright yellow. Taste and add remaining chile if you’d like a spicier sauce; season with more salt if needed. Do ahead: Hot sauce can be made 2 weeks ahead. Transfer to a jar; cover and chill.", details: "The saviour for the winter")
 
-@pumpkin_soup_garlic = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @garlic.id, ammount: 500, unit: "grams")
-@pumpkin_soup_ginger = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @ginger.id, ammount: 500, unit: "grams")
-@pumpkin_soup_pumpkin = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @pumpkin.id, ammount: 500, unit: "grams")
-@pumpkin_soup_cider_vinegar = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @cider_vinegar.id, ammount: 20, unit: "grams")
-@pumpkin_soup_lime_juice = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @lime_juice.id, ammount: 20, unit: "grams")
-@pumpkin_soup_lemon_juice = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @lemon_juice.id, ammount: 20, unit: "grams")
+@pumpkin_soup_garlic = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @garlic.id, ammount: 1, unit: "head")
+@pumpkin_soup_ginger = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @ginger.id, ammount: 1, unit: "head")
+@pumpkin_soup_pumpkin = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @pumpkin.id, ammount: 300, unit: "grams")
+@pumpkin_soup_cider_vinegar = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @cider_vinegar.id, ammount: 1, unit: "pinch")
+@pumpkin_soup_lime_juice = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @lime_juice.id, ammount: 1, unit: "spoon")
+@pumpkin_soup_lemon_juice = RecipeIngredient.create(recipe_id: @pumpkin_soup.id, ingredient_id: @lemon_juice.id, ammount: 1, unit: "spoon")
 
 @pumpkin_soup_vegetarian = RecipeOption.create(recipe_id: @pumpkin_soup.id, option_id: @vegetarian.id)
 @pumpkin_soup_vegan = RecipeOption.create(recipe_id: @pumpkin_soup.id, option_id: @vegan.id)
@@ -914,14 +907,6 @@ puts "Creating pumpkin soup"
 @pumpkin_soup_diabetic = RecipeOption.create(recipe_id: @pumpkin_soup.id, option_id: @diabetic.id)
 @pumpkin_soup_paleo = RecipeOption.create(recipe_id: @pumpkin_soup.id, option_id: @paleo.id)
 @pumpkin_soup_sugar_free = RecipeOption.create(recipe_id: @pumpkin_soup.id, option_id: @sugar_free.id)
-
-# 1 2-lb. heirloom pumpkin or butternut squash
-# 6 garlic cloves
-# 4 oz. ginger, peeled, coarsely chopped
-# ¼ cup apple cider vinegar
-# ¼ cup fresh lime juice
-# 2 Tbsp. fresh lemon juice
-# 2 tsp. Diamond Crystal or 1 tsp. Morton kosher salt
 
 puts "Creating tofu bowl"
 @tofu_bowl = Recipe.create(name: "Tofu bowl", instructions: "Cut tofu in half horizontally through the equator (like a hamburger bun), then cut into 1 cubes and pat dry again. Arrange in a single layer on a rimmed baking sheet or large plate and set aside. Cut 1 large head of broccoli (about 1 lb.) into small 1 florets. If your broccoli has a long stem, peel tough outer skin to remove the lighter fibrous layer, then slice stem ¼ thick. Finely chop 1 scallion and set aside for serving. To make the sauce, scrape skin from one 1 piece ginger with a spoon, then grate on a Microplane into a small bowl. Smash and peel 1 garlic clove and grate into bowl with ginger. Add ¼ cup tamari or soy sauce, 2 Tbsp. light or dark brown sugar or pure maple syrup, 2 Tbsp. tahini, 2 Tbsp. unseasoned rice vinegar, 1 Tbsp. toasted sesame oil, 1½ tsp. cornstarch, a pinch of kosher salt, and 3 Tbsp. water and whisk to combine. Set sauce aside. Sprinkle 1 tsp. Diamond Crystal or ½ tsp. Morton kosher salt over tofu and toss to coat. Scatter remaining ¼ cup cornstarch over tofu a tablespoonful at a time, tossing after each addition and gently pressing into the tofu pieces, until well coated on all sides. Heat 1 Tbsp. grapeseed oil or vegetable oil in a large nonstick or cast-iron skillet over medium-high. Add broccoli, season with ½ tsp. Diamond Crystal or ¼ tsp. Morton kosher salt and ¼ tsp. freshly ground black pepper, and cook, tossing occasionally, until just tender, about 5 minutes. Transfer broccoli to a plate. Wipe out skillet. Heat remaining ¼ cup grapeseed or vegetable oil in same skillet over medium-high. When oil is hot (it will start to shimmer), reduce heat to medium and add tofu in a single layer (work in batches if needed). Cook, turning every 3–4 minutes, until golden brown all over, 10–12 minutes total. Transfer to a clean kitchen towel or paper towels and let drain. Pour out any remaining oil in pan and wipe out. Return pan to medium heat. Whisk reserved sauce if it has separated, then pour into pan and cook until thickened and bubbling, about 20 seconds. Immediately remove pan from heat and add broccoli and tofu; toss to coat. Top tofu and broccoli with 1 Tbsp. toasted sesame seeds and reserved scallions. Serve with steamed white or brown rice.", details: "Even meat lovers will want to have a bite")
@@ -1098,23 +1083,8 @@ puts "Creating BA pizza"
 @ba_pizza_paleo = RecipeOption.create(recipe_id: @ba_pizza.id, option_id: @paleo.id)
 @ba_pizza_sugar_free = RecipeOption.create(recipe_id: @ba_pizza.id, option_id: @sugar_free.id)
 
-# 1 1-lb. store-bought pizza dough
-# ¼ cup grated Parmesan
-# ¼ cup fresh ricotta
-# 2 Tbsp. heavy cream
-# 1 small garlic clove, finely grated
-# 1 tsp. Diamond Crystal or ½ tsp. Morton kosher salt
-# ¾ tsp. freshly ground black pepper
-# 1½ cups fresh corn (from about 2 medium ears), divided
-# 4 Tbsp. extra-virgin olive oil, divided, plus more for drizzling
-# 2 oz. sliced pepperoni
-# 8 oz. cherry tomatoes, halved (about 1⅓ cups)
-# ½ cup grated smoked mozzarella
-# Fresh basil leaves (for serving)
-
-
 puts "Creating Chocolate ganache"
-@chocolate_ganache = Recipe.create(name: "Chocolate ganache", instructions: "Place a rack in middle of oven; preheat to 350°. Lightly butter pan; line with a round of parchment paper cut to fit just inside pan. Pulse nuts in a food processor until finely chopped. Add sugar and salt and pulse again to combine. Drizzle in melted butter and pulse until nuts begin to clump together and mixture looks sandy. Using your hands, firmly and evenly press mixture into bottom and up sides of pan (it doesn’t need to come all the way up the sides). Bake crust until golden brown, 20–25 minutes. Let cool. Place chocolate in a medium bowl. Heat cream in a small saucepan until just beginning to simmer; immediately pour over chocolate. Let sit, undisturbed, 5 minutes. Add butter and mix with a heatproof rubber spatula until smooth and glossy. Scrape ganache into crust and smooth out any bubbles. Chill, uncovered, until set, at least 1 hour. Remove tart from pan; sprinkle sea salt over. Slice into wedges with a hot knife. Do Ahead: Tart can be made 1 day ahead. Cover and keep chilled.", details: "Not apt for vegetarians")
+@chocolate_ganache = Recipe.create(name: "Chocolate ganache", instructions: "Place a rack in middle of oven; preheat to 350°. Lightly butter pan; line with a round of parchment paper cut to fit just inside pan. Pulse nuts in a food processor until finely chopped. Add sugar and salt and pulse again to combine. Drizzle in melted butter and pulse until nuts begin to clump together and mixture looks sandy. Using your hands, firmly and evenly press mixture into bottom and up sides of pan (it doesn’t need to come all the way up the sides). Bake crust until golden brown, 20–25 minutes. Let cool. Place chocolate in a medium bowl. Heat cream in a small saucepan until just beginning to simmer; immediately pour over chocolate. Let sit, undisturbed, 5 minutes. Add butter and mix with a heatproof rubber spatula until smooth and glossy. Scrape ganache into crust and smooth out any bubbles. Chill, uncovered, until set, at least 1 hour. Remove tart from pan; sprinkle sea salt over. Slice into wedges with a hot knife. Do Ahead: Tart can be made 1 day ahead. Cover and keep chilled.", details: "Pour le francais dans la maison")
 
 @chocolate_ganache_chocolate = RecipeIngredient.create(recipe_id: @chocolate_ganache.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
 @chocolate_ganache_sugar = RecipeIngredient.create(recipe_id: @chocolate_ganache.id, ingredient_id: @sugar.id, ammount: 500, unit: "grams")
@@ -1137,7 +1107,7 @@ puts "Creating Chocolate ganache"
 # Flaky sea salt
 
 puts "Creating Digestives"
-@digestives = Recipe.create(name: "Digestives", instructions: "Place racks in upper and lower thirds of oven; preheat to 350°. Process 1⅓ cups whole wheat flour, wheat germ, sugar, baking powder, salt, and butter in a food processor until butter virtually disappears and you have a fine, floury meal. Add milk and pulse until a damp and crumbly dough forms. Turn dough out onto an unfloured surface and gently knead just to bring it into a ball; flatten into a disk. Lightly flour surface and roll out dough until just shy of ¼” thick. Lightly flour cookie cutter and punch out cookies, dusting with more flour as needed to avoid sticking. Dust any excess flour off of cookies with a dry pastry brush. Using a spatula, transfer cookies to 2 parchment-lined baking sheets. Gently knead scraps together, reroll, and punch out more cookies. Discard any scraps (or bake as is and crumble over ice cream!). Prick each cookie 3 times with a fork and bake, rotating baking sheets top to bottom and front to back halfway through, until bottoms and edges are browned, 15–18 minutes. Let cool on baking sheets (cookies will crisp up as they cool). If using, melt chocolate and oil in a microwave-safe bowl in the microwave in 20-second increments, stirring after each burst, until mostly melted and smooth, about 1 minute total. (Alternatively, melt in a heatproof bowl set over a saucepan of simmering water, stirring occasionally, until melted; do not let bowl touch water.) Stir chocolate mixture until fully melted, then continue to stir until slightly cooled and thickened, about 3 minutes. (This makes it easier to get a thick layer of chocolate on the cookies.) Using a small offset spatula or butter knife and working one at a time, spread a scant 1 tsp. chocolate over the flat underside of each cookie. Using the edge of the spatula and starting from one side and working your way to the other, gently and quickly press a few lines into chocolate as desired. Chill cookies on baking sheets until chocolate is set, about 10 minutes.", details: "Not apt for vegetarians")
+@digestives = Recipe.create(name: "Digestives", instructions: "Place racks in upper and lower thirds of oven; preheat to 350°. Process 1⅓ cups whole wheat flour, wheat germ, sugar, baking powder, salt, and butter in a food processor until butter virtually disappears and you have a fine, floury meal. Add milk and pulse until a damp and crumbly dough forms. Turn dough out onto an unfloured surface and gently knead just to bring it into a ball; flatten into a disk. Lightly flour surface and roll out dough until just shy of ¼” thick. Lightly flour cookie cutter and punch out cookies, dusting with more flour as needed to avoid sticking. Dust any excess flour off of cookies with a dry pastry brush. Using a spatula, transfer cookies to 2 parchment-lined baking sheets. Gently knead scraps together, reroll, and punch out more cookies. Discard any scraps (or bake as is and crumble over ice cream!). Prick each cookie 3 times with a fork and bake, rotating baking sheets top to bottom and front to back halfway through, until bottoms and edges are browned, 15–18 minutes. Let cool on baking sheets (cookies will crisp up as they cool). If using, melt chocolate and oil in a microwave-safe bowl in the microwave in 20-second increments, stirring after each burst, until mostly melted and smooth, about 1 minute total. (Alternatively, melt in a heatproof bowl set over a saucepan of simmering water, stirring occasionally, until melted; do not let bowl touch water.) Stir chocolate mixture until fully melted, then continue to stir until slightly cooled and thickened, about 3 minutes. (This makes it easier to get a thick layer of chocolate on the cookies.) Using a small offset spatula or butter knife and working one at a time, spread a scant 1 tsp. chocolate over the flat underside of each cookie. Using the edge of the spatula and starting from one side and working your way to the other, gently and quickly press a few lines into chocolate as desired. Chill cookies on baking sheets until chocolate is set, about 10 minutes.", details: "A supermarket favourite made at home")
 
 @digestives_chocolate = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @chocolate.id, ammount: 500, unit: "grams")
 @digestives_butter = RecipeIngredient.create(recipe_id: @digestives.id, ingredient_id: @butter.id, ammount: 500, unit: "grams")
@@ -1205,7 +1175,7 @@ puts "Creating lasagna"
 # Extra-virgin olive oil (for greasing)
 
 puts "Creating Molten caramel cake"
-@molten_caramel_cake = Recipe.create(name: "Molten caramel cake", instructions: "Stir dulce de leche and butter in a small bowl until well combined. Dollop in 4 equal-size blobs on a metal baking dish or baking sheet. Freeze at least 30 minutes or up to overnight until very firm (the sugar will keep it from freezing completely solid). Preheat oven to 350°. Whisk flour, salt, and baking powder in a small bowl; set aside. Coat ramekins with butter in a thin, even layer, then coat with sugar, knocking out any excess. Using an electric mixer on medium-high speed (use the paddle attachment if you’re using a stand mixer), beat ⅓ cup sugar and 6 Tbsp. butter in a medium bowl until light and fluffy, about 4 minutes. Add dulce de leche and continue to beat until incorporated, about 1 minute. Beat in eggs, one at a time, until combined, followed by vanilla. Beat mixture on medium-high speed 1 minute (it might look slightly grainy and separated, and that’s okay!). Reduce mixer speed to low and beat in reserved dry ingredients until smooth. Divide batter among prepared ramekins. Make a small divot with a spoon in the top of each mound of batter. Place frozen filling onto divots, but do not press down into batter; you want the filling cradled by the batter but still on the surface, as it will sink to the center during baking. Place ramekins on a small rimmed baking sheet. Bake cakes until tops are browned, firm to the touch (be careful when checking as the filling may ooze out and it is very hot), and a tester inserted into the cakes, avoiding the liquid centers, comes out clean, 23–25 minutes.", details: "Not apt for vegetarians")
+@molten_caramel_cake = Recipe.create(name: "Molten caramel cake", instructions: "Stir dulce de leche and butter in a small bowl until well combined. Dollop in 4 equal-size blobs on a metal baking dish or baking sheet. Freeze at least 30 minutes or up to overnight until very firm (the sugar will keep it from freezing completely solid). Preheat oven to 350°. Whisk flour, salt, and baking powder in a small bowl; set aside. Coat ramekins with butter in a thin, even layer, then coat with sugar, knocking out any excess. Using an electric mixer on medium-high speed (use the paddle attachment if you’re using a stand mixer), beat ⅓ cup sugar and 6 Tbsp. butter in a medium bowl until light and fluffy, about 4 minutes. Add dulce de leche and continue to beat until incorporated, about 1 minute. Beat in eggs, one at a time, until combined, followed by vanilla. Beat mixture on medium-high speed 1 minute (it might look slightly grainy and separated, and that’s okay!). Reduce mixer speed to low and beat in reserved dry ingredients until smooth. Divide batter among prepared ramekins. Make a small divot with a spoon in the top of each mound of batter. Place frozen filling onto divots, but do not press down into batter; you want the filling cradled by the batter but still on the surface, as it will sink to the center during baking. Place ramekins on a small rimmed baking sheet. Bake cakes until tops are browned, firm to the touch (be careful when checking as the filling may ooze out and it is very hot), and a tester inserted into the cakes, avoiding the liquid centers, comes out clean, 23–25 minutes.", details: "Mmmmmmmmm")
 
 @molten_caramel_cake_flour = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @flour.id, ammount: 500, unit: "grams")
 @molten_caramel_cake_salt = RecipeIngredient.create(recipe_id: @molten_caramel_cake.id, ingredient_id: @salt.id, ammount: 500, unit: "grams")
@@ -1748,11 +1718,11 @@ puts "Creating Juicy steak"
 puts "Creating Burger alfresco"
 @burger_alfresco = Recipe.create(name: "Burger Alfresco", instructions: "Prepare a grill for high heat. Place a cast-iron griddle, flat side up, on grate; heat until very hot, at least 20 minutes. Mix together pickles, mayonnaise, ketchup, adobo sauce, and ½ tsp. salt in a medium bowl; set special sauce aside. Wrap all the buns together in a large sheet of foil to make a packet (this will keep buns soft and from getting too toasted on the grill). Place packet on grate and grill, turning once, until buns are warmed through, about 1 minute. Spread sauce over cut sides of buns. Place 3–4 pieces of lettuce on bottom buns and top each with some onion and a tomato slice, if using.", details: "Everybody love Burgers!")
 
-@burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 10, unit: "slices")
-@burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 2, unit: "cups")
-@burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 500, unit: "grams")
-@burger_alfresco_potatoes = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @potatoes.id, ammount: 500, unit: "grams")
-@burger_alfresco_meat = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @meat.id, ammount: 1000, unit: "grams")
+@burger_alfresco_cheddar = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @cheddar.id, ammount: 2, unit: "slices")
+@burger_alfresco_vegetable_oil = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @vegetable_oil.id, ammount: 1, unit: "bit")
+@burger_alfresco_tomato = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @tomato.id, ammount: 100, unit: "grams")
+@burger_alfresco_potatoes = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @potatoes.id, ammount: 150, unit: "grams")
+@burger_alfresco_meat = RecipeIngredient.create(recipe_id: @burger_alfresco.id, ingredient_id: @meat.id, ammount: 300, unit: "grams")
 
 @burger_alfresco_pescetarian = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @pescetarian.id)
 @burger_alfresco_kosher = RecipeOption.create(recipe_id: @burger_alfresco.id, option_id: @kosher.id)

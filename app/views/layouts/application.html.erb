@@ -6,7 +6,7 @@
       <%= yield :metadata %>
     <% else %>
       <title>ReadyMeals</title>
-      <meta description="ReadyMeals is a platform...">
+      <meta description="ReadyMeals is a platform that allows you to plan for meals, whether it be a single one or a whole trip full of exiting opportunities, we make meal planning, easy planning.">
     <% end %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -38,7 +38,7 @@
 
       <% unless action_name == "new"%>
         <% unless content_for? :footer %>
-          <footer id="footerbottom">
+          <footer id="footerbottom" class="my-4">
             <div class="footer-links">
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-facebook"></i></a>
